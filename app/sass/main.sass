@@ -1056,11 +1056,10 @@ button
   .drop-menu1
     box-shadow: 2px 9px 12px rgba(0, 0, 0, 0.1266)
     position: absolute
-    top: 68px
+    top: 65px
     left: 0
     width: 288px
     background-color: #fff
-    //min-height: 370px
     display: none
     z-index: 4
     .list-mobile
@@ -2568,15 +2567,19 @@ footer
     justify-content: center
     font-size: 10px
     color: #828282
-    .icon
-      transform: rotate(0)
-      margin: 0 0 0 4px
-      svg
+    span
+      position: relative
+      padding: 0 12px 0 0
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translate(0,-50%)
+        background: url('../img/arrow-top.svg') no-repeat center
+          size: cover
         width: 8px
         height: 7px
-        fill: #828282
-        path
-          fill: #828282
   .info-box__left
     width: 56.6%
   .info-box__right

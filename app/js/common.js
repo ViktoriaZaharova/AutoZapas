@@ -75,10 +75,9 @@ $(function () {
     });
 
     // hidden list > 5
-    $('.catalog_item-list .item_wrapper .b_hidden .list-characteristics').each(function () {
+    $('.list-characteristics').each(function () {
         if ($(this).find('li').length > 5) {
             $(this).find('li').slice(5).hide();
-            // $('.product-info-box .btn-all').text('Скрыть').addClass('btn-hidden');
         }
     });
 
@@ -87,21 +86,24 @@ $(function () {
 
         var
             $this = $(this),
-            content = $(this).parent().find('.info-box > .list-characteristics li');
+            content = $(this).parent().find('.info-box > .list-characteristics');
 
 
         if (!$this.hasClass('trigger')) {
             $this.addClass('trigger');
-            $this.text('Скрыть');
+            $this.find('span').text('Скрыть');
 
-            content.slideDown();
+            content.find('li').slideDown();
         } else {
             $this.removeClass('trigger');
-            $this.text('Показать больше');
+            $this.find('span').text('Показать больше');
 
-            content.slice(5).slideUp();
+            content.each(function () {
+                $(this).find('li').slice(5).slideUp();
+            })
         }
     });
+
 
     // $('.catalog_item .item_brand, .catalog_item-block .item_title').equalHeights();
 
