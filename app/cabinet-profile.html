@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>AutoZapas - интернет магазин запасных частей для вашего авто</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="css/main.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:700|Rubik:400,400i,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="my-page">
+    <header class="header" id="my-header">
+        <div class="header_fixed">
+            <div class="container">
+                <a href="index.html" class="logo_fix"><img src="img/logo-fixed.png" class="img-responsive" alt=""></a>
+                <div class="block_phone-top">
+                    <ul class="phone-code">
+                        <li>(066)</li>
+                        <li>(068)</li>
+                        <li>(093)</li>
+                    </ul>
+                    <p>213-94-13</p>
+                </div>
+
+                <ul class="list_menu-fix">
+
+                    <li><a href="#" class="btn-help">Помощь специалиста</a></li>
+                    <li>
+                        <a href="#modal_authorization" class="room open_modal">
+            <span class="icon icon-entrance">
+                <img src="img/user-orange.png" class="img-responsive" alt="">
+            </span>
+                            <span class="text">Мой кабинет</span>
+                            <span class="icon icon-arrow"><img src="img/arrow-accent-right.png" class="img-responsive"
+                                                               alt=""></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <div class="block_card">
+                            <div class="block_card-top">
+                        <span class="icon icon-basket">
+                            <img src="img/basket.png" class="img-responsive" alt="">
+                         </span>
+                                <a href="#basket_modal" class="block_card-text open_modal">
+                                    <div class="goods"><span class="card_text">Товаров:</span> <span>0</span></div>
+                                    <div class="amount"><span class="card_text">На сумму:</span> <span>0</span></div>
+                                </a>
+                            </div>
+                            <a href="#basket_modal" class="links-btn open_modal btn-grey">Оформить заказ</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="header_top">
+            <div class="container">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">О нас </a></li>
+                        <li><a href="#">Оплата </a></li>
+                        <li><a href="#">Доставка </a></li>
+                        <li><a href="#">Гарантия и Возврат </a></li>
+                        <li><a href="#">Статьи и Новости </a></li>
+                        <li><a href="#">Акции </a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="room open_modal">
+            <span class="icon icon-entrance">
+                <img src="img/user.png" class="img-responsive" alt="">
+            </span>
+                    Мой кабинет
+                    <span class="icon icon-arrow"><img src="img/arrow-accent-right.png" class="img-responsive"
+                                                       alt=""></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_center">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" class="img-responsive" alt=""></a>
+
+                <div class="block_phone">
+                    <div class="block_phone-top">
+                        <ul class="phone-code">
+                            <li>(066)</li>
+                            <li>(068)</li>
+                            <li>(093)</li>
+                        </ul>
+                        <p>213-94-13</p>
+                    </div>
+                    <form method="post" class="block_phone-callback form">
+                        <div class="input-group-phone">
+                            <span>+38</span>
+                            <input type="text" name="phone" placeholder="(000) 000-00-00" required>
+                        </div>
+                        <button type="submit" class="links-btn">Перезвоните мне</button>
+                    </form>
+                </div>
+
+                <div class="block_card">
+                    <div class="block_card-top">
+                    <span class="icon icon-basket">
+                        <img src="img/basket.png" class="img-responsive" alt="">
+                     </span>
+                        <div class="block_card-text">
+                            <a href="#">КОРЗИНА</a>
+                            <div class="goods">Товаров: <span>0</span></div>
+                            <div class="amount">На сумму: <span>0</span></div>
+                        </div>
+                    </div>
+                    <a href="#" class="links-btn">Оформить заказ</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header_bottom">
+
+            <div class="container">
+                <div class="header_bottom-wrapper">
+                    <div id="mobile_menu">
+                        <a href="#menu" class="mobile_mnu"><img src="img/burger.png" class="img-responsive" alt=""></a>
+                    </div>
+
+                    <nav id="menu">
+                        <div class="mobile-header"><span>Каталог товаров</span></div>
+                        <ul class="drop-menu1">
+                            <li><a href="#">Запчасти для ТО</a></li>
+                            <li class="links-drop"><a href="#">Тормозная система</a>
+
+                                <div class="drop-menu2">
+
+                                    <div class="menu">
+                                        <h3>Тормозные элементы</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозные колодки</a></li>
+                                            <li><a href="#">Тормозной диск</a></li>
+                                            <li><a href="#">Тормозной барабан</a></li>
+                                            <li><a href="#">Ремкомплекты тормозной системы</a></li>
+                                            <li><a href="#">Трос ручника</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="menu">
+                                        <h3>Электронные компоненты</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозные колодки</a></li>
+                                            <li><a href="#">Тормозной диск</a></li>
+                                            <li><a href="#">Тормозной барабан</a></li>
+                                            <li><a href="#">Ремкомплекты тормозной системы</a></li>
+                                            <li><a href="#">Трос ручника</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="menu">
+                                        <h3>Гидравлика тормозной системы</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозной суппорт</a></li>
+                                            <li><a href="#">Колесный тормозной цилиндр</a></li>
+                                            <li><a href="#">Главный тормозной цилиндр</a></li>
+                                            <li><a href="#">Вакуумный усилитель</a></li>
+                                            <li><a href="#">Распределитель тормозных усилий</a></li>
+                                            <li><a href="#">Тормозные шланги и трубки</a></li>
+                                            <li><a href="#">Прочие элементы тормозной системы</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li><a href="#">Двигатель и система выпуска</a></li>
+                            <li><a href="#">Подвеска и рулевое управление</a></li>
+                            <li><a href="#">Коробка передач</a></li>
+                            <li><a href="#">Электрооборудование</a></li>
+                            <li><a href="#">Кузов</a></li>
+                            <li><a href="#">Масла и автохимия</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="catalog_menu">
+                        <div class="menu-title"><span>Каталог товаров</span></div>
+                        <ul class="drop-menu1">
+                            <li><a href="#">Запчасти для ТО</a></li>
+                            <li class="links-drop"><a href="#">Тормозная система <img src="img/arrow-accent-right.png"
+                                                                                      class="img-responsive" alt=""></a>
+
+                                <div class="drop-menu2">
+
+                                    <div class="menu">
+                                        <h3>Тормозные элементы</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозные колодки</a></li>
+                                            <li><a href="#">Тормозной диск</a></li>
+                                            <li><a href="#">Тормозной барабан</a></li>
+                                            <li><a href="#">Ремкомплекты тормозной системы</a></li>
+                                            <li><a href="#">Трос ручника</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="menu">
+                                        <h3>Электронные компоненты</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозные колодки</a></li>
+                                            <li><a href="#">Тормозной диск</a></li>
+                                            <li><a href="#">Тормозной барабан</a></li>
+                                            <li><a href="#">Ремкомплекты тормозной системы</a></li>
+                                            <li><a href="#">Трос ручника</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="menu">
+                                        <h3>Гидравлика тормозной системы</h3>
+                                        <ul>
+                                            <li><a href="#">Тормозной суппорт</a></li>
+                                            <li><a href="#">Колесный тормозной цилиндр</a></li>
+                                            <li><a href="#">Главный тормозной цилиндр</a></li>
+                                            <li><a href="#">Вакуумный усилитель</a></li>
+                                            <li><a href="#">Распределитель тормозных усилий</a></li>
+                                            <li><a href="#">Тормозные шланги и трубки</a></li>
+                                            <li><a href="#">Прочие элементы тормозной системы</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li><a href="#">Двигатель и система выпуска</a></li>
+                            <li><a href="#">Подвеска и рулевое управление</a></li>
+                            <li><a href="#">Коробка передач</a></li>
+                            <li><a href="#">Электрооборудование</a></li>
+                            <li><a href="#">Кузов</a></li>
+                            <li><a href="#">Масла и автохимия</a></li>
+                        </ul>
+                    </nav>
+
+                    <a href="vin-request.html" class="vin"><p>VIN</p> <span>запрос</span> </a>
+
+                    <div class="block_search">
+                        <form method="post" class="search">
+                            <input type="text" name="search" placeholder="Поиск по названию, номеру запчасти, артикулку"
+                                   required>
+                            <button type="submit" class="btn">найти</button>
+                        </form>
+
+                        <a href="#" class="links-search">Вы искали</a>
+                    </div>
+
+                    <ul class="menu-mobile">
+                        <li class="search-mobile">
+                        <span class="icon">
+                            <img src="img/search-mobile.png" class="img-responsive" alt="">
+                        </span>
+                            <div class="block_search">
+                                <form method="post" class="search">
+                                    <input type="text" name="search"
+                                           placeholder="Поиск"
+                                           required>
+                                    <button type="submit" class="btn">найти</button>
+                                </form>
+
+                            </div>
+                        </li>
+                        <li><a href="#modal_authorization" class="open_modal"><img src="img/user-mobile.png"
+                                                                                   class="img-responsive" alt=""></a>
+                        </li>
+                        <li class="basket-mobile">
+                            <a href="#basket_modal" class="open_modal">
+                                <img src="img/basket.png" class="img-responsive" alt="">
+                                <span class="value-basket">2</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content" id="my-content">
+
+        <section class="cabinet cabinet_profile">
+
+            <ul class="breadcrumb wrap">
+                <li><a href="#">Мой кабинет</a></li>
+            </ul>
+
+            <div class="s-title wrap">
+                <h1>Мой кабинет</h1>
+            </div>
+
+            <div class="cabinet_wrapper">
+                <div class="wrap">
+                    <div class="sidebar">
+                        <div id="cabinet_menu-mobile">
+                            Меню:  <span>Личный кабинет</span>
+                        </div>
+                        <nav class="cabinet_menu">
+                            <ul>
+                                <li><a href="cabinet-dashbord.html">Личный кабинет</a></li>
+                                <li><a href="cabinet-profile.html">Профиль</a></li>
+                                <li><a href="cabinet-orders.html">Заказы</a></li>
+                                <li><a href="cabinet-vin.html">vin запросы</a></li>
+                                <li><a href="cabinet-garage.html">Мой гараж</a></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <div class="catalog_content">
+                        <div class="message_result">
+                            <span class="icon"><img src="img/check-green.png" class="img-responsive" alt=""></span>
+                            Ваши данные обновлены
+                        </div>
+
+                        <div class="subtitle">
+                            <span class="icon"><img src="img/user.png" class="img-responsive" alt=""></span>
+                            <h2>Контактные данные</h2>
+                        </div>
+
+                        <form action="" method="POST" class="form">
+                            <div class="input-group">
+                                <label>Ваше имя:</label>
+                                <input type="text" name="name" placeholder="Александр" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Фамилия:</label>
+                                <input type="text" name="surname" placeholder="Корженовский" required>
+                            </div>
+                            <div class="input-group phone-wrap">
+                                <label>Логин (Моб. телефон):</label>
+                                <div class="input-group-phone">
+                                    <span>+38</span>
+                                    <input type="text" name="phone" placeholder="(000) 000-00-00" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>E-mail:</label>
+                                <input type="text" name="mail" placeholder="Alex@info.com" required>
+                            </div>
+
+                            <div class="input-group inp-pass">
+                                <label>Пароль: <span>(минимум 6 символов)</span></label>
+                                <input type="password" name="pass" placeholder="······" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="checkbox">
+                                    <input class="checkbox-inp" type="checkbox" name="checkbox">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">Изменить пароль</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-save">Сохранить</button>
+                        </form>
+
+                        <div class="subtitle">
+                            <span class="icon"><img src="img/delivery.png" class="img-responsive" alt=""></span>
+                            <h2>Информация о доставке</h2>
+                        </div>
+
+                        <form action="" method="post" class="form_delivery form">
+
+                            <div class="input-group">
+                                <label class="radio">
+                                    <input type="radio" class="radio-inp"/>
+                                    <span class="radio-custom"></span>
+                                    <span class="label">До отделения службой Новая почта</span>
+                                    <span class="description">По тарифам Новой Почты</span>
+                                </label>
+                                <div class="radio-hidden">
+                                    <div class="select-block select-region">
+                                        <p>Область</p>
+                                        <select class="sort-dropdown select">
+                                            <option value="Выберите область">Выберите область</option>
+                                            <option value="Киевская">Киевская</option>
+                                            <option value="Житомирская">Житомирская</option>
+                                            <option value="Харьковская">Харьковская</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="select-block select-city">
+                                        <p>Город</p>
+                                        <select class="sort-dropdown select">
+                                            <option value="Выберите город">Выберите город</option>
+                                            <option value="Киев">Киев</option>
+                                            <option value="Житомир">Житомир</option>
+                                            <option value="Харьков">Харьков</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="select-block select-separation">
+                                        <p>Отделение</p>
+                                        <select class="sort-dropdown select">
+                                            <option value="Выбрать отделение">Выбрать отделение</option>
+                                            <option value="Киев">Киев</option>
+                                            <option value="Житомир">Житомир</option>
+                                            <option value="Харьков">Харьков</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="radio">
+                                    <input type="radio" class="radio-inp"/>
+                                    <span class="radio-custom"></span>
+                                    <span class="label">До отделения службой Укрпочта</span>
+                                    <span class="description">По тарифам Укрпочты</span>
+                                </label>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="radio">
+                                    <input type="radio" class="radio-inp"/>
+                                    <span class="radio-custom"></span>
+                                    <span class="label">Самовывоз из офиса г. Запорожье</span>
+                                    <span class="description">Бесплатно. Запорожье, ул Алишера Навои 74</span>
+                                </label>
+                            </div>
+
+                            <div class="input-group">
+                                <label class="radio">
+                                    <input type="radio" class="radio-inp"/>
+                                    <span class="radio-custom"></span>
+                                    <span class="label"> Доставка курьером по г. Запорожье</span>
+                                    <span class="description">Домой/ в офис 40 грн</span>
+                                </label>
+
+                                <div class="radio-hidden radio-hidden-form">
+                                    <div class="input-group">
+                                        <label>Улица</label>
+                                        <input type="text" name="street" required>
+                                    </div>
+
+                                    <div class="input-group-wrapper">
+                                        <div class="input-group">
+                                            <label>Дом</label>
+                                            <input type="text" name="house" required>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <label>Кв / офис</label>
+                                            <input type="text" name="office" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-save">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+    <footer id="my-footer">
+        <div class="container">
+
+            <div class="footer-item">
+                <h3>График работы</h3>
+                <ul>
+                    <li><span>Пн-Пт</span> 8:00 - 19:00</li>
+                    <li><span>Сб</span> 8:00-17:00</li>
+                </ul>
+
+                <a href="index.html" class="logo">
+                    <img src="img/logo-footer.png" class="img-responsive" alt="">
+                    <p>AutoZapas 2018</p>
+                </a>
+            </div>
+
+
+            <div class="footer-item">
+                <h3>Контактная информация</h3>
+                <ul>
+                    <li><a href="tel:+380932139413">(093) 213- 94-13</a></li>
+                    <li><a href="tel:+380662139413">(066) 213- 94-13</a></li>
+                    <li><a href="tel:+380682139413">(068) 213- 94-13</a></li>
+
+                    <li class="mail"><a href="mailto:info@AutoZapas.com">info@AutoZapas.com</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-item">
+                <h3>Интернет-магазин</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Гарантия и возврат</a></li>
+                    <li><a href="#">Оставить VIN запрос запчасти</a></li>
+                    <li><a href="index.html">На главную</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-item">
+                <div class="f-money">
+                    <p>Принимаем к оплате</p>
+                    <img src="img/visa.png" class="img-responsive" alt="">
+                </div>
+                <div class="f-soc">
+                    <p>Мы в социальных сетях</p>
+                    <ul>
+                        <li><a href="#"><img src="img/fb.png" class="img-responsive" alt=""></a></li>
+                        <li><a href="#"><img src="img/inst.png" class="img-responsive" alt=""></a></li>
+                        <li><a href="#"><img src="img/telegram.png" class="img-responsive" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="modal_div" id="basket_modal">
+        <div class="modal_div-wrapper">
+            <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+            <div class="modal_top">
+                <h3>Товар добавлен в корзину</h3>
+                <p class="time">срок действия корзины 24 часа</p>
+
+                <form action="" method="post" class="form_basket">
+
+                    <div class="form_top form_item">
+                        <a href="#" class="image">
+                            <img src="img/prod2.png" class="img-responsive" alt="">
+                        </a>
+
+                        <div class="item_title">
+                            <a href="#">BSG BSG 070-140-001</a>
+                            <p>Маслянный фильтр</p>
+                            <ul>
+                                <li><span>Артикул:</span> 241477</li>
+                            </ul>
+                            <a href="#" class="btn-delete"><span class="close">x</span> Удалить из корзины</a>
+                        </div>
+
+                        <div class="b_date-delivery block_line">
+                            <span>Доставка</span>
+                            <p>2 дн.</p>
+                        </div>
+
+                        <div class="b_price block_line">
+                            <span>Цена:</span>
+                            <p>1 280 грн</p>
+                        </div>
+
+                        <div class="b_quantity">
+                            <a href="#" class="minus"></a>
+                            <input type="text" name="inp-quantity" value="1">
+                            <a href="#" class="plus"></a>
+                        </div>
+
+                        <div class="b_amount block_line">
+                            <span>Сумма:</span>
+                            <p>1 280 грн</p>
+                        </div>
+                    </div>
+
+                    <div class="form_bonus form_item">
+                        <a href="#" class="btn-delete"><span class="close">x</span>Очистить корзину</a>
+                        <div class="b_bonus">
+                            <p>Кол-во бонусов:</p>
+                            <span>232 грн.</span>
+                            <a href="#" class="links-btn">Списать</a>
+                        </div>
+                    </div>
+
+                    <div class="form_bottom form_item">
+                        <div class="b_bonus">
+                            <p>Итого:</p> <span>1280 грн</span>
+                        </div>
+                        <a href="#" class="btn-continue-shopping links-btn">Продолжить покупки</a>
+
+                        <div class="block_phone-callback">
+                            <div class="input-group-phone">
+                                <span>+38</span>
+                                <input type="text" name="phone" placeholder="(000) 000-00-00" required="">
+                            </div>
+                            <a class="links-btn">Купить в 1 клик</a>
+                        </div>
+
+                        <button type="submit" class="btn">Оформить заказ</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="modal_bottom">
+                <h3>Вам может пригодиться</h3>
+                <div class="catalog_item catalog_item-list">
+                    <span class="sale">-10%</span>
+                    <a href="#" class="image">
+                        <img src="img/logo-min.png" class="img-responsive" alt=""></a>
+                    <div class="item_title">
+                        <a href="#">BSG BSG 070-140-001</a>
+                        <p>Маслянный фильтр</p>
+                        <ul>
+                            <li><span>Артикул:</span> 241477</li>
+                        </ul>
+                    </div>
+                    <div class="line_group">
+                        <div class="availability under_order">
+                            <span></span>
+                            Под заказ <br>
+                            без возврата
+                        </div>
+                        <div class="delivery">
+                            <span class="icon"><img src="img/delivery.png" class="img-responsive" alt=""></span>
+                            2 дн.
+                        </div>
+                    </div>
+
+                    <div class="line_group line_price">
+                        <div class="price">
+                            <div class="old-price">350</div>
+                            <div class="new-price">280 грн</div>
+                        </div>
+                        <a href="#" class="btn">Купить</a>
+                    </div>
+                </div>
+
+                <div class="catalog_item catalog_item-list">
+                    <a href="#" class="image"><img src="img/prod2.png" class="img-responsive" alt=""></a>
+                    <div class="item_title">
+                        <a href="#">BSG BSG 070-140-001</a>
+                        <p>Маслянный фильтр</p>
+                        <ul>
+                            <li><span>Артикул:</span> 241477</li>
+                        </ul>
+                    </div>
+                    <div class="line_group">
+                        <div class="availability">
+                            <span></span>
+                            В наличии &gt; <p>10 шт</p>
+                        </div>
+                        <div class="delivery">
+                            <span class="icon"><img src="img/delivery.png" class="img-responsive" alt=""></span>
+                            2 дн.
+                        </div>
+                    </div>
+
+                    <div class="line_group line_price">
+                        <div class="price">1 280 грн</div>
+                        <a href="#" class="btn">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal_div" id="modal_authorization">
+        <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+        <h3>Авторизация</h3>
+
+        <form action="" method="POST" class="form">
+            <div class="input-group phone-wrap">
+                <label>Логин (Моб. телефон):</label>
+                <div class="input-group-phone">
+                    <span>+38</span>
+                    <input type="text" name="phone" placeholder="(000) 000-00-00" required>
+                </div>
+            </div>
+
+            <div class="input-group inp-pass">
+                <label>Ваш пароль <span class="links-search">Забыли пароль?</span></label>
+                <input type="password" name="pass" required>
+            </div>
+
+            <div class="input-group inp-btn">
+                <label class="checkbox">
+                    <input class="checkbox-inp" type="checkbox" name="checkbox">
+                    <span class="checkbox-custom"></span>
+                    <span class="label">Запомнить меня</span>
+                </label>
+                <button type="submit" class="btn">Войти</button>
+            </div>
+
+            <p>Вы можете зарегестрироватсья на AutoZapas
+                c помощью учетных записей социальных сетей
+            </p>
+
+            <div class="button-group">
+                <a href="#" class="fb">
+                    <span class="image"><img src="img/fb.png" class="img-responsive" alt=""></span>
+                    <span class="text">Facebook</span>
+                </a>
+                <a href="#" class="google">
+                    <span class="image"><img src="img/g+.png" class="img-responsive" alt=""></span>
+                    <span class="text">google</span>
+                </a>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="overlay"></div><!-- Пoдлoжкa -->
+</div>
+<script src="js/scripts.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+
+</body>
+</html>

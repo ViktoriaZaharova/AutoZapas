@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>AutoZapas - интернет магазин запасных частей для вашего авто</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+<div id="my-page">
+    <header class="header" id="my-header">
+
+        <!--<div class="header_fixed">-->
+        <!--<div class="container">-->
+        <!--<a href="index.html" class="logo_fix"><img src="img/logo-fixed.png" class="img-responsive" alt=""></a>-->
+        <!--<div class="block_phone-top">-->
+        <!--<ul class="phone-code">-->
+        <!--<li>(066)</li>-->
+        <!--<li>(068)</li>-->
+        <!--<li>(093)</li>-->
+        <!--</ul>-->
+        <!--<p>213-94-13</p>-->
+        <!--</div>-->
+
+        <!--<ul class="list_menu-fix">-->
+
+        <!--<li><a href="#" class="btn-help">Помощь специалиста</a></li>-->
+        <!--<li>-->
+        <!--<a href="#modal_authorization" class="room open_modal">-->
+        <!--<span class="icon icon-entrance">-->
+        <!--<img src="img/entrance-orange.png" class="img-responsive" alt="">-->
+        <!--</span>-->
+        <!--<span class="text">Войти</span>-->
+        <!--</a>-->
+        <!--</li>-->
+
+        <!--<li>-->
+        <!--<div class="block_card">-->
+        <!--<div class="block_card-top">-->
+        <!--<span class="icon icon-basket">-->
+        <!--<img src="img/basket.png" class="img-responsive" alt="">-->
+        <!--</span>-->
+        <!--<a href="#basket_modal" class="block_card-text open_modal">-->
+        <!--<div class="goods"><span class="card_text">Товаров:</span> <span>0</span></div>-->
+        <!--<div class="amount"><span class="card_text">На сумму:</span> <span>0</span></div>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<a href="#basket_modal" class="links-btn open_modal">Оформить заказ</a>-->
+        <!--</div>-->
+        <!--</li>-->
+
+        <!--</ul>-->
+
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="header_top">
+            <div class="container">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">О нас </a></li>
+                        <li><a href="#">Статьи / Обзоры </a></li>
+                        <li><a href="#">Доставка / Оплата </a></li>
+                        <li><a href="#">Возврат / Гарантии </a></li>
+                        <li><a href="#">Помощь </a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="box-entrance">
+                    <a href="#modal_authorization" class="open_modal">
+                        <span class="icon icon-entrance">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6408 1.35885C12.8285 -0.452949 9.89019 -0.452949 8.07791 1.35885C6.62796 2.80841 6.3383 4.9785 7.20847 6.71621L0.00429126 13.9186L0 15.9954L4.02858 16V14.0411H5.98796V12.0823H7.94734V10.1234L9.28196 8.78917C11.0201 9.65915 13.1908 9.36953 14.6408 7.91997C16.4531 6.10817 16.4531 3.17064 14.6408 1.35885ZM13.1655 4.81762C12.6175 5.36546 11.7291 5.36546 11.1811 4.81762C10.633 4.26979 10.6331 3.38156 11.1811 2.8337C11.729 2.28583 12.6175 2.28586 13.1655 2.8337C13.7135 3.38156 13.7135 4.26979 13.1655 4.81762Z"
+                                  fill="#595959"/>
+                            </svg>
+                        </span>
+                        Вход /
+                    </a>
+                    <a href="registration.html">Регистрация</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_center">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" class="img-responsive" alt=""></a>
+
+                <ul class="block_phone">
+                    <li>
+                        <a href="tel:+380672570055" class="phone-links">
+                            <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            <span class="phone-code">+38 (067)</span>
+                            <span class="phone-number"> 257 00 55</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+380502510055" class="phone-links">
+                                <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            <span class="phone-code">+38 (050)</span>
+                            <span class="phone-number"> 251 00 55</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+380632510055" class="phone-links">
+                                <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            <span class="phone-code">+38 (063)</span>
+                            <span class="phone-number"> 251 00 55</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="box-schedule">
+                    <p>График работы:</p>
+                    <span>Пн-Пт с 9:00 до 18:00</span>
+                    <span>Сб с 10:00 до 15:00</span>
+                </div>
+
+                <a href="#" class="box-callback">
+                  <span class="icon">
+                      <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.8875 24.5823C30.6511 25.1403 29.5684 27.3878 27.1119 28.4126C25.1942 29.2122 22.9863 29.0721 20.542 28.0068C18.4934 29.1817 16.9247 28.6998 16.9247 28.6998C10.7717 24.2434 6.73945 13.2068 6.73945 13.2068C5.67913 9.59968 8.54353 7.90215 8.54353 7.90215C12.1507 5.78048 13.212 6.7363 13.212 6.7363C14.0603 7.05287 14.803 11.0862 14.803 11.0862C14.4854 12.5716 11.7265 13.2078 11.7265 13.2078C12.9999 16.9215 17.6684 22.6513 17.6684 22.6513C17.8805 21.9116 19.579 20.8503 19.579 20.8503C20.6394 20.2141 23.6103 23.9258 23.6103 23.9258C24.4555 24.5396 23.5778 25.4883 23.0279 25.9663C24.1735 26.2615 25.1861 26.2301 26.0506 25.8678C27.6862 25.1839 28.3447 23.5179 28.3529 23.4986L28.3914 23.3931L28.4482 23.2946C29.7795 20.9629 30.3903 18.3096 30.2168 15.6187C29.9834 11.9557 28.3356 8.60328 25.5788 6.18026C22.8229 3.75521 19.2889 2.5508 15.6249 2.78518C11.9599 3.01957 8.60847 4.66739 6.18443 7.42322C3.76039 10.1791 2.55497 13.7142 2.79037 17.3791C3.02476 21.0401 4.67156 24.3935 7.42841 26.8176C10.1842 29.2416 13.7173 30.446 17.3833 30.2116C18.1433 30.1589 18.7998 30.7403 18.8465 31.5013C18.8952 32.2623 18.3178 32.9177 17.5568 32.9644C17.1976 32.9877 16.8374 32.9999 16.4782 32.9999C12.4693 32.9999 8.64398 31.5611 5.60607 28.8895C2.29521 25.9805 0.316615 21.9553 0.0345378 17.5577C-0.24754 13.1601 1.19938 8.91276 4.11045 5.60596C7.02052 2.29713 11.0457 0.319544 15.4433 0.0374669C19.8398 -0.24461 24.0862 1.2023 27.395 4.1144C30.7059 7.02446 32.6824 11.0496 32.9645 15.4472C33.1735 18.6424 32.4541 21.801 30.8875 24.5823ZM24.6615 21.1395C24.8249 21.2024 24.9943 21.2328 25.1597 21.2328C25.7127 21.2328 26.2342 20.898 26.4463 20.3511C27.4762 17.6947 27.4092 14.7958 26.2586 12.1911C25.108 9.58548 23.0127 7.58354 20.3563 6.55366C19.647 6.27868 18.8475 6.63077 18.5715 7.34104C18.2965 8.0513 18.6486 8.84985 19.3578 9.12482C23.4216 10.7016 25.4469 15.2879 23.8721 19.3527C23.5981 20.065 23.9502 20.8635 24.6615 21.1395ZM17.1712 10.9543C16.8963 11.6635 17.2484 12.4631 17.9586 12.7391C20.0316 13.5427 21.0655 15.8825 20.2619 17.9555C19.9869 18.6657 20.339 19.4643 21.0483 19.7392C21.2127 19.8032 21.3811 19.8356 21.5465 19.8356C22.0995 19.8356 22.623 19.5008 22.8341 18.9539C24.1866 15.4624 22.4465 11.5204 18.956 10.1679C18.2458 9.89089 17.4472 10.243 17.1712 10.9543Z"
+                              fill="#FFA734"/>
+                        </svg>
+                  </span>
+                    Перезвоните мне
+                </a>
+
+                <div class="block_card">
+                    <a href="#basket_modal" class="icon-basket open_modal">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8306 4.42779C15.9718 4.60431 16.0247 4.81612 15.9894 5.06324L15.3187 8.91124C15.2951 9.11135 15.2039 9.27603 15.0451 9.40548C14.8862 9.53492 14.7068 9.59964 14.5067 9.59964H4.72792L4.53376 10.694H13.8537C14.0772 10.694 14.2713 10.7734 14.4361 10.9323C14.6009 11.0912 14.6832 11.2883 14.6832 11.5236C14.6832 11.759 14.6009 11.9561 14.4361 12.1149C14.2713 12.2738 14.0772 12.3532 13.8537 12.3532H3.54529C3.29817 12.3532 3.08636 12.2532 2.90984 12.0533C2.7451 11.8531 2.68038 11.6237 2.71568 11.3649L3.15696 8.96428L2.48621 2.22144L0.579877 1.6213C0.356294 1.5507 0.194491 1.41534 0.0944669 1.21532C-0.00555687 1.01525 -0.02615 0.803459 0.0326875 0.579876C0.103293 0.356294 0.241561 0.194491 0.447492 0.0944669C0.653423 -0.00555687 0.862297 -0.02615 1.07411 0.0326875L3.50999 0.809343C3.66296 0.856413 3.78946 0.944669 3.88949 1.07411C3.98951 1.20355 4.05129 1.35068 4.07483 1.51542L4.21604 2.85692L15.2657 4.09251C15.5128 4.12772 15.7011 4.23951 15.8306 4.42779ZM4.79856 12.8122C5.15158 12.8122 5.45165 12.9357 5.69877 13.1829C5.94589 13.4299 6.06945 13.7301 6.06945 14.0831C6.06945 14.4361 5.94589 14.7392 5.69877 14.9922C5.45165 15.2452 5.15158 15.3717 4.79856 15.3717C4.44553 15.3717 4.14546 15.2452 3.89834 14.9922C3.65122 14.7392 3.52767 14.4361 3.52767 14.0831C3.52767 13.7301 3.65122 13.43 3.89834 13.1829C4.14543 12.9357 4.4455 12.8122 4.79856 12.8122ZM12.3356 12.8122C12.6886 12.8122 12.9887 12.9357 13.2359 13.1829C13.4829 13.4299 13.6065 13.7301 13.6065 14.0831C13.6065 14.4361 13.4829 14.7392 13.2359 14.9922C12.9887 15.2452 12.6886 15.3717 12.3356 15.3717C11.9826 15.3717 11.6825 15.2452 11.4354 14.9922C11.1883 14.7392 11.0647 14.4361 11.0647 14.0831C11.0647 13.7301 11.1883 13.43 11.4354 13.1829C11.6825 12.9357 11.9826 12.8122 12.3356 12.8122Z"
+                                  fill="white"/>
+                        </svg>
+
+                        <span class="quantity-goods text-red">95</span>
+                    </a>
+
+                    <ul class="block_card-text">
+                        <li>
+                            <p>Товаров</p>
+                            <a href="#basket_modal" class="open_modal btn-position">5 позиций</a>
+                        </li>
+                        <li>
+                            <p>На сумму</p>
+                            <span>3849 грн.</span>
+                        </li>
+
+                        <li>
+                            <p>Корзина:</p>
+                            <div class="text-accent">1</div>
+                            <div class="total">2</div>
+                            <div class="total-plus">+</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="header_bottom">
+
+            <div class="container">
+                <div id="mobile_menu">
+                    <a href="#menu" class="mobile_mnu">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M26.6 8.42102H1.4C0.6272 8.42102 0 9.12839 0 9.99998C0 10.8716 0.6272 11.5789 1.4 11.5789H26.6C27.3728 11.5789 28 10.8716 28 9.99998C28 9.12839 27.3728 8.42102 26.6 8.42102ZM26.6 16.842H1.4C0.6272 16.842 0 17.5494 0 18.421C0 19.2926 0.6272 19.9999 1.4 19.9999H26.6C27.3728 19.9999 28 19.2926 28 18.421C28 17.5494 27.3728 16.842 26.6 16.842ZM1.4 3.15788H26.6C27.3728 3.15788 28 2.45051 28 1.57894C28 0.707365 27.3728 0 26.6 0H1.4C0.6272 0 0 0.707365 0 1.57894C0 2.45051 0.6272 3.15788 1.4 3.15788Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav id="menu">
+                    <div class="mobile-header"><span>Каталог</span></div>
+                    <ul class="drop-menu1">
+                        <li><a href="#">Масло моторное</a></li>
+                        <li class="links-drop"><a href="#">Фильтры</a></li>
+                        <li class="links-drop"><a href="#">Тормозная система</a></li>
+                        <li class="links-drop"><a href="#">Амортизация</a></li>
+                        <li class="links-drop"><a href="#">Ходовая часть, подвеска</a></li>
+                        <li class="links-drop"><a href="#">Рулевое управление</a></li>
+                        <li class="links-drop"><a href="#">Детали двигателя</a></li>
+                        <li class="links-drop"><a href="#">Прокладки двигателя</a></li>
+                        <li class="links-drop"><a href="#">Ремни, цепи, натяжители</a></li>
+                        <li class="links-drop"><a href="#">Подача воздуха, турбокомпессор</a></li>
+                        <li class="links-drop"><a href="#">Система смазки</a>
+                            <div class="drop-menu2">
+                                <ul class="submenu">
+                                    <li><a href="#">Тормозные колодки</a></li>
+                                    <li><a href="#">Тормозной диск</a></li>
+                                    <li><a href="#">Тормозной барабан</a></li>
+                                    <li><a href="#">Ремкомплекты тормозной системы</a></li>
+                                    <li><a href="#">Трос ручника</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="links-drop"><a href="#">Топливная система</a></li>
+                        <li class="links-drop"><a href="#">Коробка передач</a></li>
+                        <li class="links-drop"><a href="#">Сцепление</a></li>
+                        <li class="links-drop"><a href="#">Трансмиссия</a></li>
+                        <li class="links-drop"><a href="#">Система охлаждени двигателя</a></li>
+                        <li class="links-drop"><a href="#">Отопление и кондиционирование</a></li>
+                        <li class="links-drop"><a href="#">Электрооборудование</a></li>
+                        <li class="links-drop"><a href="#">Система зажигания</a></li>
+                        <li class="links-drop"><a href="#">Датчики</a></li>
+                        <li class="links-drop"><a href="#">Приборы, органы управления</a></li>
+                        <li class="links-drop"><a href="#">Кузовные детали</a></li>
+                        <li class="links-drop"><a href="#">Фары и фонари</a></li>
+                        <li class="links-drop"><a href="#">Система очистки окон</a></li>
+                        <li class="links-drop"><a href="#">Автолампы</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="catalog_menu">
+                    <div class="menu-title">
+                            <span class="icon icon-burger">
+                                <svg width="28" height="20" viewBox="0 0 28 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M26.6 8.42102H1.4C0.6272 8.42102 0 9.12839 0 9.99998C0 10.8716 0.6272 11.5789 1.4 11.5789H26.6C27.3728 11.5789 28 10.8716 28 9.99998C28 9.12839 27.3728 8.42102 26.6 8.42102ZM26.6 16.842H1.4C0.6272 16.842 0 17.5494 0 18.421C0 19.2926 0.6272 19.9999 1.4 19.9999H26.6C27.3728 19.9999 28 19.2926 28 18.421C28 17.5494 27.3728 16.842 26.6 16.842ZM1.4 3.15788H26.6C27.3728 3.15788 28 2.45051 28 1.57894C28 0.707365 27.3728 0 26.6 0H1.4C0.6272 0 0 0.707365 0 1.57894C0 2.45051 0.6272 3.15788 1.4 3.15788Z"
+                                      fill="white"/>
+                                </svg>
+                            </span>
+                        <p>Каталог</p>
+                    </div>
+                    <ul class="drop-menu1">
+                        <li><a href="#">Масло моторное</a></li>
+                        <li class="links-drop"><a href="#">Фильтры
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Тормозная система
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Амортизация
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Ходовая часть, подвеска
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Рулевое управление
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Детали двигателя
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Прокладки двигателя
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Ремни, цепи, натяжители
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Подача воздуха, турбокомпессор
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Система смазки
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a>
+                            <div class="drop-menu2">
+                                <ul class="submenu">
+                                    <li><a href="#">Комплект прокладок двигателя</a></li>
+                                    <li><a href="#">Прокладка ГБЦ</a></li>
+                                    <li><a href="#">Прокладка клапанной крышки</a></li>
+                                    <li><a href="#">Коврики, комплект прокладок
+                                                    двигателя</a></li>
+                                    <li><a href="#">Подлокотник</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="links-drop"><a href="#">Топливная система
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Коробка передач
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Сцепление
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Трансмиссия
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Система охлаждени двигателя
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Отопление и кондиционирование
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Электрооборудование
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Система зажигания
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Датчики
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Приборы, органы управления
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Кузовные детали
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Фары и фонари
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Система очистки окон
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                        <li class="links-drop"><a href="#">Автолампы
+                            <span class="icon">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59947 28L0.78125 26.1252L13.2261 13.9995L0.78125 1.87711L2.59894 0L16.9688 13.9995L2.59947 28Z"
+      fill="white"/>
+</svg>
+
+                        </span>
+                        </a></li>
+                    </ul>
+                </nav>
+
+                <div class="block_search">
+                    <form method="post" class="search">
+                        <input type="text" name="search" placeholder="Введите значение..." required>
+                        <button type="submit" class="btn-search">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 14.8385L11.6644 10.4827C12.4978 9.38475 12.9943 8.01495 12.9943 6.53046C12.9943 2.93224 10.0798 0.00341797 6.49703 0.00341797C2.91431 0.00341797 0 2.93224 0 6.53046C0 10.1301 2.91451 13.0591 6.49703 13.0591C8.0161 13.0591 9.41353 12.5314 10.5212 11.6503L14.8476 15.9965L16 14.8385ZM6.49703 11.5897C3.72105 11.5897 1.46222 9.32016 1.46222 6.53046C1.46222 3.74255 3.72105 1.473 6.49703 1.473C9.27321 1.473 11.532 3.74255 11.532 6.53046C11.5318 9.32035 9.27321 11.5897 6.49703 11.5897Z"
+                                      fill="#595959"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!--<ul class="menu-mobile">-->
+                    <!--<li class="search-mobile">-->
+                    <!--<span class="icon">-->
+                    <!--<img src="img/search-mobile.png" class="img-responsive" alt="">-->
+                    <!--</span>-->
+                    <!--<div class="block_search">-->
+                    <!--<form method="post" class="search">-->
+                    <!--<input type="text" name="search" placeholder="Поиск" required>-->
+                    <!--<button type="submit" class="btn">найти</button>-->
+                    <!--</form>-->
+
+                    <!--</div>-->
+                    <!--</li>-->
+                    <!--<li><a href="#modal_authorization" class="open_modal"><img src="img/user-mobile.png"-->
+                    <!--class="img-responsive" alt=""></a>-->
+                    <!--</li>-->
+                    <!--<li class="basket-mobile">-->
+                    <!--<a href="#basket_modal" class="open_modal">-->
+                    <!--<img src="img/basket.png" class="img-responsive" alt="">-->
+                    <!--<span class="value-basket">2</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+
+                </div>
+
+                <div class="box-right">
+                    <a href="#" class="links-search">Вы искали</a>
+                    <a href="vin-request.html" class="links-search">VIN запрос</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content" id="my-content">
+
+        <section class="page-content page-text-content section page-404">
+            <div class="container">
+
+                <div class="page-text-content__wrapper">
+                    <h1 class="title">Ошибка 404</h1>
+
+                    <p>Страница, на которую вы хотите перейти, не существует.</p>
+
+                    <div class="item">
+                        <p>Вы можете перейти:</p>
+                        <a href="index.html" class="links-accent">На главную страницу</a>
+                        <a href="index.html" class="links-accent">На страницу с нашими контактными данными</a>
+                    </div>
+
+                    <div class="item box-contacts">
+                        <div class="box">
+                            <p>Телефоны для связи:</p>
+                            <ul class="block_phone">
+                                <li>
+                                    <a href="tel:+380672570055" class="phone-links">
+                                        +38 (067) 257 00 55
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+380502510055" class="phone-links">
+                                        +38 (050) 251 00 55
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+380632510055" class="phone-links">
+                                        +38 (063) 251 00 55
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="box">
+                            <p>Электронная почта:</p>
+                            <a href="mailto:info@autozapas.com" class="mail links-accent">info@autozapas.com</a>
+                        </div>
+                    </div>
+
+                    <form method="post" class="form-contacts form">
+
+                        <p>Или оставьте свои данные, и наши специалисты свяжутся с Вами в ближайшее время.</p>
+                        <label class="input-group">
+                            <span>Ваше имя</span>
+                            <input type="text" name="name" required placeholder="Сергей">
+                        </label>
+
+                        <label class="input-group">
+                            <span>Телефон</span>
+                            <input type="text" name="phone" required placeholder="89512">
+                        </label>
+
+                        <button type="submit" class="btn">Жду звонка!</button>
+
+                    </form>
+
+                </div>
+
+
+                <div class="page-text-content__image">
+                    <div class="icon">
+                        <svg width="372" height="372" viewBox="0 0 372 372" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M226.106 255.458C226.106 254.167 225.653 252.875 224.75 251.584C217.516 242.927 211.705 235.5 207.311 229.304C210.024 224.009 212.091 219.1 213.508 214.583L243.54 209.933C244.706 209.801 245.74 209.125 246.643 207.901C247.546 206.669 247.994 205.412 247.994 204.12V168.274C247.994 166.855 247.546 165.595 246.643 164.499C245.74 163.403 244.641 162.722 243.349 162.468L213.897 158.011C212.474 153.618 210.28 148.32 207.309 142.123C209.244 139.279 212.154 135.403 216.03 130.497C219.904 125.588 222.621 122.102 224.167 120.035C225.073 118.743 225.523 117.515 225.523 116.354C225.523 112.866 216.222 102.533 197.627 85.3526C196.337 84.3211 194.98 83.8047 193.554 83.8047C192.008 83.8047 190.716 84.2519 189.678 85.1599L166.815 102.404C161.521 99.6919 156.677 97.6906 152.285 96.3951L147.828 66.753C147.701 65.4616 147.055 64.3297 145.892 63.362C144.729 62.3936 143.438 61.9084 142.015 61.9084H105.981C103.01 61.9084 101.073 63.4584 100.169 66.5576C98.6176 72.5003 97.1335 82.4482 95.7124 96.3951C90.1593 98.203 85.1864 100.27 80.795 102.595L58.5146 85.1592C57.2232 84.2533 55.8673 83.804 54.4456 83.804C51.9883 83.804 46.8871 87.6138 39.138 95.236C31.3875 102.856 26.0888 108.603 23.2495 112.479C22.3442 113.514 21.8943 114.805 21.8943 116.355C21.8943 117.516 22.3435 118.808 23.2495 120.229C30.4815 128.885 36.2932 136.312 40.6859 142.509C37.9742 147.808 35.9085 152.714 34.4888 157.234L4.45649 161.881C3.29266 162.01 2.26048 162.687 1.3552 163.912C0.45196 165.142 0 166.399 0 167.69V203.534C0 204.956 0.45196 206.214 1.3552 207.31C2.26048 208.411 3.35713 209.024 4.65126 209.152L34.1006 213.802C35.6506 218.708 37.9131 224.006 40.8834 229.689C38.8163 232.533 35.7822 236.474 31.7777 241.509C27.7705 246.549 25.1238 249.972 23.8331 251.779C22.9292 253.07 22.4765 254.301 22.4765 255.457C22.4765 258.95 31.7777 269.28 50.3773 286.461C51.6687 287.492 53.0232 288.005 54.4463 288.005C56.1252 288.005 57.4166 287.557 58.3198 286.651L81.1818 269.41C86.4758 272.123 91.3197 274.122 95.7131 275.414L100.17 305.059C100.297 306.35 100.945 307.483 102.106 308.449C103.268 309.418 104.56 309.901 105.981 309.901H142.016C144.988 309.901 146.924 308.352 147.829 305.252C149.379 299.179 150.863 289.17 152.286 275.219C157.45 273.675 162.423 271.666 167.203 269.216L189.484 286.651C190.775 287.557 192.131 288.005 193.553 288.005C196.008 288.005 201.08 284.164 208.764 276.475C216.446 268.795 221.777 263.01 224.749 259.136C225.653 258.235 226.106 257.009 226.106 255.458ZM159.066 220.976C149.381 230.66 137.69 235.504 124 235.504C110.306 235.504 98.6156 230.659 88.9303 220.976C79.2437 211.287 74.3997 199.596 74.3997 185.905C74.3997 172.215 79.2437 160.524 88.9303 150.837C98.6156 141.15 110.307 136.307 124 136.307C137.69 136.307 149.381 141.149 159.066 150.837C168.755 160.524 173.598 172.215 173.598 185.905C173.598 199.596 168.756 211.287 159.066 220.976Z"
+                                  fill="#E0E0E0"/>
+                            <path d="M343.129 265.537C341.452 261.793 339.512 258.435 337.319 255.462C343.907 240.864 347.198 231.951 347.198 228.723C347.198 228.212 346.945 227.757 346.424 227.369C330.92 218.329 322.915 213.807 322.398 213.807L321.237 214.197C315.941 219.495 309.997 226.726 303.412 235.897C300.83 235.64 298.895 235.507 297.604 235.507C296.308 235.507 294.373 235.64 291.789 235.897C289.987 233.182 286.624 228.821 281.717 222.818C276.81 216.815 273.837 213.808 272.804 213.808C272.546 213.808 270.609 214.841 266.99 216.912C263.375 218.98 259.564 221.171 255.56 223.501C251.552 225.831 249.297 227.117 248.779 227.377C248.259 227.762 248.003 228.218 248.003 228.729C248.003 231.962 251.296 240.868 257.883 255.468C255.691 258.441 253.751 261.798 252.072 265.54C232.825 267.474 223.201 269.479 223.201 271.545V298.668C223.201 300.736 232.825 302.737 252.072 304.674C253.619 308.163 255.558 311.521 257.883 314.744C251.296 329.343 248.003 338.256 248.003 341.483C248.003 341.999 248.259 342.454 248.779 342.84C264.534 352.011 272.546 356.595 272.804 356.595C273.836 356.595 276.809 353.56 281.717 347.489C286.624 341.417 289.982 337.029 291.789 334.317C294.371 334.57 296.308 334.7 297.604 334.7C298.894 334.7 300.83 334.57 303.412 334.317C305.216 337.029 308.577 341.417 313.484 347.489C318.391 353.56 321.361 356.595 322.398 356.595C322.656 356.595 330.668 352.009 346.424 342.84C346.945 342.454 347.198 342.002 347.198 341.483C347.198 338.255 343.903 329.342 337.319 314.744C339.643 311.521 341.58 308.163 343.129 304.674C362.376 302.737 372 300.736 372 298.668V271.545C372 269.478 362.376 267.474 343.129 265.537ZM315.13 302.638C310.293 307.483 304.446 309.91 297.599 309.91C290.75 309.91 284.905 307.483 280.065 302.638C275.221 297.794 272.796 291.951 272.796 285.105C272.796 278.391 275.253 272.574 280.162 267.669C285.069 262.762 290.883 260.307 297.598 260.307C304.313 260.307 310.13 262.759 315.039 267.669C319.944 272.574 322.401 278.391 322.401 285.105C322.397 291.951 319.977 297.794 315.13 302.638Z"
+                                  fill="#E0E0E0"/>
+                            <path d="M343.129 67.1365C341.452 63.3905 339.512 60.0327 337.319 57.0596C343.907 42.4659 347.198 33.553 347.198 30.3241C347.198 29.8097 346.945 29.3557 346.424 28.9675C330.92 19.9263 322.915 15.406 322.398 15.406L321.237 15.7928C315.941 21.0915 309.997 28.3228 303.412 37.493C300.83 37.2365 298.895 37.1062 297.604 37.1062C296.308 37.1062 294.373 37.2365 291.789 37.493C289.987 34.7806 286.624 30.4218 281.717 24.416C276.81 18.4089 273.837 15.4067 272.804 15.4067C272.546 15.4067 270.609 16.4389 266.99 18.5073C263.375 20.5764 259.564 22.7711 255.56 25.0967C251.552 27.423 249.297 28.7137 248.779 28.9702C248.259 29.3577 248.003 29.8097 248.003 30.3268C248.003 33.5557 251.296 42.4693 257.883 57.0637C255.691 60.0361 253.751 63.3932 252.072 67.1392C232.825 69.0753 223.201 71.0765 223.201 73.1436V100.269C223.201 102.334 232.825 104.338 252.072 106.273C253.619 109.759 255.558 113.119 257.883 116.349C251.296 130.946 248.003 139.855 248.003 143.085C248.003 143.599 248.259 144.053 248.779 144.441C264.534 153.611 272.546 158.196 272.804 158.196C273.836 158.196 276.809 155.162 281.717 149.091C286.624 143.019 289.982 138.63 291.789 135.916C294.371 136.172 296.308 136.303 297.604 136.303C298.894 136.303 300.83 136.172 303.412 135.916C305.216 138.63 308.577 143.018 313.484 149.091C318.391 155.162 321.361 158.196 322.398 158.196C322.656 158.196 330.668 153.611 346.424 144.441C346.945 144.053 347.198 143.601 347.198 143.085C347.198 139.855 343.903 130.946 337.319 116.349C339.643 113.119 341.58 109.761 343.129 106.273C362.376 104.337 372 102.334 372 100.269V73.1436C372 71.0765 362.376 69.0746 343.129 67.1365ZM315.13 104.239C310.293 109.084 304.446 111.506 297.599 111.506C290.75 111.506 284.905 109.084 280.065 104.239C275.221 99.3973 272.796 93.5517 272.796 86.7058C272.796 79.9895 275.253 74.1758 280.162 69.2673C285.069 64.3589 290.883 61.9043 297.598 61.9043C304.313 61.9043 310.13 64.3616 315.039 69.2673C319.944 74.1751 322.401 79.9895 322.401 86.7058C322.397 93.5517 319.977 99.3973 315.13 104.239Z"
+                                  fill="#E0E0E0"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer id="my-footer">
+        <div class="container">
+
+            <div class="footer-item">
+                <p class="copyright">AUTOZAPAS 2011-2019</p>
+
+                <ul class="block_phone">
+                    <li>
+                        <a href="tel:+380672570055" class="phone-links">
+                            <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            +38 (067) 257 00 55
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+380502510055" class="phone-links">
+                                <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            +38 (050) 251 00 55
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+380632510055" class="phone-links">
+                                <span class="icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.61312 0L7.33754 4.31428C7.14751 4.96168 5.00808 6.13341 5.00808 6.13341L9.32475 11.4236C9.32475 11.4236 10.8195 9.39606 11.4817 9.27386L15.3085 13.7067C14.852 15.0406 13.5883 16 12.0997 16C11.0323 16 10.0807 15.5065 9.45891 14.7356L9.44034 14.7666L1.92478 6.06082C1.92478 6.06082 0.691467 4.44668 0.691467 3.35839C0.691497 1.64492 1.96255 0.228969 3.61312 0Z"
+                                              fill="#595959"/>
+                                        </svg>
+                                </span>
+                            +38 (063) 251 00 55
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="mailto:info@autozapas.com" class="mail">info@autozapas.com</a>
+                <div class="box-address">
+                    <p>г.Киев, ул.Сосюры 68</p>
+                    <a href="#" class="links-accent">cмотреть карту проезда</a>
+                </div>
+            </div>
+
+
+            <div class="footer-item">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">О нас </a></li>
+                        <li><a href="#">Статьи / Обзоры </a></li>
+                        <li><a href="#">Доставка / Оплата </a></li>
+                        <li><a href="#">Возврат / Гарантии </a></li>
+                        <li><a href="#">Помощь </a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="footer-item">
+                <div class="footer-item__top">
+                    <nav class="footer-item__top-left menu">
+                        <ul>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Пользовательское соглашение</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-item__top-right">
+                        <ul class="f-money">
+                            <li><a href="#"><img src="img/mastercard.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/visa.png" alt=""></a></li>
+                        </ul>
+                        <ul class="f-soc">
+                            <li><a href="#"><img src="img/vk.png" class="img-responsive" alt=""></a></li>
+                            <li><a href="#"><img src="img/fb.png" class="img-responsive" alt=""></a></li>
+                            <li><a href="#"><img src="img/twitter.png" class="img-responsive" alt=""></a></li>
+                            <li><a href="#"><img src="img/inst.png" class="img-responsive" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-item__bottom">
+                    <p>Киев, Харьков, Днепр, Одесса, Львів, Запорожье, Винница, Житомир, Ивано-Франковск, Кропивницкий,
+                       Луцк, Николаев, Полтава, Ровно, Сумы, Тернополь, Ужгород, Херсон, Хмельницкий, Черкассы,
+                       Чернигов, Черновцы, Мариуполь, Каменское, Кременчуг, Белая Церковь, Краматорск, Мелитополь,
+                       Никополь, Славянск, Бердянск, Павлоград, Северодонецк, Лисичанск, Каменец-Подольский</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="modal_div" id="basket_modal">
+        <div class="modal_div-wrapper">
+            <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+            <div class="modal_top">
+                <h3>Товар добавлен в корзину</h3>
+                <p class="time">срок действия корзины 24 часа</p>
+
+                <form action="" method="post" class="form_basket">
+
+                    <div class="form_top form_item">
+                        <a href="#" class="image">
+                            <img src="img/prod2.png" class="img-responsive" alt="">
+                        </a>
+
+                        <div class="item_title">
+                            <a href="#">BSG BSG 070-140-001</a>
+                            <p>Маслянный фильтр</p>
+                            <ul>
+                                <li><span>Артикул:</span> 241477</li>
+                            </ul>
+                            <a href="#" class="btn-delete"><span class="close">x</span> Удалить из корзины</a>
+                        </div>
+
+                        <div class="b_date-delivery block_line">
+                            <span>Доставка</span>
+                            <p>2 дн.</p>
+                        </div>
+
+                        <div class="b_price block_line">
+                            <span>Цена:</span>
+                            <p>1 280 грн</p>
+                        </div>
+
+                        <div class="b_quantity">
+                            <a href="#" class="minus"></a>
+                            <input type="text" name="inp-quantity" value="1">
+                            <a href="#" class="plus"></a>
+                        </div>
+
+                        <div class="b_amount block_line">
+                            <span>Сумма:</span>
+                            <p>1 280 грн</p>
+                        </div>
+                    </div>
+
+                    <div class="form_bonus form_item">
+                        <a href="#" class="btn-delete"><span class="close">x</span>Очистить корзину</a>
+                        <div class="b_bonus">
+                            <p>Кол-во бонусов:</p>
+                            <span>232 грн.</span>
+                            <a href="#" class="links-btn">Списать</a>
+                        </div>
+                    </div>
+
+                    <div class="form_bottom form_item">
+                        <div class="b_bonus">
+                            <p>Итого:</p> <span>1280 грн</span>
+                        </div>
+                        <a href="#" class="btn-continue-shopping links-btn">Продолжить покупки</a>
+
+                        <div class="block_phone-callback">
+                            <div class="input-group-phone">
+                                <span>+38</span>
+                                <input type="text" name="phone" placeholder="(000) 000-00-00" required="">
+                            </div>
+                            <a class="links-btn">Купить в 1 клик</a>
+                        </div>
+
+                        <button type="submit" class="btn">Оформить заказ</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="modal_bottom">
+                <h3>Вам может пригодиться</h3>
+                <div class="catalog_item catalog_item-list">
+                    <span class="sale">-10%</span>
+                    <a href="#" class="image">
+                        <img src="img/logo-min.png" class="img-responsive" alt=""></a>
+                    <div class="item_title">
+                        <a href="#">BSG BSG 070-140-001</a>
+                        <p>Маслянный фильтр</p>
+                        <ul>
+                            <li><span>Артикул:</span> 241477</li>
+                        </ul>
+                    </div>
+                    <div class="line_group">
+                        <div class="availability under_order">
+                            <span></span>
+                            Под заказ <br>
+                            без возврата
+                        </div>
+                        <div class="delivery">
+                            <span class="icon"><img src="img/delivery.png" class="img-responsive" alt=""></span>
+                            2 дн.
+                        </div>
+                    </div>
+
+                    <div class="line_group line_price">
+                        <div class="price">
+                            <div class="old-price">350</div>
+                            <div class="new-price">280 грн</div>
+                        </div>
+                        <a href="#" class="btn">Купить</a>
+                    </div>
+                </div>
+
+                <div class="catalog_item catalog_item-list">
+                    <a href="#" class="image"><img src="img/prod2.png" class="img-responsive" alt=""></a>
+                    <div class="item_title">
+                        <a href="#">BSG BSG 070-140-001</a>
+                        <p>Маслянный фильтр</p>
+                        <ul>
+                            <li><span>Артикул:</span> 241477</li>
+                        </ul>
+                    </div>
+                    <div class="line_group">
+                        <div class="availability">
+                            <span></span>
+                            В наличии &gt; <p>10 шт</p>
+                        </div>
+                        <div class="delivery">
+                            <span class="icon"><img src="img/delivery.png" class="img-responsive" alt=""></span>
+                            2 дн.
+                        </div>
+                    </div>
+
+                    <div class="line_group line_price">
+                        <div class="price">1 280 грн</div>
+                        <a href="#" class="btn">Купить</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal_div" id="modal_authorization">
+        <span class="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+        <h3>Авторизация</h3>
+
+        <form action="" method="POST" class="form">
+            <div class="input-group phone-wrap">
+                <label>Логин (Моб. телефон):</label>
+                <div class="input-group-phone">
+                    <span>+38</span>
+                    <input type="text" name="phone" placeholder="(000) 000-00-00" required>
+                </div>
+            </div>
+
+            <div class="input-group inp-pass">
+                <label>Ваш пароль <span class="links-search">Забыли пароль?</span></label>
+                <input type="password" name="pass" required>
+            </div>
+
+            <div class="input-group inp-btn">
+                <label class="checkbox">
+                    <input class="checkbox-inp" type="checkbox" name="checkbox">
+                    <span class="checkbox-custom"></span>
+                    <span class="label">Запомнить меня</span>
+                </label>
+                <button type="submit" class="btn">Войти</button>
+            </div>
+
+            <p>Вы можете зарегестрироватсья на AutoZapas
+               c помощью учетных записей социальных сетей </p>
+
+            <div class="button-group">
+                <a href="#" class="fb">
+                    <span class="image"><img src="img/fb.png" class="img-responsive" alt=""></span>
+                    <span class="text">Facebook</span>
+                </a>
+                <a href="#" class="google">
+                    <span class="image"><img src="img/g+.png" class="img-responsive" alt=""></span>
+                    <span class="text">google</span>
+                </a>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="modal_div" id="modal_thanks">
+        <div class="modal_div-wrapper">
+
+            <h3 class="text-accent">Спасибо за заказ!</h3>
+            <h6 class="number-order">Номер заказа: 45623453</h6>
+            <p>Наши специалисты свяжутся с Вами в ближайшее время.</p>
+
+            <p>Посмотреть детали заказа можно в <a href="#" class="links-accent">личном кабинете.</a></p>
+
+            <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+
+        </div>
+    </div>
+
+    <div id="overlay"></div><!-- Пoдлoжкa -->
+</div>
+
+<script src="js/scripts.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+
+</body>
+</html>
