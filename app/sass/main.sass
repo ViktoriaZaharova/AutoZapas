@@ -10,6 +10,10 @@
 
 html, body
   overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+html.fix
+  overflow: hidden
 
 body
   min-width: 320px
@@ -19,7 +23,7 @@ body
     family: $default-font
     size: 14px
   color: $title
-  background-color: #f9f9f9
+  background-color: #fff
   input, textarea
     border: 1px solid #BEBEBE
       radius: 4px
@@ -103,6 +107,23 @@ a
   &:hover
     color: $accent2
 
+.btn-default
+  background: $footer
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 11px 8px
+  box-sizing: border-box
+  font:
+    size: 16px
+    weight: bold
+  color: #fff
+  text-align: center
+  border-radius: 4px
+  &:hover
+    background: $view
+    color: #fff
+
 
 .select
   outline: none
@@ -130,11 +151,14 @@ h2, .title
 
 
 .container
-  +row-flex()
-  +wrapper()
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  width: 1150px
   box-sizing: border-box
   margin: 0 auto
-  width: 100%
+  padding: 0 15px
+  //width: 100%
 
 .wrap
   +wrapper()
@@ -143,22 +167,32 @@ h2, .title
   margin: 0 auto
   box-sizing: border-box
 
-.list-auto
-  li
-    a
-      display: flex
-      align-items: center
-      font:
-        size: 18px
-      color: $title
+.s_category-mark
+  .list-auto
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    li
       margin: 0 0 11px
-      &:hover
-        color: $accent2
-      span
+      width: 25%
+      &:last-child
+        margin: 0
+      a
+        display: flex
+        align-items: center
         font:
+          size: 18px
           weight: bold
+        color: $title
+        margin: 0 0 11px
         text-transform: uppercase
-        margin: 0 0 0 5px
+        &:hover
+          color: $accent2
+        span
+          font:
+            weight: normal
+          text-transform: none
+          margin: 0 5px 0 0
 
 
 
@@ -207,6 +241,8 @@ h2, .title
   margin: 22px 0 0
   .links-btn
     margin: 40px auto 0
+  .load-more
+    margin: 0 auto 20px
 
 .pagination
   display: flex
@@ -263,6 +299,9 @@ h2, .title
   justify-content: space-between
   align-items: center
   margin: 22px auto 17px
+  span
+    text-transform: uppercase
+    color: $accent2
 
 .category-title
   justify-content: flex-start
@@ -278,6 +317,9 @@ h2, .title
   flex-direction: column
   align-items: center
   margin: 0 auto
+
+.selection
+  background: #f2f2f2
 
 .cart-wrapper
   display: flex
@@ -534,6 +576,9 @@ button
   width: 23px
   height: 55px
   position: relative
+  display: flex
+  align-items: center
+  justify-content: center
   &:after
     content: ''
     position: absolute
@@ -584,6 +629,8 @@ button
       padding: 0
     &:hover
       color: $accent2
+  a.b-mobile
+    display: none
 
 
 .icon-entrance
@@ -592,46 +639,6 @@ button
   display: inline-block
   margin: 0 8px 0 0
 
-
-//.room
-//  padding: 5px 7px
-//  font-size: 12px
-//  display: flex
-//  align-items: center
-//  justify-content: center
-//  cursor: pointer
-//  border-bottom: 1px solid $accent2
-//  transition: .3s ease
-//  margin-right: 38px
-//  color: $text
-//  &:hover
-//    color: $accent2
-//  .icon-entrance
-//    margin-right: 12px
-//  .icon-arrow
-//    transform: rotate(90deg)
-//    entrance-left: 10px
-/* === room end === */
-
-
-/* === form === */
-.block_phone-callback
-  +row-flex()
-  +col-padding()
-  align-items: center
-  .links-btn
-    border:
-      radius: 0 5px 5px 0
-    background-color: #ffffff
-    margin-left: -1px
-    padding: 0
-    width: 128px
-    height: 30px
-    font-size: 12px
-    box-sizing: border-box
-    cursor: pointer
-    &:hover
-      background: $accent2
 
 
 .input-group-phone
@@ -674,7 +681,7 @@ button
       border-radius: 4px
       border: 1px solid #BEBEBE
       background-color: #ffffff
-      padding: 0 12px 0 19px
+      padding: 0 14px
       box-sizing: border-box
       color: #BDBDBD
       font-size: 14px
@@ -705,6 +712,161 @@ button
         width: auto
         height: 100%
 /* === form end === */
+
+.block_card.block_card-mobile
+  padding: 13px 5px
+  position: relative
+  display: none
+  box-sizing: border-box
+  border:
+    left: 1px solid grey
+    right: 1px solid grey
+  flex-wrap: wrap
+  justify-content: center
+  .icon-basket
+    margin: 0
+    border-radius: 0
+    width: 24px
+    height: 24px
+    min-width: 24px
+    background: transparent
+    position: relative
+    svg
+      width: 24px
+      height: 24px
+      fill: #595959
+      path
+        fill: #595959
+    .quantity-goods
+      top: -7px
+      right: -12px
+      padding: 2px
+      background: #EB5757
+      color: #fff
+      width: 16px
+      height: 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      font-weight: normal
+      font-size: 9px
+  .block_card-text
+    width: 100%
+    li
+      font-size: 10px
+      line-height: 12px
+      flex-wrap: wrap
+      text-align: center
+      justify-content: center
+      margin: 2px 0 0 0
+      div
+        font-size: 12px
+        line-height: 12px
+        margin: 0 3px 0 0
+      .total-plus
+        margin: 0
+
+.logo-mobile.logo
+  display: none
+
+.btn-phone-mobile
+  //margin: 0 20px 0 auto
+  display: none
+  height: 64px
+  padding: 10px 20px
+  box-sizing: border-box
+  align-items: center
+  justify-content: center
+  border:
+    right: 1px solid grey
+    left: 1px solid grey
+  svg
+    width: 22px
+    height: 22px
+
+
+.block_phone-mobile
+  position: absolute
+  left: 0
+  right: 0
+  margin: 0 auto
+  top: 32px
+  padding: 16px 16px 30px
+  box-sizing: border-box
+  background: #fff
+  z-index: 10
+  width: 320px
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+  display: none
+  h3
+    text-align: left
+    font-weight: bold
+    font-size: 16px
+    color: $footer
+  li
+    a
+      justify-content: center
+      align-items: center
+  .btn-close
+    position: absolute
+    right: 10px
+    top: 10px
+    background: transparent
+    cursor: pointer
+    padding: 0
+    width: 26px
+    height: 26px
+    svg
+      fill: $footer
+      width: 26px
+      height: 26px
+      path
+        fill: $footer
+  .box-callback
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 19px auto 14px
+    padding: 13px 17px
+    border: 1px solid #BDBDBD
+    width: 100%
+    box-sizing: border-box
+    font-weight: normal
+    color: $footer
+    font-size: 14px
+    height: auto
+    .icon
+      width: 14px
+      height: 14px
+      margin: 0 8px 0 0
+  .block_phone
+    justify-content: flex-start
+    align-items: center
+    li
+      width: 100%
+      margin: 0 0 5px
+      a
+        text-align: left
+        justify-content: flex-start
+        font-size: 20px
+        font-weight: 600
+        .phone-code
+          color: $footer
+  .box-address
+    display: flex
+    margin: 22px 0 14px
+    flex-direction: column
+    align-items: flex-start
+    position: relative
+    p
+      color: $footer
+  .box-schedule
+    color: $footer
+    font-size: 14px
+
+
+
 
 .block_card
   display: flex
@@ -765,6 +927,12 @@ button
 
 .text-accent
   color: $accent2
+
+.text-blue
+  color: $blue
+
+.text-green
+  color: #219653
 
 .vin
   +size(2)
@@ -860,26 +1028,26 @@ button
 
 /* === menu === */
 #cabinet_menu-mobile
-  height: 42px
-  background-color: $accent1
-  border-radius: 10px
+  height: auto
+  background-color: #fff
+  border: 1px solid #BDBDBD
+    radius: 4px
   font:
-    weight: 500
+    weight: 600
     size: 12px
-  text-transform: uppercase
-  color: #ffffff
+  color: $title
   position: relative
   display: none
   align-items: center
-  padding: 0 14px
+  padding: 10px 30px 10px 15px
   box-sizing: border-box
   &:before
     content: ''
     transition: .3s ease
     position: absolute
-    background: url("../img/arrow-accent-right.png") no-repeat
-    transform: rotate(90deg)
-    width: 6px
+    background: url("../img/arr-bottom.svg") no-repeat center
+      size: contain
+    width: 10px
     height: 10px
     right: 14px
   span
@@ -887,128 +1055,214 @@ button
     margin-left: 5px
 
 
-#mobile_menu
+.mobile_menu
   display: none
 
-.mm-menu
-  background-color: #343d43
-  color: #a6b0b6
-  width: 261px
 
-.mm-menu_navbar_top-1 .mm-panels
-  top: 67px
 
-.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
-  border-color: $accent2
-
-.mm-navbar__btn:first-child
-  right: 0
-  left: auto
-  top: 13px
-
-.mm-navbars_top
-  height: 67px
-  border-color: #272f34
-
-.mm-listitem .mm-btn_next:not(.mm-btn_fullwidth)
-  display: none
-
-.mm-navbars_bottom>.mm-navbar, .mm-navbars_top>.mm-navbar
-  padding: 0
-  height: 67px
-
-.mm-menu .mm-listview a:not(.mm-btn_next)
-  margin-right: 0
-  font-size: 14px
-  padding: 9px 17px
-  border-bottom: 1px solid #272f34
-  line-height: 14px
-  box-sizing: border-box
-  
 .mobile-header
-  padding: 24px 0 24px 19px
-  font:
-    weight: 500
-    family: $default-font
-    size: 18px
-  text-transform: uppercase
-  text-align: left
-  span
-    color: #ffffff
-
-.mm-listitem:after
-  display: none
-
-.menu-mobile
-  display: none
-  flex-direction: row
-  align-items: center
-  li
-    height: 100%
+  padding: 0
+  .mobile-header__top
+    padding: 10px 20px 15px
+    box-sizing: border-box
     display: flex
+    flex-direction: row
+    font:
+      family: $default-font
+      size: 14px
+    text-align: left
+    .logo
+      width: 60px
+      height: 60px
+      margin: 0 22px 0 0
+  .box-entrance
+    padding: 17px 21px
+    box-sizing: border-box
+    background: $input
+    margin: 0
+    width: 100%
+    a
+      color: #4F4F4F
+      .icon-entrance
+        svg
+          fill: $footer
+#menu.on
+  left: 0
+
+.cabinet-wrapper .sidebar.on
+  right: 0
+  .box-close.b-mobile
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
     align-items: center
-    justify-content: center
+    text-transform: uppercase
+    background: #FFFFFF
+    padding: 17px 39px 14px 25px
     box-sizing: border-box
-    border-right: 2px solid #5a6267
-    img
-      margin: 0 auto
-    &:last-child
-      border-right: none
-    .open_modal, .icon
-      width: 63px
-  .search-mobile.in
-    background: #343d43
-  .search-mobile
+    font-size: 14px
+    width: 100%
+    z-index: 2
+    transition: .3s ease
+    margin: 0
+    .icon-close
+      width: 16px
+      height: 16px
+      position: relative
+      margin: 0 20px 0 0
+      &:before, &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0 auto
+        top: 0
+        width: 2.67px
+        height: 100%
+        background: $title
+      &:before
+        transform: rotate(-45deg)
+      &:after
+        transform: rotate(45deg)
+
+
+
+
+#menu
+  position: fixed
+  left: -100%
+  display: none
+  z-index: 41
+  background: #fff
+  height: calc(100% - 45px)
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  top: 45px
+  width: 100%
+  .block_phone
+    margin: 20px 0
+    padding: 0 24px
     box-sizing: border-box
-    .icon
-      display: block
-      cursor: pointer
-    .block_search
-      position: absolute
-      z-index: 2
+  .box-schedule
+    padding: 20px 24px
+    box-sizing: border-box
+    border-bottom: 1px dashed #e0e0e0
+    border-top: 1px dashed #e0e0e0
+  .box-address
+    color: $footer
+    padding: 20px 24px
+    font-size: 14px
+  .catalog_menu
+    flex-wrap: wrap
+    box-shadow: none
+    .menu-title
       width: 100%
-      min-width: 290px
-      display: none
+      background: #595959
+      padding: 11px 40px 11px 24px
+      text-transform: none
+      font-size: 14px
+      text-align: left
+
+      &:before
+        right: 27px
+      p
+        padding: 0
+    .drop-menu1
+      display: block
+      position: relative
+      left: 0
+      top: 0
+      width: 100%
+      box-shadow: none
+      li
+        a
+          padding: 8px 26px 8px 20px
+          box-sizing: border-box
+      .links-drop
+        &:last-child
+          a
+            border-bottom: 1px solid #e0e0e0
+        .drop-menu2
+          max-height: 175px
+          overflow-y: scroll
+          position: relative
+          display: none
+          left: 0
+          top: 0
+          width: 100%
+          opacity: 1
+          visibility: visible
+          height: auto
+          box-shadow: none
+          min-width: auto
+          min-height: auto
+          transition: inherit
+          -webkit-overflow-scrolling: touch
+          &::-webkit-scrollbar
+            width: 10px
+            height: 10px
+          &::-webkit-scrollbar-track
+            background-color: $title
+          &::-webkit-scrollbar-track-piece
+            background-color: #999
+          &::-webkit-scrollbar-thumb
+            background-color: $title
+          &::-webkit-scrollbar-corner
+            background-color: #999
+          &::-webkit-resizer
+            background-color: $title
+          .submenu
+            width: 100%
+            height: 100%
+            overflow-y: scroll
+            -webkit-overflow-scrolling: touch
+          li
+            width: 100%
+            a
+              padding: 8px 22px
+              font-size: 14px
+              width: 100%
+              box-sizing: border-box
+      .links-drop.in
+        background: inherit
+        > a
+          color: #fff
+          background: $accent2
+          .icon
+            svg
+              transform: rotate(90deg)
+              fill: #fff
+              path
+                fill: #fff
+          span
+            svg
+              fill: #fff
+              .cls-1
+                stroke: #fff
+  .menu
+    border-bottom: 1px dashed #e0e0e0
+    padding: 10px 0
+    background: $footer
+    ul
       flex-direction: column
       align-items: flex-start
-      left: 0
-      top: 65px
-      background: #343d43
-      padding: 10px 5px
-      box-sizing: border-box
-      .search
-        position: relative
+      li
         width: 100%
-        input
-          width: calc(100% - 70px)
-          padding-left: 20px
-          background: #fff
-          height: 45px
-        .btn
-          width: 70px
-          height: 45px
-      .links-search
-        margin: 5px 0 0 0
-        display: inline-block
-  .basket-mobile
-    position: relative
-    .value-basket
-      position: absolute
-      top: 8px
-      right: 8px
-      width: 18px
-      height: 18px
-      box-sizing: border-box
-      background-color: #343d43
-      border: 2px solid #ff9d04
-        radius: 50%
-      display: flex
-      align-items: center
-      justify-content: center
-      font:
-        weight: 700
-        size: 11px
-      color: #ffffff
+        a
+          margin: 0
+          width: 100%
+          padding: 5px 24px
+          box-sizing: border-box
+          color: #fff
+          &:hover
+            color: $accent2
+
+
+
+.links-registration
+  margin: 5px auto
+  text-align: center
+
 
 .menu
   ul
@@ -1040,7 +1294,7 @@ button
       size: 18px
       weight: bold
     position: relative
-    padding: 22px 0
+    padding: 15px 0
     p
       padding: 0 28px 0 18px
     &:before
@@ -1056,12 +1310,29 @@ button
   .drop-menu1
     box-shadow: 2px 9px 12px rgba(0, 0, 0, 0.1266)
     position: absolute
-    top: 65px
+    top: 54px
     left: 0
     width: 288px
     background-color: #fff
     display: none
     z-index: 4
+    li
+      a
+        display: flex
+        align-items: center
+        flex-direction: row
+        justify-content: flex-start
+        .icon-product
+          width: 20px
+          height: 20px
+          margin: 0 10px 0 0
+          svg
+            display: inline-block
+            width: 100%
+            height: 100%
+            .cls-1
+              stroke: $accent2
+              fill: transparent
     .list-mobile
       display: none
       a
@@ -1082,10 +1353,11 @@ button
         display: flex
         align-items: center
         flex-direction: row
-        justify-content: space-between
+        justify-content: flex-start
         .icon
           width: 12px
           height: 7px
+          margin: 0 0 0 auto
           svg
             fill: $title
             width: 100%
@@ -1094,6 +1366,7 @@ button
             path
               fill: $title
               transition: .3s ease
+
       &:hover
         background-color: #F2F2F2
         a
@@ -1103,23 +1376,20 @@ button
             fill: $accent2
             path
               fill: $accent2
-        .drop-menu2
-          opacity: 1
-          visibility: visible
       .drop-menu2
-        transition: .3s ease
+        //transition: .3s ease
         justify-content: space-between
         margin: 0
         position: absolute
         left: 288px
         top: 0
+        height: 100%
         min-width: 288px
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.22)
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22)
         background-color: #F2F2F2
         min-height: 367px
-        opacity: 0
-        visibility: hidden
         box-sizing: border-box
+        display: none
         .submenu
           li
             a
@@ -1130,58 +1400,103 @@ button
             &:last-child
               a
                 padding: 12px 16px
+      .drop-menu2.active
+        display: flex
+
+.icon-poduct
+  svg
+    .cls-1
+      fill: none
+      stroke: #ffa734
+      stroke-linecap: round
+      stroke-linejoin: round
+      stroke-width: 0.7px
+
+
 
 .cabinet_menu
   display: flex
   flex-direction: column
-  ul
-    display: flex
-    flex-direction: column
-    li
-      a
-        color: #889196
-        line-height: 36px
-        font:
-          size: 12px
-          weight: 500
-        text-transform: uppercase
-        border:
-          top: 1px solid #dce0e2
-          right: 4px solid transparent
-      .active
-        border-right: 4px solid $accent2
-        color: $accent1
-      &:last-child
-        a
-          border-bottom: 1px solid #dce0e2
+  padding: 20px 0 25px
+  box-sizing: border-box
+  border:
+    top: 1px solid #E0E0E0
+    bottom: 1px solid #E0E0E0
+  li
+    a
+      padding: 9px 16px
+      box-sizing: border-box
+      color: $title
+      font:
+        size: 14px
+      &:hover
+        color: $accent2
+    .active
+      color: #fff
+      background: $footer
+
+.cabinet-personal__info
+  padding: 13px 16px
+  box-sizing: border-box
+
+.id
+  font-weight: bold
+  margin: 0 0 7px
+
+.balance
+
+  color: #333333
+  span
+    display: block
+
+.box-exit
+  padding: 16px 16px 20px
+  box-sizing: border-box
+  color: #000
+
+.box-personal-manager
+  background: $blue
+  display: flex
+  align-items: center
+  border-radius: 4px
+  box-sizing: border-box
+  width: 100%
+  padding: 15px 13px
+  margin: 35px 0 0 0
+  font-weight: bold
+  color: #fff
+  font-size: 16px
+  .icon
+    margin: 0 23px 0 0
+    width: 60px
+    min-width: 60px
+    display: block
+    svg
+      width: 100%
+
 /* === menu end === */
 
-.ordering_wrapper
-  .container
-    padding: 0
 
 label
   display: block
 
+select
+  outline: none
+  cursor: pointer
+
 /* === auto select === */
-.clarification
-  font-size: 12px
-  border-bottom: 1px dashed #666666
-  color: #a6b0b6
-  margin-bottom: 23px
-  display: none
-
-
 .auto_select
   box-sizing: border-box
-  margin: 0 0 32px
+  padding: 16px 0 32px
+  background: #f2f2f2
+  width: 100%
   z-index: 3
-  .wrapper
+  .container
+    width: 1120px
     padding: 17px 23px 24px 24px
     border-radius: 6px
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0866)
     background-color: #fff
-    width: 100%
     margin: 0 auto
     box-sizing: border-box
     h4
@@ -1210,140 +1525,114 @@ label
     justify-content: space-between
     align-items: center
     flex-wrap: wrap
+    width: 100%
     .item
       position: relative
+    .btn-select
+      display: flex
+      align-items: center
+      justify-content: space-between
       width: 168px
-      .btn-select
-        display: flex
-        align-items: center
-        justify-content: space-between
+      height: 32px
+      position: relative
+      cursor: pointer
+      z-index: 1
+      font-size: 12px
+      box-sizing: border-box
+      background: #fff
+      border-radius: 5px
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        border: 1px solid $accent2
+          radius: 0 5px 5px 0
+        height: 100%
+        width: 33px
+        min-width: 33px
+        background: url('../img/arrow-bottom-white.svg') no-repeat center $accent2
+          size: 13px
+        box-sizing: border-box
+        z-index: 3
+      select, p
+        color: #828282
+        padding: 0 0 0 12px
+        white-space: nowrap
+        width: 100%
         border: 1px solid #e4e4e4
           radius: 5px
-        background-color: #ffffff
         height: 32px
-        padding: 0 0 0 12px
-        position: relative
-        cursor: pointer
-        z-index: 1
-        font-size: 12px
         box-sizing: border-box
-        p
-          color: #828282
-          padding: 0 7px 0 0
-          white-space: nowrap
-        .icon
-          height: 100%
-          width: 33px
-          min-width: 33px
-          border: 1px solid $accent2
-            radius: 0 4px 4px 0
-          background: $accent2
-          margin: 0 -1px 0 0
-          svg
-            transform: rotate(90deg)
-            width: 8px
-            height: 14px
-            display: inline-block
-      .drop-menu
+        font-size: 12px
+        display: flex
+        align-items: center
+        background-color: transparent
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        z-index: 2
+      p
+        background: #fff
+        z-index: 0
+        padding: 0 33px 0 12px
+      .icon
+        height: 100%
+        width: 33px
+        min-width: 33px
+        border: 1px solid $accent2
+          radius: 0 4px 4px 0
+        background: $accent2
+        //margin: 0 -1px 0 0
+        box-sizing: border-box
+        display: flex
+        align-items: center
+        justify-content: center
         position: absolute
-        border: 1px solid #BEBEBE
-        background-color: #ffffff
-        width: 100%
-        top: 32px
-        display: none
-        flex-direction: column
-        z-index: 3
-        max-height: 158px
-        overflow-x: auto
-        padding: 5px 0
-        li
-          display: block
-          a
-            color: $text
-            font-size: 12px
-            width: 100%
-            padding: 5px 11px
-            box-sizing: border-box
-            &:hover
-              color: $accent2
-              font-weight: 600
-              background: #FFF7EB
+        right: 0
+        top: 0
+        svg
+          transform: rotate(90deg)
+          width: 8px
+          height: 14px
+          display: inline-block
+    .drop-menu
+      position: absolute
+      border: 1px solid #BEBEBE
+      background-color: #ffffff
+      width: 100%
+      top: 32px
+      display: none
+      flex-direction: column
+      z-index: 3
+      max-height: 158px
+      overflow-x: auto
+      -webkit-overflow-scrolling: touch
+      padding: 5px 0
+      li
+        display: block
+        a
+          color: $text
+          font-size: 12px
+          width: 100%
+          padding: 5px 11px
+          box-sizing: border-box
+          &:hover
+            color: $accent2
+            font-weight: 600
+            background: #FFF7EB
 
 .item-disable
   opacity: .6
 /* === auto select end === */
 
 /* === header === */
-.header_fixed.fixed
-  display: flex
-  position: fixed
-  z-index: 100
-  width: 100%
-  left: 0
-  top: 0
-.header_fixed
-  background: $accent1
-  display: none
-  .container
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-between
-    .logo_fix
-      +size(1)
-      +size-md(2)
-      +size-xs(2)
-      display: flex
-      align-items: center
-      justify-content: center
-      img
-        margin: 0 auto
-    .list_menu-fix
-      display: flex
-      flex-direction: row
-      align-items: center
-      flex-wrap: wrap
-      li
-        height: 100%
-        display: flex
-        border:
-          right: 2px solid #5a6267
-    .btn-help
-      text-transform: uppercase
-      color: #ffffff
-      font:
-        size: 12px
-        weight: 500
-      padding: 0 28px
-      height: 100%
-      display: flex
-      align-items: center
-      justify-content: center
-      border:
-        left: 2px solid #5a6267
-    .room
-      margin: 0
-      border: none
-      text-transform: uppercase
-      color: #ffffff
-      font-weight: 500
-      padding: 0 20px
-    .block_card
-      padding: 0 22px
-      display: flex
-      flex-direction: row
-      margin: 0
-      align-items: center
-      .block_card-text
-        color: #ffffff
-      .links-btn
-        margin: 0 0 0 20px
-        color: #666666
-        border-color: #ff9c00
-      .btn-grey
-        background: transparent
-        border-color: #4d555a
-
 .header
+  position: relative
+  //left: 0
+  //top: 0
+  //z-index: 40
+  width: 100%
   &_top
     background-color: $input
     .container
@@ -1352,7 +1641,7 @@ label
       justify-content: space-between
       padding: 14px 15px
   &_center
-    padding: 28px 0
+    padding: 15px 0
     background: #fff
     .container
       justify-content: space-between
@@ -1388,7 +1677,7 @@ label
   flex-direction: column
   align-items: flex-start
   li
-    margin: 0 0 8px
+    margin: 0 0 2px
     font-size: 12px
     display: block
     &:last-child
@@ -1442,7 +1731,6 @@ label
   width: 100%
   position: relative
   box-sizing: border-box
-  margin: 0 0 16px
   .slider_item
     display: flex
     justify-content: space-between
@@ -1458,10 +1746,12 @@ label
       width: 100%
       height: 100%
       img
+        width: 100%
         align-self: center
         margin: 0 auto
         z-index: 2
-        height: 100%
+        min-height: 100%
+        //height: 100%
         max-width: none
     .slider_text
       position: relative
@@ -1580,19 +1870,30 @@ label
 /* === product === */
 .s_product-group
   width: 100%
+  background: #F2F2F2
   .container
     justify-content: space-between
+    align-items: flex-start
+    position: relative
+
+.product_item.in
+  width: 100%
+  z-index: 4
+  box-sizing: border-box
+  .product_menu
+    width: 100%
+    column-count: 4
+    padding: 0 135px 0 0
+    box-sizing: border-box
 
 .product_item
   width: 352px
-  height: 188px
   margin-bottom: 32px
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0866)
   background: #fff
   display: flex
   justify-content: space-between
   flex-direction: column
-  //flex-wrap: wrap
   padding: 18px
   box-sizing: border-box
   border-radius: 6px
@@ -1611,6 +1912,10 @@ label
     position: absolute
     right: 0
     top: 9px
+    svg
+      width: 100%
+      height: 100%
+      display: inline-block
     img
       border-radius: 6px
   .product_item-text
@@ -1619,9 +1924,13 @@ label
     display: flex
     flex-direction: column
     justify-content: space-between
+
   .product-title
-    margin: 0
+    position: relative
+    z-index: 2
     color: $title
+    min-height: 44px
+    margin: 0 0 20px 0
     font:
       weight: 700
       size: 16px
@@ -1637,53 +1946,23 @@ label
           color: $accent2
 /* === product end === */
 
-/* === auto === */
-//.s-auto
-//  padding: 56px 0 52px
-//  .cart-wrapper
-//    margin: 44px auto 0
-//    justify-content: flex-start
-
-//.auto_item
-//  width: 130px
-//  height: 130px
-//  border: 1px solid #f4f4f4
-//    radius: 4px
-//  background-color: #ffffff
-//  display: flex
-//  flex-direction: column
-//  justify-content: center
-//  align-items: center
-//  margin: 0 32px 20px 0
-//  cursor: pointer
-//  transition: .3s ease
-//  padding: 30px 0 11px
-//  box-sizing: border-box
-//  &:hover
-//    border: 2px solid $accent2
-//    box-shadow: 0 0 20px rgba(255, 156, 0, 0.28)
-//  p
-//    margin-top: auto
-//    color: $input
-//    font-size: 14px
-//    line-height: 16px
-//  .car-brand
-//    font-weight: 500
-//    color: #2b2b2b
-//    text-transform: uppercase
-//    line-height: 16px
-//
-//.auto_item:nth-child(7) ~ .auto_item
-//  display: none
-
-/* === auto end === */
 
 /* === s-news-article === */
 .s-news-article
+  background: #f2f2f2
   .container
-    border:
-      bottom: 1px solid #E0E0E0
     padding: 0 15px 58px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-50%,0)
+      height: 1px
+      background: #e0e0e0
+      width: calc(100% - 40px)
+
 
 .article__content
   width: 100%
@@ -1770,6 +2049,7 @@ label
 /* === s-advantages === */
 .s-advantages
   padding: 0 0 16px
+  background: #f2f2f2
 .s-advantages__content
   width: 100%
   display: flex
@@ -1792,7 +2072,25 @@ label
     color: $title
 /* === s-advantages end === */
 
-
+#btn-top
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background: $accent2
+  width: 52px
+  height: 52px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  box-sizing: border-box
+  border-radius: 50%
+  z-index: 7
+  transition: .3s ease
+  svg
+    transform: rotate(-90deg)
+    width: 26px
+    height: 15px
 
 
 /* === footer === */
@@ -1836,14 +2134,7 @@ footer
           line-height: 24px
           &:hover
             color: $accent2
-    .mail
-      color: $accent2
-    .box-address
-      color: #F2F2F2
-      margin: 4px 0
-      a
-        color: $accent2
-        border: none
+
     .menu
       ul
         flex-direction: column
@@ -1873,6 +2164,17 @@ footer
         flex-direction: row
         flex-wrap: wrap
         align-items: center
+        justify-content: center
+
+.mail
+  color: $accent2
+
+.box-address
+  color: #F2F2F2
+  margin: 4px 0
+  a
+    color: $accent2
+    border: none
 
 .f-money, .f-soc
   display: flex
@@ -1884,6 +2186,15 @@ footer
     &:last-child
       a
         margin: 0
+
+.f-money
+  li
+    a
+      width: 42px
+      height: 42px
+      display: flex
+      align-items: center
+      justify-content: center
 
 .f-soc
   margin: 0 0 0 16px
@@ -1898,9 +2209,16 @@ footer
       border: 1px solid rgba(255, 255, 255, 0.1)
         radius: 50%
       margin-right: 6px
+      padding: 10px
+      box-sizing: border-box
       &:hover
         background: $accent2
         border-color: $accent2
+      svg
+        display: inline-block
+        width: 100%
+        height: 100%
+        fill: #f7f7f7
     &:last-child
       a
         margin-right: 0
@@ -1908,6 +2226,7 @@ footer
 
 /* === page === */
 .page-content
+  width: 100%
   padding: 21px 0 83px
   .container
     justify-content: space-between
@@ -2039,50 +2358,101 @@ footer
             margin-bottom: 5px
 /* === short_description end === */
 
-/* === spare_parts === */
-.spare_parts
-  .spare_parts-categories
+
+/* === selection === */
+.selection
+  .s_product-group
+    background: transparent
     width: 100%
-    justify-content: space-between
     display: flex
-    flex-direction: row
+    align-items: flex-start
     flex-wrap: wrap
-    .item
-      +size(4)
-      +size-md(6)
-      +size-xs(12)
-      border: 1px solid #c0cdd6
-        radius: 10px
-      background-color: #ffffff
-      padding: 24px 32px 30px
-      position: relative
-      min-height: 232px
-      box-sizing: border-box
-      margin-bottom: 30px
-      .image
-        position: absolute
-        bottom: 0
-        right: 0
-      h3
-        color: $title
-        font:
-          weight: 500
-          size: 16px
-        margin-bottom: 25px
-        line-height: 18px
-      ul
-        display: flex
-        flex-direction: column
-        z-index: 2
-        position: relative
-        li
-          a
-            color: $text
-            line-height: 24px
-            font-size: 12px
-            &:hover
-              text-decoration: underline
-/* === spare_parts end === */
+    margin: 32px 0 0 0
+    justify-content: space-between
+  .text-description
+    font-weight: bold
+    margin: 0 0 11px
+
+.s-category-auto
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  margin: 30px 0 0 0
+  h6
+    font-weight: bold
+    color: $title
+    margin: 0 0 9px 0
+
+.list-auto
+  margin: 0 0 20px 0
+  &:last-child
+    margin: 0
+  li
+    a
+      text-decoration: underline
+      color: $title
+      line-height: 23px
+      font-size: 14px
+      &:hover
+        color: $accent2
+
+.selection-result
+  h3
+    font-weight: bold
+  .s-title
+    h1
+      text-transform: none
+      span
+        text-transform: none
+
+.selection-result__wrapper
+  margin: 0 0 47px 0
+  width: 100%
+  display: flex
+  align-items: center
+  .image
+    width: 256px
+    height: 128px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    margin: 0 32px 0 0
+    overflow: hidden
+  .auto-characteristics
+    margin: 0 86px auto 0
+    li
+      line-height: 23px
+      font-size: 14px
+      color: #000000
+  .btn-delete
+    display: flex
+    align-items: center
+    color: #595959
+    &:hover
+      color: $accent2
+    .icon
+      width: 10px
+      height: 10px
+      margin: 0 10px 0 0
+      display: flex
+      align-items: center
+      justify-content: center
+      svg
+        width: 10px
+        height: 10px
+        fill: #EB5757
+
+        display: inline-block
+        path
+          fill: #EB5757
+          width: 10px
+          height: 10px
+
+/* === selection end === */
+
 
 /* === catalog block === */
 .catalog_wrapper
@@ -2090,6 +2460,11 @@ footer
   flex-wrap: wrap
   justify-content: space-between
   width: 100%
+
+.catalog
+  background: #f2f2f2
+  .sort_wrapper
+    padding: 0
 
 .catalog_content
   width: calc(100% - 285px)
@@ -2200,19 +2575,6 @@ footer
     span
       border-bottom: 1px solid #828282
 
-.item_brand
-  min-height: 46px
-  text-align: center
-  font-weight: 600
-  display: flex
-  align-items: flex-start
-  flex-wrap: wrap
-  justify-content: center
-  line-height: 17px
-  font-size: 16px
-  span
-    color: #595959
-    margin: 0 0 0 5px
 
 .catalog_item
   border: 1px solid #E0E0E0
@@ -2342,7 +2704,6 @@ footer
 .catalog_item-block
   padding: 12px 16px
   width: 256px
-  cursor: pointer
   transition: .3s ease
   position: relative
   height: 455px
@@ -2350,6 +2711,20 @@ footer
   margin-bottom: 40px
   &:last-child
     margin: 0
+  .item_brand
+    min-height: 46px
+    text-align: center
+    font-weight: 600
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: center
+    line-height: 17px
+    font-size: 16px
+    span
+      color: #595959
+      margin: 0 0 0 5px
+
   .image
     margin: 0 auto
   .item_title
@@ -2367,7 +2742,7 @@ footer
       opacity: 1
   .line_group
     .availability
-      max-width: 110px
+      max-width: 108px
     .quantity
       p
         margin: 0 0 5px
@@ -2471,7 +2846,6 @@ footer
   .item_wrapper.active
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.07)
     border-top: 1px solid #BEBEBE
-    transform: scale(1.01)
     z-index: 3
     .b_hidden
       display: flex
@@ -2495,7 +2869,6 @@ footer
       align-items: center
       flex-wrap: wrap
       justify-content: space-between
-
     .b_hidden
       padding: 8px 9px
       border-top: 1px dashed #BEBEBE
@@ -2672,11 +3045,8 @@ footer
 
 /* === sidebar === */
 .sidebar
-  +size(3)
-  h4
-    line-height: 22px
-    font-weight: bold
-    color: $title
+  width: 256px
+
 
 .filter-reset
   box-sizing: border-box
@@ -2722,7 +3092,9 @@ footer
   flex-direction: row
   justify-content: space-between
   align-items: center
+  flex-wrap: wrap
   width: 100%
+  font-size: 14px
   .icon
     display: inline-block
     transform: rotate(90deg)
@@ -2736,10 +3108,13 @@ footer
       path
         fill: #595959
 
-.filter-product__title.in
-  .icon
-    svg
-      transform: rotate(180deg)
+.filter-product.active
+  .filter-product__title
+    .icon
+      svg
+        transform: rotate(180deg)
+  .box-hidden
+    display: block
 
 .filter-product
   display: flex
@@ -2754,8 +3129,21 @@ footer
     display: none
     margin-top: 12px
 
+
 .filter-product .box-hidden label:nth-child(5) ~ label
   display: none
+
+.cabinet-orders
+  .filter-product
+    .left, .right
+      width: 48%
+  .filter-product.active
+    .box-hidden
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      label
+        width: 100%
 
 //ползунок цен
 .range_val
@@ -2848,6 +3236,7 @@ footer
     vertical-align: middle
     background: #fff
     border: 1px solid #E0E0E0
+    box-sizing: border-box
   .label
     display: inline-block
     vertical-align: middle
@@ -2855,6 +3244,7 @@ footer
     color: #000
     cursor: pointer
     font-size: 14px
+    text-transform: none
   .checkbox-inp:checked + .checkbox-custom::before
     content: ""
     display: block
@@ -2916,27 +3306,223 @@ footer
 /* === sidebar end === */
 
 
-/* === registration === */
-.registration, .cabinet
-  .breadcrumb
-    margin: 0 auto 20px
-  .form
-    width: 360px
-    margin: 20px auto 0
-    .input-group-phone
-      max-width: 153px
-    .btn
-      width: 226px
-      height: 47px
-      margin: 0 auto
-    .reCapcha
-      margin: 0 auto 20px
-      img
-        margin: 0 auto
+/* === contacts === */
+.contacts
+  .container
+    .page-text-content__wrapper
+      width: 438px
+      padding: 0 30px 0 0
+      box-sizing: border-box
+      border-right: 1px solid #E0E0E0
+    .line-subtitle
+      width: 100%
+      display: flex
+      align-items: center
+      margin: 0 0 6px
+      h3
+        margin: 0
+        font-size: 16px
+    .box-contacts
+      display: flex
+      flex-direction: column
+      padding: 0 0 0 35px
+      margin: 0 0 56px 0
+      position: relative
 
-.registration
-  .s-title
+      .icon
+        position: absolute
+        left: 0
+        top: 0
+    .list-phone
+      box-sizing: border-box
+      li
+        a
+          line-height: 31px
+    a
+      color: #595959
+    h4
+      font-weight: 600
+      margin: 21px 0 0 0
+    .box-address
+      padding: 0 0 0 35px
+      position: relative
+      display: flex
+      flex-direction: column
+      color: $footer
+      .icon
+        position: absolute
+        left: 0
+        top: 0
+    .box-schedule
+      width: 100%
+      padding: 30px 0 0 35px
+      display: flex
+      flex-direction: column
+      position: relative
+      margin: 30px 0 0 0
+      border-top: 1px solid #E0E0E0
+      box-sizing: border-box
+      .icon
+        position: absolute
+        left: 0
+        top: 30px
+    .list-schedule
+      li
+        line-height: 31px
+        color: #595959
+        display: flex
+        align-items: center
+        p
+          min-width: 52px
+          margin: 0 15px 0 0
+    .page-text-content__description
+      width: 652px
+      box-sizing: border-box
+      padding: 0 0 0 29px
+      #map
+        height: 528px
+        width: 100%
+        margin: 14px 0 0 0
+      h3
+        margin: 0 0 0 14px
+  .page-text-content__callback-form
+    .form
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-end
+
+
+.page-text-content__callback-form
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-end
+  padding: 30px 0 0 38px
+  margin: 30px 0 0 0
+  border-top: 1px solid #E0E0E0
+  position: relative
+  box-sizing: border-box
+
+  h3
+    font-weight: bold
+    color: #595959
+    font-size: 16px
+    margin: 0 0 20px
+  .icon
+    position: absolute
+    left: 0
+    top: 30px
+  .box-left
+    width: 402px
+    padding: 0 30px 0 0
+    box-sizing: border-box
+    input
+      width: 372px
+  .box-right
+    box-sizing: border-box
+    width: 652px
+    padding: 0 0 0 30px
+
+    .button-group
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-end
+      margin: 25px 0 0 0
+      .image-code
+        width: 118px
+        height: 46px
+        margin: 0 35px 0 0
+      label
+        input
+          width: 63px
+          height: 42px
+          text-align: center
+      p
+        width: 100%
+        margin: 0 0 5px 0
+      button
+        margin: 0 0 0 auto
+  textarea
     width: 100%
+    height: 135px
+    border-color: $accent2
+    padding: 10px 14px
+    box-sizing: border-box
+    color: #828282
+    font-size: 14px
+
+
+/* === contacts end === */
+
+
+/* === registration === */
+.registration, .vin-request, .contacts
+  .form
+    width: 372px
+    .text-red
+      color: #EB5757
+    .input-group
+      margin: 22px 0 0 0
+    p
+      margin: 0 0 10px
+      color: #595959
+    input
+      border-color: $accent2
+      color: #828282
+      font-size: 14px
+    input[name='pass']
+      font-size: 30px
+      color: #595959
+      letter-spacing: 2px
+      &::placeholder
+        color: #595959
+    .btn
+      width: 245px
+      height: 44px
+      margin: 0
+    .reCapcha
+      margin: 36px auto 20px
+
+.page-text-content__description
+  width: 60%
+  h3
+    font-weight: bold
+    color: #595959
+    font-size: 16px
+    margin: 0 0 20px
+  .box
+    margin: 0 0 50px
+    &:last-child
+      margin: 190px 0 0 0
+
+.page-text-content__wrapper
+  h3
+    font-weight: bold
+    color: #595959
+    font-size: 16px
+    margin: 0 0 20px
+
+.list-dots
+  li
+    position: relative
+    padding: 0 0 0 14px
+    color: #595959
+    margin: 0 0 15px 0
+    &:last-child
+      margin: 0
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      width: 6px
+      height: 6px
+      background: $accent2
+      border-radius: 50%
+
 
 /* === registration end === */
 
@@ -2962,231 +3548,527 @@ footer
   .auto_select
     width: 100%
 
-.cabinet_wrapper
-  .wrap
-    justify-content: space-between
-  .catalog_content
-    .subtitle
-      display: flex
-      flex-direction: row
-      align-items: center
-      margin-bottom: 34px
-      .btn
-        margin-left: auto
-        width: 192px
-        height: 47px
-        font-size: 12px
-        display: flex
-        align-items: center
-        justify-content: center
-      .icon
-        width: 50px
-        height: 50px
-        border-radius: 5px
-        border: 3px solid $accent2
-        background-color: #ffffff
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-right: 30px
-        box-sizing: border-box
-        img
-          width: 33px
-    .item
-      border: 1px solid #f4f4f4
-        radius: 10px
-      background-color: #ffffff
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      flex-wrap: wrap
-      .b_left
-        padding: 20px 30px 34px
-        box-sizing: border-box
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        .subtitle
-          margin-bottom: 15px
-        .text
-          margin-bottom: 20px
-          p
-            color: $title
-            line-height: 18px
-          span
-            font:
-              weight: 500
-              size: 10px
-            color: $input
-        .links-search
-          color: #a6b0b6
-          font-size: 12px
-          line-height: 14px
-      .b_right
-        background-color: #f5f5f5
-        border: 1px solid #f4f4f4
-        width: 466px
-        padding: 63px 69px 74px 89px
-        box-sizing: border-box
-        display: flex
-        flex-direction: row
-        align-items: center
-        .image
-          width: 118px
-          height: 118px
-          background-color: $accent2
-          border-radius: 50%
-          display: flex
-          align-items: center
-          justify-content: center
-          box-shadow: inset 0 0 0 2px white
-          border: 4px solid $accent2
-          box-sizing: border-box
-          margin-right: 27px
-        .text
-          color: $title
-          line-height: 34px
-          p
-            display: flex
-            flex-direction: row
-            align-items: flex-start
-            text-transform: uppercase
-            font-size: 24px
-            a
-              margin: -6px 0 0 4px
-          span
-            font:
-              weight: 700
-              size: 36px
-
-.s__cabinet
-  margin: 40px auto 0
-
-.s__cabinet-content
+.cabinet-wrapper
+  width: 100%
   display: flex
-  flex-direction: column
-  .line
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: flex-start
-    border:
-      top: 1px solid #dce0e2
-    box-sizing: border-box
-    padding: 22px 10px
-    font-size: 12px
-    color: $title
-    line-height: 18px
-    transition: .3s ease
-    cursor: pointer
-    &:hover
-      background: #f6f6f6
-    span
-      color: $input
-      font:
-        weight: 500
-        size: 10px
-    .line-block
-      display: flex
-      flex-direction: column
-    .status
-      width: 130px
-    .number
-      width: 125px
-    .diagnostic, .payment, .number_declaration, .vin_code
-      width: 165px
-    .comment
-      width: 170px
-      p
-        font-style: italic
-    .b_date
-      width: 90px
-    .mark, .code_name
-      width: 200px
-    .btn-print
-      display: flex
-      flex-direction: row
-      align-items: center
-      font-size: 10px
-      width: 105px
-      min-width: 105px
-      height: 30px
-      line-height: 12px
-      padding: 0 11px 0 8px !important
-      box-sizing: border-box
-      .icon
-        margin-right: 7px
-        width: 21px
-        min-width: 21px
-    .links-btn
-      padding: 5px 19px
-    .btn-inside
-      margin-left: auto
-    &:last-child
-      border-bottom: 1px solid #dce0e2
-  .status-completed
-    .status
-      color: #5aa501
-  .status-annulment
-    .number
-      p
-        text-decoration: line-through
-    .status
-      color: #676767
-  .status-confirmation
-    .status
-      color: #ac5bb3
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
 
-.s__cabinet-form
+.cabinet-wrapper__content
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  width: calc(100% - 285px)
+  h3
+    font-weight: 600
+    font-size: 18px
+    color: $title
+  .filter_mnu
+    width: 90%
+    margin: 0 auto 20px
+  .filter-product
+    input
+      width: 100%
+      height: 40px
+      padding: 0 10px
+      color: #333333
+      font-size: 12px
+      &::placeholder
+        color: #333
+
+.cabinet-personal
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+.cabinet-personal__box
+  background: #fff
+  border-radius: 4px 4px 0 0
+  box-sizing: border-box
+  padding: 15px 20px
+  border: 1px solid #E0E0E0
+  width: 400px
+  min-height: 192px
+  h3
+    margin: 0 0 7px
+  .box-top
+    display: flex
+    align-items: flex-start
+    .manager-photo
+      border: 1px solid #E0E0E0
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 96px
+      height: 96px
+      margin: 0 19px 0 0
+  .box-message
+    display: flex
+    align-items: center
+    color: #000
+    margin: 13px 0 0 0
+    span
+      font-weight: bold
+    p
+      margin: 0 3px 0 7px
+  .name-user
+    font-size: 18px
+    font-weight: 600
+  .links-settings
+    font-size: 11px
+
+.list-sale
+  margin: 14px 0 9px 0
+  li
+    margin: 0 0 9px
+    color: #000000
+    display: flex
+    align-items: center
+    p
+      min-width: 178px
+    span
+      font-weight: 600
+
+.manager-contacts
   display: flex
   flex-direction: row
-  align-items: center
-  width: auto
-  margin: 0
-  .input-group
+  flex-wrap: wrap
+  margin: 12px 0 0 0
+  li
+    width: 50%
+    margin: 0 0 3px
+    a
+      display: flex
+      align-items: center
+      width: 100%
+      color: #000000
+      line-height: 23px
+      .icon
+        margin: 0 10px 0 0
+
+.cabinet-details
+  border: 1px solid #E0E0E0
+    radius: 4px
+  box-sizing: border-box
+  background: #fff
+  margin: 15px 0 0 0
+  width: 100%
+  h3
+    padding: 20px 0
+    text-align: center
+    width: 100%
+
+
+.cabinet-details__tabs
+  width: 100%
+  .tabs__caption
+    width: 100%
+    margin: 0
+    border:
+      top: 1px solid #E0E0E0
+      bottom: 1px solid #E0E0E0
+    li
+      margin: 0
+      font-size: 12px
+      color: $title
+      flex: 1
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 15px
+      box-sizing: border-box
+      border:
+        right: 1px solid #E0E0E0
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 4px
+        background: transparent
+        transition: .3s ease
+      &:last-child
+        border-right: none
+        &:before
+          display: none
+    li.active
+      background: #FFBA61
+      &:before
+        background: #FFA734
+
+.tabs__content
+  width: 100%
+
+.basket-table
+  position: relative
+  width: 100%
+  .button-line
+    padding: 13px 20px 16px
+    box-sizing: border-box
+    width: 100%
     display: flex
-    flex-direction: row
+    justify-content: flex-end
+    align-items: flex-end
+  .btn-all
+    padding: 14px 16px
+    text-align: right
+    display: flex
+    justify-content: flex-end
+    box-sizing: border-box
+
+.basket-table__line
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  padding: 12px 20px
+  box-sizing: border-box
+  border:
+    bottom: 1px solid #E0E0E0
+  cursor: pointer
+  &:hover
+    background: #F2F2F2
+  span
+    display: block
+    font-size: 10px
+    color: $footer
+    margin: 0 0 9px
+  p, a
+    font-size: 12px
+    color: $title
+  a
+    &:hover
+      color: $accent2
+  .number-orders
+    width: 9.9%
+  .code-orders
+    width: 13.5%
+  .name-orders
+    width: 37%
+  .time-orders
+    width: 10.2%
+  .quantity-orders
+    width: 8.8%
+  .price-orders
+    width: 11.3%
+  .auto-photo
+    display: flex
+    align-items: center
+    .image
+      width: 120px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 17px 0 0
+      max-height: 70px
+      background: #fff
+      img
+        max-height: 70px
+      &:last-child
+        margin: 0
+  .auto-name
+    font-weight: bold
+    width: 19.4%
+    text-align: center
+  .auto-characteristics
+    width: 25.8%
+
+
+.basket-table__line-auto
+  align-items: center
+  padding: 17px 20px 17px 17px
+  .btn-close
+    background: transparent
+    margin: 0 0 0 auto
+    svg, path
+      fill: #EB5757
+
+  .button-group
+    a
+      display: flex
+      align-items: center
+      border: none
+      margin: 0 0 12px
+      .icon
+        margin: 0 8px 0 0
+        width: 12px
+        height: 12px
+        svg
+          width: 100%
+          height: 100%
+      .text
+        margin: 0
+        line-height: normal
+        color: $accent2
+        border-bottom: 1px dashed $accent2
+    .btn-vin
+      .icon
+        svg, path
+          fill: $accent2
+
+.auto-details
+  border-radius: 0
+
+.auto-characteristics
+  font-size: 10px
+  color: #595959
+
+.cabinet-orders
+  padding: 20px
+
+.filter-orders
+  margin: 0 0 30px
+
+.filter-orders__line
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 8px
+  &:last-child
+    margin: 0
+  .checkbox
+    width: 110px
+    margin: 0
+    span
+      font-size: 12px
+      color: #333333
+  p
+    font-size: 12px
+    width: 110px
+    color: #333333
+  .left
+    margin: 0 40px 0 0
+  .left, .right
+    display: flex
+    align-items: center
+    width: 246px
+  input
+    width: 136px
+    height: 32px
+    padding: 0 10px
+    color: #595959
+    font-size: 12px
+    &::placeholder
+      color: #595959
+  .item
+    position: relative
+  .btn-select
+    width: 136px
+    height: 32px
+    border: 1px solid #BEBEBE
+      radius: 4px
+    background: #fff
+    box-sizing: border-box
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 10px
+    cursor: pointer
+    .icon
+      transform: rotate(90deg)
+      height: 13px
+      width: 8px
+      svg
+        fill: #595959
+        display: inline-block
+        width: 100%
+        height: 100%
+        path
+          fill: #595959
+    p
+      width: auto
+  .drop-menu
+    position: absolute
+    border: 1px solid #bebebe
+    background-color: #fff
+    width: 100%
+    top: 32px
+    padding: 5px 0
+    box-sizing: border-box
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    display: none
+    flex-direction: column
+    li
+      a
+        color: $footer
+        padding: 5px 11px
+        &:hover
+          background: #fff7eb
+          color: $accent2
+  .btn-default
+    background: #828282
+    font-size: 12px
+    padding: 8px 19px
+    &:hover
+      background: $accent2
+    &:first-child
+      margin: 0 15px 0 0
+  .button-group
+    justify-content: flex-end
+
+.list-info__details
+  width: auto
+  li
+    display: flex
+    margin: 0 0 10px
     align-items: center
     color: $title
     font-size: 12px
-    line-height: 18px
-    margin-right: 29px
-    input
-      margin-left: 7px
-      width: 115px
-      height: 45px
-      border-radius: 5px
-      border: 1px solid #e4e4e4
-      background: url("../img/calendar.png") no-repeat 83px center #ffffff
-      box-sizing: border-box
-      padding: 0 35px 0 11px
-      font-size: 12px
-      color: $input
-      &::placeholder
-        color: $input
-    &:last-child
-      margin-right: 19px
-  .links-btn
-    height: 30px
-    width: 119px
+    p
+      min-width: 115px
+      color: #595959
 
-.VIN_queries
-  .s__cabinet-content
+.list-orders__bottom-box
+  display: none
+  flex-wrap: wrap
+  align-items: flex-start
+  justify-content: space-between
+  width: 100%
+  .box-info-delivery, .box-info-comment
+    width: 50%
+    font-size: 12px
+    max-width: 369px
+    margin: 20px 0 27px 0
+    p
+      color: #595959
+      margin: 0 0 4px
     .line
-      padding: 18px 10px 24px
-      .comment
-        width: 310px
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      p
+        color: $title
+        margin: 0
+      .the-sum
+        margin: 0 24px 0 20px
+      .btn
+        font-size: 12px
+        padding: 4px 19px
+  .total-amount
+    width: 100%
+    font-size: 12px
+    color: $footer
+    padding: 13px 0 0
+    text-align: right
+
+.table-orders
+  width: 100%
+  border: 1px solid #E0E0E0
+    radius: 4px 4px 0 0
+    bottom: none
+  box-sizing: border-box
+  font-size: 11px
+  color: $footer
+  .table-title
+    display: flex
+    align-items: center
+    height: 36px
+    flex-wrap: wrap
+    padding: 0 18px
+  .table-body
+    border-bottom: 1px solid #E0E0E0
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 13px 18px
+    box-sizing: border-box
+    .order-status
+      font-weight: 600
+      color: $title
+    .order-brand, .order-article
+      font-weight: bold
+    .text-green
+      color: #6FBA26
+  .order-brand
+    width: 11.1%
+  .order-article
+    width: 12.7%
+  .order-name
+    width: 26.7%
+  .order-price
+    width: 9%
+    text-align: center
+  .order-quantity
+    width: 8.5%
+    text-align: center
+  .order-availability
+    width: 11.6%
+    margin: 0 19px 0 0
 
 
-  .pagination-group
-    margin: 20px auto
-    .links-next
-      right: 15px
 
-.you_searched
-  .s__cabinet-form
-    margin-left: 0
+.list-orders
+  box-sizing: border-box
+  border: 1px solid #E0E0E0
+  margin: 0 0 14px
+  cursor: pointer
+  .text-green
+    color: #93CB5C
 
+.list-orders.in
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.05)
+  .list-orders__top-line
+    .icon
+      transform: rotate(90deg)
+  .list-orders__bottom-box
+    display: flex
+
+.list-orders__top-line
+  color: #595959
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  padding: 11px 64px 13px 14px
+  box-sizing: border-box
+  .icon
+    transform: rotate(-90deg)
+    transition: .3s ease
+    height: 13px
+    width: 8px
+    margin: 0 34px 0 0
+    svg
+      display: inline-block
+      fill: $accent2
+      width: 100%
+      height: 100%
+      path
+        fill: $accent2
+  .number-orders
+    width: 153px
+  .date-orders
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    width: 210px
+    span
+      display: inline-block
+      margin: 0 10px 0 0
+      &:last-child
+        margin: 0
+  .quantity-orders
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  .status-orders
+    font-weight: 600
+    margin: 0 0 0 auto
+
+.list-orders__bottom-box
+  padding: 20px 14px
+  box-sizing: border-box
+
+.cabinet
+  background: #f9f9f9
 
 .cabinet_garage
   .short_description
@@ -3235,30 +4117,6 @@ footer
           .number_declaration
             width: 125px
 
-.cabinet_vin
-  .cabinet_wrapper
-    .catalog_content
-      .line_sort
-        .select
-          margin-right: 19px
-        .s__cabinet-form
-          .input-group
-            margin-right: 10px
-      .s__cabinet-content
-        .line
-          .number, .status
-            width: 85px
-          .vin_code
-            width: 110px
-          .comment
-            width: 190px
-          .links-btn
-            margin: 0 0 0 10px
-          .btn-close
-            margin: 0 0 0 15px
-          .b_date
-            padding-left: 10px
-            box-sizing: border-box
 
 .cabinet_orders, .cabinet_vin
   .cabinet_wrapper
@@ -3306,137 +4164,100 @@ footer
 
 /* === vin request === */
 .vin-request
-  .cabinet_wrapper
-    .tabs__caption-vin
-      margin: 0 0 45px 0
-      color: $text
-      font-size: 12px
-      line-height: 14px
-      li
-        padding: 9px 20px
-        box-sizing: border-box
-        border: 1px solid $accent2
-          radius: 5px
-        background-color: #ffffff
-        margin-right: 31px
-        &:last-child
-          margin-right: 0
-        &:before
-          display: none
-      .active
-        border: none
-          radius: 0
-        font:
-          size: 16px
-          weight: 700
-        color: $title
-    .tabs__content
+  .page-text-content__description
+    width: 50%
+  .form
+    width: 435px
+    .input-group
+      input
+        width: 372px
+  .text-description
+    margin: 0 0 18px
+    max-width: 380px
+    p
+      margin: 0
+  .details-box
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin: 30px 0
+    padding: 30px 0
+    border:
+      top: 1px solid #E0E0E0
+      bottom: 1px solid #E0E0E0
+    p
       width: 100%
-      .auto_select
-        .wrapper
-          box-shadow: none
-          border: none
-        &-top
-          align-items: center
-          .block_left
-            max-width: 360px
-          .block_center
-            width: 193px
-          .block_right
-            max-width: 444px
-            color: $text
-            font-size: 12px
-            p
-              margin-bottom: 20px
-              &:last-child
-                margin-bottom: 0
-      .details_description
-        background-color: #f2f2f2
-        border-radius: 5px
-        width: 100%
-        box-sizing: border-box
-        padding: 39px 10px 26px 23px
-        margin: 26px 0 44px
+    .line
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: wrap
+      margin-bottom: 29px
+      .input-group
         display: flex
-        flex-direction: column
-        align-items: flex-start
-        h5
-          color: $title
-          font:
-            size: 16px
-            weight: 700
-        .list-instruction
-          font-size: 12px
-          line-height: 18px
-          color: $title
-          .correctly
-            span
-              color: #619e1f
-          .wrong
-            span
-              color: #ba2f2f
-        .form
-          margin: 17px 0 0 0
-          width: auto
-          align-items: flex-start
-          display: flex
-          flex-direction: column
-          .line
-            display: flex
-            flex-direction: row
-            align-items: center
-            flex-wrap: wrap
-            margin-bottom: 10px
-            .input-group
-              display: flex
-              flex-direction: row
-              align-items: center
-              flex-wrap: wrap
-              margin: 0 20px 0 0
-              label
-                margin: 0 13px 0 0
-              input
-                padding-left: 15px
-              input[name='inp-quantity']
-                max-width: 55px
-                padding: 0
-                text-align: center
-            .btn-close
-              margin: 0 0 0 20px
-          .add-line
-            width: 150px
-            height: 30px
-            display: flex
-            align-items: center
-            justify-content: center
-            margin: 14px 0 0 0
-      .block_form
-        .form
-          display: flex
-          flex-direction: row
-          flex-wrap: wrap
-          width: auto
-          .form_left
-            width: 355px
-            input
-              width: 100%
-          .form_right
-            width: 360px
-            margin-left: 30px
-            .message
-              height: 120px
-            .btn-close
-              border: none
-                radius: 0
-              width: auto
-              height: auto
-              padding: 0
-          .form_bottom
+        flex-direction: row
+        align-items: center
+        flex-wrap: wrap
+        margin: 0 20px 0 0
+        width: 252px
+        label
+          width: 100%
+          input
             width: 100%
-            .reCapcha
-              margin-left: 0
-              img
-                margin-left: 0
+      .btn-close
+        margin: 0 0 0 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        svg
+          width: 12px
+          height: 12px
+    .add-line
+      width: 145px
+      height: 42px
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #E0E0E0
+      border: 1px solid #BDBDBD
+        radius: 4px
+      box-sizing: border-box
+      padding: 0 10px
+      font-size: 14px
+      color: $footer
+      &:hover
+        background: $accent2
+        color: #fff
+        border-color: $accent2
+  .b_quantity
+    align-items: center
+    justify-content: center
+    display: flex
+    input
+      width: 42px
+      height: 30px
+      color: $title
+      font-size: 18px
+      margin: 0
+      border: none
+        radius: 0
+    .minus, .plus
+      width: 30px
+      min-width: 30px
+      height: 30px
+      background: #E0E0E0
+      border-radius: 4px
+      &:after, &:before
+        background: #595959
+        width: 10px
+        height: 2px
+        left: 0
+        margin: 0 auto
+        right: 0
+
 
 /* === vin request end === */
 
@@ -3481,36 +4302,60 @@ footer
 /* === modal === */
 .modal_div
   width: 417px
-  height: 458px
-  box-shadow: 0 0 20px rgba(51, 51, 51, 0.17)
-  border-radius: 5px
-  background-color: #ffffff
+  height: 100%
   position: fixed
   top: 45%
   left: 50%
-  margin-top: -229px
-  margin-left: -213px
+  transform: translate(-50%,-50%)
   display: none
   opacity: 0
   z-index: 100
-  padding: 23px 20px 34px
   box-sizing: border-box
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  .modal_div-wrapper
+    padding: 24px 34px 35px
+    box-sizing: border-box
+    width: 100%
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    margin: 20px 0
+    position: relative
+    background-color: #ffffff
+    border-radius: 4px
   .modal_close
     position: absolute
-    top: 13px
-    right: 24px
+    top: 6px
+    right: 6px
     cursor: pointer
-    color: $text
-    z-index: 3
+    background: #828282
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 4px
+    width: 18px
+    height: 18px
+    z-index: 7
+    svg
+      fill: #fff
+      path
+        fill: #fff
   h3
-    text-transform: uppercase
-    padding-bottom: 37px
     font:
-      size: 24px
+      weight: bold
+      size: 16px
     position: relative
     text-align: left
-    line-height: 24px
+    line-height: 22px
     color: $title
+    margin: 0 0 8px
+    span
+      margin: 0 0 0 5px
+      display: inline-block
+      color: $accent2
   .text
     color: $text
     font-size: 12px
@@ -3528,7 +4373,7 @@ footer
 #overlay
   z-index: 48
   position: fixed
-  //background-color: rgba(#000,.8)
+  background: linear-gradient(0deg, rgba(6, 6, 6, 0.62), rgba(6, 6, 6, 0.62))
   width: 100%
   height: 100%
   top: 0
@@ -3538,135 +4383,209 @@ footer
 
 #basket_modal
   padding: 0
-  width: 1006px
-  height: 731px
-  margin-left: - 503px
-  margin-top: - 367px
-  h3
-    font-size: 18px
-    line-height: 18px
-    padding: 0
-  .btn-delete
-    color: #a6b0b6 !important
-    font-size: 12px
-    line-height: 18px
-    border-bottom: 1px dashed #696969
-    .close
-      color: $accent2
-      margin-right: 6px
-  .modal_top
-    background-color: #ffffff
-    padding: 30px
-    border:
-      radius: 5px 5px 0 0
-    .time
-      color: $accent2
-      text-transform: uppercase
-      font-size: 12px
-      line-height: 22px
+  width: 1200px
   form
+    .predestination-order
+      text-align: center
+    .btn-continue-shopping
+      padding: 10px 17px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 16px
+    .btn
+      padding: 11px 27px
+  .button-group
+    width: 100%
     display: flex
-    flex-direction: column
-    margin: 20px 0 0 0
-    .form_item
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      justify-content: space-between
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 14px 0 0 0
+
+.table-basket
+  .table-header
+    background: #F2F2F2
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    color: $title
+    font-size: 12px
+    text-align: center
+    padding: 13px 0
+    box-sizing: border-box
+  .name-order
+    width: 40%
+  .predestination-order
+    width: 20%
+  .cost-order
+    width: 10%
+    text-align: center
+  .quantity-order
+    width: 15%
+  .amount-order
+    width: 10%
+  .delete-order
+    width: 5%
+  .table-body
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    border: 1px solid #E0E0E0
+    margin: 0 0 -1px 0
+    padding: 14px
+    box-sizing: border-box
+    color: $title
+    .b_quantity
       align-items: center
-      border:
-        top: 1px solid #dddddd
-      padding: 20px 13px
-      box-sizing: border-box
-      .item_title
-        font-size: 12px
+      justify-content: center
+      display: flex
+      input
+        width: 42px
+        height: 30px
         color: $title
-        a
-          color: $title
-          line-height: 18px
-        p
-          color: $input
-        ul
-          li
-            span
-              color: $input
-              font-size: 10px
-      .image
-        width: 66px
-        margin-right: 30px
-      .block_line
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        color: $title
-        font:
-          size: 16px
+        font-size: 18px
+        margin: 0
+        border: none
+          radius: 0
+      .minus, .plus
+        width: 30px
+        min-width: 30px
+        height: 30px
+        background: #E0E0E0
+        border-radius: 4px
+        &:after, &:before
+          background: #595959
+          width: 10px
+          height: 2px
+          left: 0
+          margin: 0 auto
+          right: 0
+    .cost-order, .the-sum
+      font-weight: bold
+      font-size: 20px
+      text-align: center
+    .name-order
+      display: flex
+      align-items: center
+    .item_title
+      font-size: 12px
+      color: $title
+      a
+        width: fit-content
+        color: $accent2
         line-height: 16px
-        span
-          font:
-            weight: 500
-            size: 10px
-          color: $input
-      .b_date-delivery
-        margin: 0 33px 0 auto
-      .b_quantity
-        margin: 0 102px 0 50px
-    .form_top
-      padding-left: 0
-    .form_bonus
-      padding: 17px 0
-    .b_bonus
+        margin: 0 0 8px
+        border-bottom: 1px solid $accent2
+      ul
+        li
+          font-size: 12px
+          line-height: 16px
+          margin: 0 0 2px
+          span
+            font-weight: 600
+    .image
+      width: 126px
+      min-width: 126px
+      height: 80px
       display: flex
-      flex-direction: row
       align-items: center
-      line-height: 18px
-      p
-        color: $text
-        font-size: 16px
-      span
-        color: $title
-        margin-left: 3px
-      .links-btn
-        margin: 0 0 0 20px
-        width: 73px
-        height: 30px
-    .form_bottom
-      padding: 20px 0 0
-      .b_bonus
-        margin-bottom: 15px
-        width: 100%
-        justify-content: flex-end
-        span
-          font-weight: 700
-      .btn-continue-shopping
-        width: 171px
-        height: 30px
-        display: flex
-        align-items: center
-        justify-content: center
-    button.btn
-      width: 190px
-      height: 47px
-  .modal_bottom
-    background-color: #fbfbfb
-    padding: 40px 30px
-    border:
-      radius: 0 0 5px 5px
-    h3
-      margin-bottom: 20px
-    .catalog_item-list
-      &:last-child
-        margin-bottom: 0
+      justify-content: center
+      margin-right: 36px
+      overflow: hidden
+      img
+        height: 100%
+        width: auto
+        max-width: none
+  .the-sum__total
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding: 14px 90px
+    font-weight: bold
+    font-size: 16px
+    box-sizing: border-box
+    background: #F2F2F2
+    span
+      font-size: 20px
+      margin: 0 0 0 29px
+
+.quick-order
+  background: #FFF7EB
+  margin: 50px auto 0
+  padding: 27px 20px 32px 45px
+  box-sizing: border-box
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  max-width: 929px
+  h3
+    font-size: 14px
+    margin: 0 0 10px 0
+    width: 100%
+  .form-phone
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+    max-width: 330px
+    button
+      border-radius: 0 4px 4px 0
+      background: #BEBEBE
+      box-sizing: border-box
+      border: 1px solid #BEBEBE
+      font-weight: bold
+      color: #fff
+      padding: 11px
+      height: 42px
+      margin: 0 0 0 -4px
+      font-size: 14px
+      &:hover
+        background: $accent2
+        border-color: $accent2
+    input
+      width: 167px
+      height: 42px
+      background: #FFFFFF
+      box-sizing: border-box
+      border: 1px solid #BEBEBE
+        radius: 4px
+      color: #828282
+      font-size: 14px
+      text-align: center
+  .quick-order__description
+    max-width: 449px
+    p
+      line-height: 23px
+      color: $footer
+
+
+
 
 #modal_authorization
-  padding: 23px 25px 34px
-  width: 417px
-  height: 481px
-  margin-top: -240px
-  margin-left: -205px
+  width: 400px
+  .modal_div-wrapper
+    padding: 23px 25px 34px
+    h3
+      text-align: center
+      margin: 0 0 11px
+      color: $accent2
+      padding: 0
+      text-transform: none
   .form
     margin: 0 auto
     width: 100%
+    .phone-wrap
+      justify-content: space-between
+      input
+        width: 200px
+        text-align: center
+        padding: 0 15px
     input
       width: 100%
     .inp-btn
@@ -3674,6 +4593,7 @@ footer
       flex-direction: row
       align-items: center
       justify-content: space-between
+      margin: 10px 0
       label
         margin: 0
       .btn
@@ -3686,9 +4606,9 @@ footer
         justify-content: space-between
         align-items: center
     p
-      font-size: 14px
+      font-size: 12px
       line-height: 16px
-      max-width: 320px
+      text-align: center
     .button-group
       display: flex
       flex-direction: row
@@ -3706,6 +4626,7 @@ footer
           size: 12px
         text-transform: uppercase
         line-height: 18px
+        margin: 27px auto 0
         .image
           width: 50px
           height: 100%
@@ -3713,33 +4634,61 @@ footer
           align-items: center
           justify-content: center
           border-right: 1px solid #3f63ac
+          svg
+            display: inline-block
+            width: 100%
+            height: 100%
+            fill: #fff
+            path
+              fill: #fff
         .text
           color: #ffffff
           display: inline-block
           margin: 0 auto
-      .fb
-        background-color: #395ca4
-      .google
-        background-color: #dc4e41
-        .image
-          border-color: #c43a2d
+    .fb
+      background-color: #395ca4
+      width: 160px
+      height: 47px
+      display: flex
+      align-items: center
+      border-radius: 5px
+      font:
+        weight: 500
+        size: 12px
+      text-transform: uppercase
+      line-height: 18px
+      margin: 27px auto 0
+      .image
+        width: 50px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        border-right: 1px solid #3f63ac
+        svg
+          width: 25px
+          height: 25px
+          display: inline-block
+          fill: #fff
+          path
+            fill: #fff
+      .text
+        color: #ffffff
+        display: inline-block
+        margin: 0 auto
+
 
 #modal_thanks
-  border: 1px solid #E0E0E0
-    radius: 4px
   width: 605px
-  height: 307px
-  margin: -153px 0 0 -302px
-  padding: 40px
   .modal_div-wrapper
     display: flex
     flex-direction: column
     align-items: center
     color: $title
+    padding: 40px
+    border: 1px solid #E0E0E0
+      radius: 4px
     h3
-      font:
-        size: 16px
-        weight: 600
       text-align: center
       margin: 0 0 11px
       color: $accent2
@@ -3757,6 +4706,8 @@ footer
       flex-direction: row
       align-items: center
       text-align: center
+      flex-wrap: wrap
+      text-align: center
       line-height: 23px
       a
         margin: 0 0 0 5px
@@ -3769,219 +4720,327 @@ footer
   display: none
 
 /* === product === */
+.product_content__wrapper
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  border: 1px solid #E0E0E0
+    radius: 4px
+  box-sizing: border-box
+  background: #fff
+  padding: 16px 20px 35px
+
+.offers-products
+  .table-title
+    width: 100%
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #E0E0E0
+    p
+      color: $title
+      font-size: 14px
+      &:first-child
+        width: 90px
+      &:nth-child(2)
+        width: 105px
+  .table-body
+    margin: 0 0 4px
+    li
+      width: 100%
+      border-bottom: 1px solid #E0E0E0
+      padding: 7px 0
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      .quantity
+        color: $green
+        font-weight: bold
+        width: 90px
+      .price
+        font-size: 20px
+        font-weight: bold
+        width: 105px
+      .availability
+        width: 106px
+        margin: 0 21px 0 0
+        color: $green
+        font-size: 12px
+      .button-group
+        display: flex
+        align-items: center
+        .btn
+          margin: 0 0 0 12px
+          padding: 11px 24px
+
+.product-information
+  margin: 39px 0 0 0
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  .info-item
+    width: 50%
+    color: $footer
+    display: flex
+    align-items: center
+    justify-content: center
+    .icon
+      margin: 0 13px 0 0
+
+.info-delivery-payment
+  margin: 25px 0 41px 0
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  .box
+    width: 295px
+    height: 195px
+    border: 1px solid #E0E0E0
+    box-sizing: border-box
+    padding: 24px 50px 20px 52px
+    &:nth-child(2)
+      margin: 0 0 0 -1px
+  .icon
+    margin: 0 0 9px 0
+    justify-content: flex-start
+  h3
+    font-size: 16px
+    font-weight: bold
+    color: $footer
+    margin: 0 0 12px
+  .list-line
+    line-height: 31px
+    color: $footer
+
+.about-brand
+  max-width: 590px
+  .image
+    width: 160px
+    height: 108px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+  .brand-description
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    p
+      margin: 0 0 12px
+      width: 100%
+      a
+        display: inline
+        text-decoration: none
+        border-bottom: none
+  p.text-image
+    width: calc(100% - 160px)
+    padding: 0 12px 0 0
+    box-sizing: border-box
+
+
 .product
   .container
     flex-direction: column
-    padding-bottom: 50px
   .product_content
-    +row-flex()
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
     width: 100%
-    margin: 35px auto 50px
     justify-content: space-between
     &-left
-      +row-flex()
-      margin: 0
+      display: flex
       &-image
-        +row-flex()
-        margin: 0 30px 0 0
+        display: flex
+        flex-direction: column
         align-items: center
+        max-width: 438px
         .image_min
-          +col()
-          width: 82px
-          margin: 0 16px 0 0
+          width: 100%
           .item
             display: flex
             align-items: center
             justify-content: center
-            margin-bottom: 10px
-            width: 81px
-            height: 82px
-            border-radius: 10px
-            border: 1px solid #e2e2e2
+            width: 136px
+            height: 100px
+            border: 1px solid #E0E0E0
             background-color: #ffffff
             box-sizing: border-box
             cursor: pointer
-            &:last-child
-              margin-bottom: 0
+            overflow: hidden
+            margin: 0 auto
           .active
             border-color: $accent2
         .image_max
-          width: 357px
-          height: 357px
-          border-radius: 10px
-          border: 1px solid #e2e2e2
+          width: 100%
+          height: 324px
+          border: 1px solid #E0E0E0
           background-color: #ffffff
           display: flex
           align-items: center
           justify-content: center
           box-sizing: border-box
-      &-text
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        max-width: 300px
-        .appointment
-          color: $title
-          display: flex
-          flex-direction: row
-          align-items: flex-start
-          font-size: 12px
-          line-height: 16px
-          margin: 0 0 50px 0
-          .icon
-            margin: 5px 13px 0 0
-        .delivery, .availability
-          display: flex
-          flex-direction: row
-          align-items: center
-          color: $title
-          margin-bottom: 22px
-          .icon
-            margin-right: 9px
-        .availability
-          margin-bottom: 0
-          span
-            margin-right: 14px
-            width: 15px
-            height: 15px
-          p
-            margin-left: 5px
-        .btn-analogies
-          justify-content: space-between
-          width: 115px
-          height: 30px
-          margin: 50px 0 30px
-          .icon-analog
-            margin-left: 7px
-          .icon-arrow
-            margin-right: 10px
-        .links-search
-          display: flex
-          align-items: center
-          flex-direction: row
-          &:hover
-            color: $accent2
-          span
-            margin-left: 10px
-          &:last-child
-            margin-top: 20px
-    &-right
-      width: 265px
-      .block_purchase
-        position: relative
-        background-color: #fbfbfb
-        border: 1px solid #f4f4f4
-          radius: 10px
+          margin: 0 0 15px
+          overflow: hidden
+  .pagination-group
+    margin: 70px 0 0 0
+
+  .btn-all
+    span
+      border-bottom: 1px solid #FFA734
+  .characteristics
+    width: 100%
+
+  .list-characteristics
+    margin: 0 0 25px
+    li
+      padding: 0
+      height: auto
+      p, span
+        padding: 4px 13px 4px 8px
         box-sizing: border-box
-        padding: 40px 30px
         display: flex
-        flex-direction: column
-        align-items: center
-        margin-bottom: 22px
-        width: 100%
-        .price
-          margin: 30px auto 15px
-          color: $title
-          .old-price
-            color: $input
-            font-size: 16px
-            text-decoration: line-through
-          .new-price
-            font-size: 36px
-            line-height: 30px
-        .btn
-          width: 190px
-          height: 47px
-          display: flex
-          align-items: center
-          justify-content: center
+      p
+        width: 58.5%
+        border:
+          right: 1px solid #E0E0E0
+        height: 100%
+      span
+        height: 100%
+        width: 41.5%
   .subtitle
-    font-size: 24px
+    font-size: 14px
     color: $title
     line-height: 26px
-  .product_descriptions
-    +row-flex()
-    margin: 0
-    flex-direction: row
-    justify-content: space-between
-    &-left
-      max-width: 748px
-      .characteristics
-        margin-bottom: 50px
-        .product_characteristics-text
-          display: flex
-          flex-direction: column
-          margin-top: 33px
-          .line
-            display: flex
-            flex-direction: row
-            flex-wrap: wrap
-            align-items: center
-            border-top: 1px solid #ebebeb
-            box-sizing: border-box
-            padding: 0 0 0 10px
-            font-size: 14px
-            color: $text
-            line-height: 48px
-            p
-              min-width: 430px
-            &:last-child
-              border-bottom: 1px solid #ebebeb
-      .brand
-        .line
-          display: flex
-          flex-direction: row
-          align-items: center
-          justify-content: space-between
-          flex-wrap: wrap
-          margin: 38px 0 30px 0
-          ul
-            li
-              font-size: 14px
-              color: $text
-              line-height: 24px
-              span
-                font-weight: 700
-                color: #000
-        h5
-          color: $text
-          margin-bottom: 30px
-          font:
-            weight: 500
-            size: 14px
-        p
-          font-size: 14px
-    &-right
+    text-transform: none
+    h2
+      margin: 0 0 10px
+      font-size: 14px
+
+.product-analogies
+  width: 100%
+  margin: 57px 0 0 0
+  .auto_select-wrap
+    margin: 0 0 12px
+    width: 100%
+  .tabs__caption
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 0 0 12px
+    li
+      color: $title
+      font-weight: 600
+      padding: 10px 19px
+      text-align: center
       display: flex
-      flex-direction: column
-      max-width: 265px
-      h3
-        color: $title
-        font-size: 18px
-        text-transform: uppercase
-        margin-bottom: 30px
-        line-height: 20px
-      .dots-orange
-        margin-bottom: 0
-        li
-          margin-bottom: 30px
-          line-height: 14px
-          color: $title
-          &:last-child
-            margin-bottom: 0
-          &:before
-            top: 20%
-          span
-            color: $input
-            line-height: 18px
-          p
-            line-height: 18px
-      .item
-        margin-bottom: 60px
-        &:last-child
-          margin-bottom: 0
-        p
-          color: $title
+      align-items: center
+      justify-content: center
+      margin: 0 20px 0 0
+      border-radius: 4px
+      background: #F2F2F2
+      &:last-child
+        margin: 0
+    li.active
+      background: $accent2
+      color: #fff
+  .tabs__content
+    width: 100%
+
+.slick-slide
+  outline: none
+
+.load-more
+  width: 100%
+  margin: 24px 0 0
+  text-align: center
+  align-items: center
+  justify-content: center
+  color: #828282
+  border: none
+  &:hover
+    color: $accent2
+  .icon
+    transform: none
+    border: none
+    width: 16px
+    height: 16px
+    margin: 0 9px 0 0
+    svg
+      width: 16px
+      height: 16px
+      fill: #828282
+      path
+        fill: #828282
+
+.product .load-more span
+  border-bottom: none
+
+.pagination-group.pagination-group__mobile, .product-analogies.product-analogies__mobile
+  display: none
+
+.pagination-group.pagination-group__mobile
+  margin: 30px 0 0 0
+
+
+.table-catalog
+  color: $title
+  width: 100%
+  position: relative
+  .table-title
+    width: 100%
+    background: #F2F2F2
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 11px 18px
+    box-sizing: border-box
+    border:
+      bottom: 1px solid #E0E0E0
+  .table-body
+    padding: 7px 18px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    border:
+      bottom: 1px solid #E0E0E0
+      left: 1px solid #E0E0E0
+      right: 1px solid #E0E0E0
+    box-sizing: border-box
+    &:nth-child(odd)
+      background: #F2F2F2
+      box-sizing: border-box
+
+  .auto-mark
+    width: 8%
+  .auto-model
+    width: 32.5%
+  .auto-date
+    width: 18%
+  .auto-volume
+    width: 7.5%
+  .auto-type
+    width: 8%
+  .auto-power
+    width: 6%
+  .auto-speed
+    width: 6%
+  .auto-engine
+    width: 9%
+
+
+.appointment
+  width: 100%
+  color: $footer
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  font-size: 14px
+  line-height: 23px
+  margin: 26px 0 34px 0
+
 
 .dots-orange
   margin-bottom: 30px
@@ -3999,338 +5058,178 @@ footer
       background: $accent2
       top: 40%
       left: 0
-
-.application
-  border:
-    top: 1px solid #e6e6e6
-    bottom: 1px solid #e6e6e6
-  background-color: #fbfbfb
-  .container
-    padding: 64px 15px 53px
-    flex-direction: row
-    justify-content: space-between
-    .application-wrapper
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      justify-content: space-between
-      width: 100%
-    .application_left, .application_right
-      +size(6)
-      .text
-        font-size: 12px
-        color: $input
-        line-height: 18px
-        margin: 20px 0 40px
-      .links-all
-        display: inline-block
-    .application_left
-      .application_list
-        margin-bottom: 20px
-        li
-          display: flex
-          flex-direction: row
-          align-items: center
-          line-height: 48px
-          padding: 0 40px 0 10px
-          box-sizing: border-box
-          color: $text
-          border:
-            top: 1px solid #ebebeb
-          &:last-child
-            border-bottom: 1px solid #ebebeb
-          .auto
-            min-width: 145px
-            color: $accent2
-          .date
-            margin-left: auto
-            font-weight: 400
-            color: $text
-            text-transform: none
-    .application_right
-      .dots-orange
-        column-count: 4
-        margin-bottom: 50px
-
-  .subtitle
-    font-size: 24px
-    color: $title
-    line-height: 26px
-
-
-.product_catalog
-  .s-title
-    padding-top: 65px
-    font-size: 30px
-    color: $title
-    margin: 0 auto
 /* === product end === */
 
 /* === ordering === */
-.ordering
-  .breadcrumb
-    margin: 0 auto
-  .container
-    justify-content: space-between
-    margin-top: 40px
-    .ordering_left
-      .stages
-        margin-bottom: 47px
-        &:last-child
-          margin-bottom: 0
-        .subtitle
-          +row-flex()
-          align-items: center
-          margin: 0 0 24px 0
-          h2
-            font-size: 24px
-            line-height: 26px
-          .link-hidden
-            line-height: 12px
-            margin-left: 10px
-            display: none
-            text-transform: none
-            cursor: pointer
-            transition: .3s ease
-            &:hover
-              color: $title
-          .icon
-            box-sizing: border-box
-            display: flex
-            align-items: center
-            justify-content: center
-            color: $title
-            font-size: 24px
-            text-transform: uppercase
-            width: 50px
-            height: 50px
-            border: 3px solid $accent2
-              radius: 5px
-            background-color: #ffffff
-            margin-right: 46px
-            position: relative
-            &:before
-              content: '1'
-              position: absolute
-              left: 0
-              right: 0
-              margin: 0 auto
-              width: 100%
-              height: 100%
-              line-height: 44px
-              text-align: center
-        .line
-          +row-flex()
-          align-items: center
-          margin: 0 0 30px 0
-          padding-left: 96px
-          a
-            color: $title
-            font-weight: 700
-          .links-btn
-            font-weight: normal
-            margin-left: 34px
-            width: 141px
-            height: 30px
-        .form
-          width: 360px
-          padding-left: 96px
-          .btn
-            width: 226px
-            height: 47px
-            font-size: 12px
-        .form_delivery
-          display: none
-        .number_stages.in
-          opacity: 1
-        .number_stages.out
-          h2
-            opacity: .2
-          .link-hidden
-            display: inline-block
-          .icon
-            &:before
-              content: ''
-              background: url("../img/check-grey.png") no-repeat
-                size: contain
-              width: 16px
-              height: 11px
-      .two_stages
-        .subtitle
-          opacity: .2
-          .icon
-            &:before
-              content: '2'
-      .three_stages
-        .subtitle
-          opacity: .2
-          .icon
-            &:before
-              content: '3'
-        .form
-          .input-group
-            margin-bottom: 10px
-            .radio
-              .radio-inp:checked+.radio-custom+.label
-                color: #666
-          .arrow-links
-            padding-left: 40px
-            width: 24px
-            height: 20px
-            img
-              width: 100%
-    .ordering_right
-      width: 50%
-      .subtitle
-        font-size: 24px
-        +row-flex()
-        justify-content: space-between
-        align-items: center
-        margin: 0
-        .btn-edit
-          width: 171px
-          height: 30px
-      .ordering_product
-        +row-flex()
-        margin: 0
-        .item
-          display: flex
-          flex-direction: row
-          flex-wrap: nowrap
-          align-items: flex-start
-          justify-content: space-between
-          width: 100%
-          padding: 40px 0 35px
-          box-sizing: border-box
-          border-bottom: 1px solid #dddddd
-          .image
-            width: 66px
-          .item_title
-            margin-left: 17px
-            a
-              color: $title
-              line-height: 18px
-              font-size: 12px
-            p
-              color: $input
-            ul
+.ordering-line
+  display: flex
+  align-items: center
+  width: 100%
+  margin: 7px 0 40px
 
-              font:
-                weight: 500
-                size: 10px
-              li
-                color: $title
-                span
-                  color: $input
-          .b_date-delivery
-            margin: 0 40px 0 auto
-          .b_price
-            margin: 0 29px 0 0
-          .block_line
-            line-height: normal
-            span
-              font:
-                weight: 500
-                size: 10px
-              color: $input
-            p
-              font-size: 16px
-              color: $title
-              line-height: 16px
-      .ordering_total
-        margin: 30px 0 24px 0
-        display: flex
-        flex-direction: row
-        align-items: center
-        flex-wrap: wrap
-        justify-content: space-between
-        .left
-          .b-currency, .b-total
-            color: $text
-            font-size: 14px
-            display: flex
-            flex-direction: row
-            align-items: center
-            line-height: 22px
-            p
-              margin-left: 5px
-              color: $title
-              font-weight: 700
-          .b-total
-            font-size: 24px
-        .btn-disable
-          width: 190px
-          height: 47px
-          background-color: #d7d7d7
-          border-radius: 5px
-          text-transform: uppercase
-          font:
-            weight: 500
-            size: 12px
-          display: flex
-          align-items: center
-          justify-content: center
-          color: #ffffff
-        .btn-disable.btn
-          background: $accent2
-      .link-comment
-        display: inline-block
-        padding: 0
-        &:hover
-          color: $accent2
-
-.radio-hidden
-  margin-top: 10px
-  display: none
-  .select-block
-    margin-bottom: 20px
-    &:last-child
-      margin-bottom: 0
-    p
-      font-size: 12px
-    select
-      margin-left: 0
+  .box-number-stages
+    color: #E0E0E0
+    font-weight: bold
+    font-size: 16px
+    width: 255px
+    padding: 0 0 19px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 15px
+      bottom: 0
+      background: #E0E0E0
       width: 100%
-      background-position: 330px center
+      height: 3px
+    &:after
+      content: ''
+      position: absolute
+      left: 15px
+      bottom: -7px
+      width: 15px
+      height: 15px
+      border: 3px solid #DADADA
+        radius: 50%
+      background: #fff
+      box-sizing: border-box
+  .box-number-stages-three
+    &:before
+      display: none
+  .box-number-stages-one
+    color: $accent2
+    &:after
+      background: $accent2
+      border-color: $accent2
+  .box-number-stages.active
+    color: #E0E0E0
+    &:before
+      background: $accent2
+    + .box-number-stages-two
+        color: $accent2
+        &:after
+          background: $accent2
+          border-color: $accent2
+  .box-number-stages.box-number-stages-two.active
+    color: #E0E0E0
+    + .box-number-stages-three
+        color: $accent2
+        &:after
+          background: $accent2
+          border-color: $accent2
 
 
-  .select-separation
-    opacity: .3
 
-.radio-hidden-form
-  padding-left: 35px
-  .input-group-wrapper
+.ordering_wrapper
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  h4
+    width: 100%
+    margin: 0 0 18px 0
+    font-weight: bold
+    color: #595959
+    font-size: 16px
+  h3
+    width: 100%
+    font-size: 16px
+    font-weight: 600
+    color: #000
+    margin: 0 0 8px
+  .two_stages.stages, .three_stages.stages
+    display: none
+  .stages
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    .line
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      margin: 26px 0 0 0
+      .list-radio
+        margin: 25px 0 0 0
+        li
+          margin: 0 0 5px
+          &:last-child
+            margin: 0
+    .box-left
+      width: 300px
+      margin: 0 80px 0 0
+    .box-left, .box-right
+      p
+        margin: 31px 0 8px
+        color: #595959
+        &:first-child
+          margin: 0 0 8px
+  .input-group
     display: flex
     flex-direction: row
-    justify-content: space-between
-    width: 360px
-    .input-group
-      width: 175px
-      input
-        width: 100%
-      &:last-child
-        width: 167px
+    input[name='street']
+      width: 231px
+      margin: 0 6px 0 0
+    input[name='home']
+      width: 63px
+  input
+    width: 300px
+    height: 42px
+    box-sizing: border-box
+    border: 1px solid #FFA734
+      radius: 4px
+    background: #FFF
+    padding: 0 14px
+    font-size: 14px
+    color: #828282
+  label
+    margin: 0 0 8px
+    &:last-child
+      margin: 0
+  .table-orders
+    margin: 46px 0 0 0
+    width: 100%
+    font-size: 12px
+    border: none
+      radius: 0
+    .table-title
+      background: #F2F2F2
+    .table-body
+      border: 1px solid #F2F2F2
+      margin: 0 0 -1px 0
+    .order-availability
+      margin: 0
+      width: 13%
+    .order-amount, .order-price, .order-quantity
+      width: 10%
+      text-align: center
+    .order-delete
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 5%
+      svg
+        fill: #EB5757
+        path
+          fill: #EB5757
+    .total-amount
+      width: 100%
+      padding: 10px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      font-weight: 600
+      font-size: 14px
+      color: $title
+      span
+        display: inline-block
+        margin: 0 0 0 26px
+  .btn-stages
+    margin: 10px 0 20px auto
+    font-size: 16px
+    padding: 11px 44px
 
-.comment-delivery
-  display: none
-  width: 100%
-  height: 108px
-  border: 1px solid #e4e4e4
-    radius: 5px
-  background-color: #ffffff
-  color: $text
-  line-height: 18px
-  font-size: 12px
-  padding: 17px
-  box-sizing: border-box
-  margin: 19px 0 0 0
-  overflow: auto
 
-.link-comment.in
-  color: #000000
-  border-bottom: none
-
-/* === ordering end === */
 
 .s_sale
   .container
@@ -4338,40 +5237,354 @@ footer
 
 #filter_menu
   position: fixed
-  left: -300px
+  left: -100%
   top: 0
   height: 100%
   max-height: 100%
   overflow-y: scroll
-  width: 300px
-  background: #fbfbfb
-  padding: 30px 15px
+  -webkit-overflow-scrolling: touch
+  width: 80%
+  background: #f9f9f9
+  padding: 74px 20px
   box-sizing: border-box
   z-index: 1000
   transition: .3s ease
-  .filter-product
+
+  .sidebar-filter__wrapper
+    margin: 0 auto
+  .button-group
+    position: fixed
+    transition: .3s ease
+    left: -100%
+    bottom: 0
+    width: 80%
+    display: flex
+    align-items: center
+    z-index: 2
+    background: #fff
+    border-top: 1px solid #E0E0E0
+    padding: 9px 20px
+    box-sizing: border-box
+    justify-content: space-around
+    a
+      width: 150px
+      height: 44px
+      display: flex
+      align-items: center
+      justify-content: center
+    .btn-reset
+      color: #333333
+      font-size: 14px
+      font-weight: 600
+      border: 1px solid #BDBDBD
+        radius: 4px
+
+.filter-title
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  text-transform: uppercase
+  background: #FFFFFF
+  padding: 17px  25px 14px 39px
+  box-sizing: border-box
+  font-size: 14px
+  position: fixed
+  left: -100%
+  top: 0
+  width: 80%
+  z-index: 2
+  transition: .3s ease
+  .icon-close
+    width: 24px
+    height: 24px
+    position: relative
+    &:before, &:after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 2.67px
+      height: 16px
+      background: $title
+    &:before
+      transform: rotate(-45deg)
+    &:after
+      transform: rotate(45deg)
+
+
+
+.filter_mnu
+  background: #fff
+  width: auto
+  height: 44px
+  border-radius: 4px
+  border: 1px solid #BDBDBD
+  display: none
+  align-items: center
+  justify-content: center
+  font-size: 14px
+  font-weight: 600
+  padding: 5px 30px
+  color: $title
+  box-sizing: border-box
+  margin: 0 20px 0 0
+
+.catalog-butter_item-block
+  padding: 16px
+  height: auto
+  margin: 0 0 32px
+  .item_title
+    text-align: center
+    font-size: 16px
+    margin: 8px auto 16px
+
+.list-descriptions
+  margin: 8px 0 14px
+  > li
+      font-size: 12px
+      font-weight: normal
+      margin: 0 0 6px
+      line-height: normal
+      strong
+          font-weight: 600
+      p
+        display: inline
+
+.list-volume
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin: 6px 0 0 0
+  li.active
+    a
+      color: #FFFFFF
+      background: #FFBA61
+  li
+    margin: 0 6px 0 0
     &:last-child
-      margin-bottom: 0
-  .filter-title
+      margin: 0
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      border: 1px solid #FFA734
+        radius: 4px
+      box-sizing: border-box
+      color: #000000
+      font-size: 12px
+      font-weight: normal
+      padding: 6px
+      background: #fff
+
+.catalog-butter_item
+  border: 1px solid #E0E0E0
+    radius: 4px
+  background: #fff
+  &:hover
+    background: #fff
+    box-shadow: 2px 9px 12px rgba(0, 0, 0, 0.1266)
+    border: 1px solid #BDC6CF
+      radius: 6px
+  .item_title
+    font-weight: 600
+    font-size: 16px
+    color: $accent2
+
+.catalog-butter_item-list
+  padding: 0
+  margin: 0 0 12px
+  flex-wrap: nowrap
+  box-sizing: border-box
+  .box-right
+    width: 250px
+    min-width: 250px
+    height: 100%
+    min-height: 213px
+    padding: 16px 16px 18px
+    box-sizing: border-box
+    border-radius: 0 4px 4px 0
+    background: #FFF1E0
+  .box-left
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    padding: 15px 59px 15px 7px
+    box-sizing: border-box
+  .image
+    width: 224px
+    min-width: 224px
+    height: 181px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    margin: 0 26px 0 0
+  .item_title
+    text-align: left
+  .availability
+    margin: 0
+    width: 108px
+    text-align: center
+  .price
+    margin: 0
+    font-size: 20px
+    color: #333333
+    font-weight: bold
+    width: auto
+  .line_price.line_group
+    align-items: flex-end
+    margin: 10px 0 0 0
+  .btn
+    width: 109px
+    height: 44px
+    font-size: 16px
+  .quantity
+    width: auto
+    span
+      color: #6FBA26
+      font-weight: bold
+      font-size: 14px
+
+.subcategory-auto
+  background: rgba(244, 244, 244, 0.5)
+  padding: 10px 0
+  box-sizing: border-box
+  display: none
+  max-height: 150px
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar
+    width: 10px
+    height: 10px
+  &::-webkit-scrollbar-track
+    background-color: $accent2
+  &::-webkit-scrollbar-track-piece
+    background-color: #999
+  &::-webkit-scrollbar-thumb
+    background-color: $accent2
+  &::-webkit-scrollbar-corner
+    background-color: #999
+  &::-webkit-resizer
+    background-color: $accent2
+  li
+    width: 100%
+    margin: 0
+    a
+      font-weight: normal
+      width: 100%
+      color: #333333
+      font-size: 14px
+      padding: 0 38px
+      line-height: 23px
+      box-sizing: border-box
+      margin: 0
+
+.btn-main-garage
+  display: none
+  align-items: center
+  justify-content: flex-start
+  padding: 10px 15px
+  box-sizing: border-box
+  width: 100%
+  font-weight: 600
+  .icon
+    margin: 0 10px 0 0
+    width: 23px
+    height: 16px
+  .icon-arrow
+    width: 10px
+    height: 18px
+    margin: 0 0 0 auto
+    display: inline-block
+    opacity: .7
+    svg
+      transform: rotate(90deg)
+      width: 10px
+      height: 18px
+
+.btn-scroll
+  background: linear-gradient(88.9deg, rgba(224, 224, 224, 0.24) -18.16%, #E0E0E0 96.81%)
+  position: absolute
+  right: 0
+  top: 0
+  width: 63px
+  height: 100%
+  display: none
+  align-items: center
+  justify-content: center
+  padding: 0
+  svg
+    fill: #BDBDBD
+    path
+      fill: #BDBDBD
+
+.analog-product__item
+  border: 1px solid #E0E0E0
+    radius: 0
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  margin: 0 0 8px
+  .item_brand
+    font-weight: bold
+    span
+      display: block
+      color: $title
+  .item_name
+    .name-category
+      font-weight: normal
+      margin: 0
+  .item_wrapper-top
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
-    text-transform: uppercase
-    position: relative
-    margin: 0 0 23px 0
+    padding: 5px 10px
+    box-sizing: border-box
+    border-bottom: 1px solid #E0E0E0
+  .item_wrapper-bottom
+    padding: 5px 11px 10px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .image
+    border: 1px solid #DADADA
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 120px
+    height: 100px
+  .availability
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: 12px
+    p
+      font-size: 16px
+      color: #1C9434
+      margin: 0 0 8px
+  .button-group
+    display: flex
+    flex-direction: column
+    align-items: center
+  .price
+    text-align: center
     font-size: 18px
-    .icon-close
-      color: $accent2
+    font-weight: normal
+    margin: 0 0 8px
+  .btn
+    font-size: 12px
+    font-weight: normal
+    width: 73px
+    height: 26px
 
-.filter_mnu
-  background: $accent2
-  width: 62px
-  height: 47px
-  border-radius: 5px
+.b-mobile
   display: none
-  align-items: center
-  justify-content: center
+
 
 @import "media"
 // Always at the end

@@ -6,74 +6,45 @@
 @media only screen and (max-width : 1200px)
   .container
     max-width: 100%
+    width: 100%
 
-  .search
-    input
-      width: auto
-      min-width: 350px
+  .s-about__content
+    .image
+      width: 100%
+      height: auto
+
+  .article__content
+    justify-content: space-around
+
+  .s_product-group .container
+    justify-content: space-around
+
+  .auto_select-wrap
+    .btn-select
+      width: 33%
+      margin: 0 0 8px
 
   .auto_select
-    .wrapper
-      padding: 26px 27px 18px 18px
-      .auto_select-wrap
-        .item
-          margin-bottom: 10px
+    .container
+      border-radius: 0
 
   .menu
-    width: auto
     ul
       li
         a
-          margin-right: 10px
-
-  .catalog_menu
-    .drop-menu1
-      min-width: 254px
-
-  .main_slider
-    .wrapper-slide
-      &:before
-        height: 359px
-    .slider_item
-      .slider_text
-        width: calc(100% - 400px)
-        h3
-          max-width: 300px
-          padding-left: 20px
-          font-size: 30px
-          line-height: 36px
-        .text-sale
-          height: 70px
-          width: 100%
-          p
-            padding-left: 20px
-            font-size: 20px
-      .image
-        padding: 140px 150px 90px 0
-        &:before
-          top: -25px
-          right: 0
-          width: 450px
-          height: 450px
-        &:after
-          width: 200px
-          height: 200px
-          top: 90px
-          right: 130px
-        img
-          max-width: 150px
+          margin-right: 15px
 
   #basket_modal
-    width: 100%
-    margin-left: 0
-    height: auto
-    left: 0
-    .modal_top, .modal_bottom
-      padding: 20px
-    form
-      .form_item
-        .b_quantity
-          margin: 0 50px 0 20px
+    width: 97%
+
+  .contacts
+    .container
+      .page-text-content__description
+        width: calc(100% - 440px)
+
+  .page-text-content__callback-form
+    .box-right
+      width: calc(100% - 405px)
 
   .s_sale
     .cart-wrapper
@@ -81,157 +52,212 @@
       .cart_item
         margin-bottom: 20px
 
-  .s_product-group
-    max-width: 1170px
-    margin: 0 auto
-    padding: 63px 15px 0
-    .cart-wrapper
-      flex-wrap: wrap
-      justify-content: space-between
-      .product_item
-        min-width: 245px
-        &:last-child
-          margin: 0 auto 0 30px
+  .page-text-content__image
+    width: 220px
 
-  //.s-news-article
-  //  max-width: 1170px
-  //  margin: 0 auto
-  //  padding: 56px 15px 74px
-  //  .article_item
-  //    .image
-  //      display: flex
-  //      align-items: center
-  //      justify-content: center
-  //      border-top-left-radius: 10px
-  //      border-top-right-radius: 10px
-  //      img
-  //        width: auto
-  //        margin: 0 auto
+  .cabinet-personal__box
+    width: 370px
 
-  .cabinet_wrapper
-    .catalog_content
-      .item
-        .b_right
-          padding: 63px 40px 74px
-          width: 350px
-          .text
-            p
-              font-size: 22px
-            span
-              font-size: 24px
-          .image
-            width: 90px
-            height: 90px
-
-  .VIN_queries .pagination-group .links-next
-    right: 30px
-
-  .vin-request
-    .cabinet_wrapper
-      .tabs__content
-        .auto_select-top
-          .block_right
-            max-width: 340px
-
-  .product
-    .product_content
-      padding: 0 15px
-      box-sizing: border-box
-      &-left
-        &-image
-          .image_max
-            width: 270px
-        &-text
-          max-width: 230px
-    .product_descriptions
-      padding: 0 15px
-      box-sizing: border-box
-      &-left
-        max-width: 600px
-  .application
-    .container
-      .application-wrapper
-        padding: 0 15px
-        box-sizing: border-box
-
-  .s-title
-    width: calc(100% - 30px)
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-  .vin-request
-    .cabinet_wrapper
-      .tabs__content
-        .auto_select-top
-          .block_right, .block_left, .block_center
-            max-width: 100%
-            width: 100%
-            img
-              margin: 0 auto
-            form
-              width: 100%
-              input
-                width: 100%
-
-  .catalog_menu
-    width: 65px
-    height: 65px
-    .menu-title
-      &:before
-        top: 16px
-      span
-        display: none
-    .drop-menu1
-      .links-drop
-        .drop-menu2
-          width: auto
-          min-width: 400px
-
-  .auto_select
-    .wrapper
-      padding: 26px 10px 13px
-      .auto_select-top
-        flex-direction: column
-        .block_right
-          margin: 18px 0 0 0
-          padding: 0
-      .auto_select-wrap
-        justify-content: space-around
-        margin-top: 19px
-
-  .s_sale
-    .cart-wrapper
-      justify-content: space-around
-
-  //.s-auto
-  //  .cart-wrapper
-  //    .auto_item
-  //      margin: 0 auto 20px
-
-  footer
-    position: relative
-    padding: 43px 0 127px
-    .footer-item
-      .logo
-        position: absolute
-        bottom: 50px
-        left: 20px
+  .sort_wrapper
+    .auto_select-wrap
+      .btn-select
+        width: 168px
         margin: 0
 
-  .ordering
-    .container
-      flex-direction: column
-      .ordering_right
-        width: 100%
 
-  .header_fixed
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1110px)
+  .product
+    .product_content-left-image
+      max-width: 350px
+      .image_min
+        .item
+          width: 100px
+          height: 70px
+
+@media only screen and (max-width : 1080px)
+  .catalog_content
+    .tabs__content
+      justify-content: space-around
+
+  .catalog-butter_item-list
+    .box-left
+      padding: 15px 10px
+    .image
+      width: 150px
+      min-width: 150px
+      height: auto
+      margin: 0 20px 0 0
+
+@media only screen and (max-width : 1070px)
+  .cabinet-personal__box
+    width: 100%
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+
+  .list-orders__top-line
+    padding: 11px 14px 13px
+    .number-orders
+      width: 100px
+    .date-orders
+      width: 160px
+
+  .basket-table__line
+    .auto-photo
+      .image
+        width: 70px
+        img
+          max-height: 50px
+
+@media only screen and (max-width : 1030px)
+  footer
+    .footer-item
+      &:last-child
+        width: 500px
+
+  .page-text-content__description
+    .box:last-child
+      margin: 70px 0 0 0
+
+  .list-orders__bottom-box .box-info-comment, .list-orders__bottom-box .box-info-delivery
+    width: 100%
+    max-width: none
+    margin: 20px 0 10px
+
+  .list-info__details
+    width: 50%
+
+  .table-orders .order-name
+    width: 22%
+
+  .offers-products
+    .table-body
+      li
+        .button-group
+          a
+            font-size: 14px
+
+  .product_content-right
+    width: 100%
+    margin: 20px auto
+
+  .about-brand
+    max-width: none
+
+  .info-delivery-payment
+    justify-content: center
+    align-items: center
+
+  .product
+    .product_content-left
+      width: 100%
+    .product_content-left-image
+      max-width: none
+      width: 100%
+      position: relative
+      .image_max, .image_min
+        max-width: 350px
+      .slick-next, .slick-prev
+        top: 20%
+        &:before
+          background: url("../img/arr-bottom.svg") no-repeat center
+            size: contain
+      .slick-next
+        right: 20px
+        &:before
+          transform: rotate(-90deg)
+      .slick-prev
+        left: 20px
+        &:before
+          transform: rotate(90deg)
+
+@media only screen and (max-width : 992px)
+  .s_category-mark .list-auto
+    li
+      a
+        font-size: 14px
+
+  .contacts
     .container
-      .list_menu-fix
-        li
-          .btn-help, .block_card, .room
-            padding: 0 10px
+      .page-text-content__wrapper
+        width: 370px
+      .page-text-content__description
+        width: calc(100% - 370px)
+
+  .page-text-content__callback-form
+    .box-left
+      width: 370px
+      input
+        width: 100%
+    .box-right
+      width: calc(100% - 370px)
+      padding-left: 0
+
+  .page-text-content__description
+    width: 50%
+
+
 
 @media screen and (max-width: 930px)
+  footer
+    padding: 33px 0 49px
+    .footer-item
+      &:last-child
+        width: 100%
+        margin: 20px 0 0 0
+
+
+  .table-basket
+    .table-body
+      .image
+        min-width: 70px
+        width: 70px
+        height: 70px
+        margin: 0 20px 0 0
+
+    .delete-order
+      text-align: center
+
+  .quick-order
+    flex-direction: column
+    align-items: center
+    h3
+      text-align: center
+    form, .quick-order__description
+      width: 100%
+      max-width: none
+    .quick-order__description
+      margin: 20px 0 0 0
+
+  .s-title
+    font-size: 24px
+
+  h1
+    font-size: 24px
+    line-height: 30px
+
+  .page-text-content__callback-form
+    .box-left, .box-right
+      width: 100%
+      padding: 0
+
+  .vin-request
+    .form, .page-text-content__wrapper, .page-text-content__description
+      width: 100%
+      .input-group
+        input
+          width: 100%
+    .page-text-content__description
+      margin: 30px 0 0 0
+      .box
+        margin: 0 0 20px
+        &:last-child
+          margin: 0
+    .text-description
+      max-width: none
+
   .catalog
     .sidebar
       display: none
@@ -239,14 +265,28 @@
   .filter_mnu
     display: flex
 
-  .application
-    .container
-      .application-wrapper
-        flex-direction: column
-        .application_left, .application_right
-          width: 100%
-        .application_left
-          margin-bottom: 40px
+  .cabinet-wrapper__content
+    width: 100%
+
+  .catalog
+    .sort_wrapper
+      flex-wrap: nowrap
+      flex-direction: row
+      display: flex
+
+  .cabinet-personal__info.b-mobile
+    display: flex
+    width: 100%
+    background: #fff
+    margin: 0 auto 20px
+    border: 1px solid #e0e0e0
+      radius: 4px
+    justify-content: space-between
+    flex-wrap: wrap
+    .balance
+      flex-direction: row
+      display: flex
+
 
   .product
     .product_content
@@ -259,72 +299,58 @@
           margin: 0 auto
           .image_max
             width: 70%
-        &-text
-          max-width: 100%
-          width: 100%
-          margin: 20px auto
-          .appointment
-            margin-bottom: 20px
-          .block_phone-callback
-            justify-content: center
       &-right
         width: 100%
-
-  //.s-news-article
-  //  .container
-  //    flex-direction: column
-  //    .s-article, .s-news
-  //      width: 100%
-  //    .s-news
-  //      margin-top: 30px
-  //      ul
-  //        li
-  //          a
-  //            padding-left: 0
-
-  .cabinet_wrapper
-    .wrap
-      flex-direction: column
-
-  .cabinet
-    .s-title
-      margin-bottom: 20px
-
-  .s-title
-    font-size: 24px
-
-  h1
-    font-size: 24px
-    line-height: 30px
 
   .sidebar
     width: 100%
 
   #cabinet_menu-mobile
     display: flex
+
   #cabinet_menu-mobile.in
     &:before
-      transform: rotate(270deg)
+      transform: rotate(180deg)
 
-  .cabinet_menu
-    display: none
-    margin-top: -8px
-    ul
-      background: $accent1
-      border-bottom:
-        right-radius: 10px
-        left-radius: 10px
-      li
-        a
-          color: #ffffff
-          border: none
-          padding-left: 60px
-        .active
-          color: #ffffff
-          border: none
-        &:last-child
-          a
-            border-bottom: none
+  .cabinet-wrapper
+    .sidebar
+      position: fixed
+      right: -100%
+      top: 0
+      height: 100%
+      z-index: 100
+      width: auto
+      overflow: auto
+      background: #fff
+      transition: .3s ease
+      -webkit-overflow-scrolling: touch
+      .sidebar-wrapper
+        border:
+          top: none
+          left: none
+        border-radius: 0
+        .cabinet-personal__info
+          display: none
+      .box-personal-manager
+        width: 80%
+        margin: 20px auto
+      .b-mobile
+        display: flex
+        margin: 5px auto 5px 5px
+      .b-mobile.filter-title
+        margin: 0
+
+  .box-personal-manager
+    margin: 20px 0
+
+
+  .cabinet
+    .s-title
+      margin-bottom: 20px
+
+
+
+
 
   .catalog_content
     width: 100%
@@ -356,240 +382,241 @@
         max-width: 100%
         margin: 20px 0
 
-  .header_fixed
-    .container
-      .list_menu-fix
-        li
-          .text
-            display: none
-          .block_card
-            .links-btn
-              display: none
 
-@media screen and (max-width: 860px)
+@media screen and (max-width: 900px)
+  .page-text-content__image
+    display: none
+
+@media screen and (max-width: 870px)
+  .header_bottom
+    .container
+      padding: 10px 20px
+      .box-right, .catalog_menu > .menu-title
+        display: none
+
+  .header_bottom
+    .block_search
+      width: 100%
+      .search
+        width: 100%
+
+  .btn-search:before, .box-callback
+    display: none
+
+  .catalog-header__sorting
+    .name-sort
+      width: 28%
+    .price-sort
+      width: 8%
+
+  .product-info-box
+    width: calc(100% - 220px)
+
+  .catalog_item-list
+    .item_name
+      max-width: 170px
+      .item_title
+        text-align: left
+    .item_wrapper
+      .b_hidden
+        justify-content: space-between
+        .image
+          width: 190px
+          height: auto
+          margin: 0 20px 0 0
+
+  .mobile_menu
+    display: block
+    height: 16px
+    width: 26px
+    .mobile_mnu
+      height: 100%
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      svg
+        fill: $footer
+        path
+          fill: $footer
+
+  .table-basket
+    .table-header
+      display: none
+    .table-body
+      .cost-order, .the-sum, .b_quantity
+        width: 30%
+        margin: 10px 0 0 0
+      .name-order
+        width: 60%
+
+
   .search_result
     width: 100%
     margin-bottom: 29px
 
-  .header_fixed
+  .contacts
     .container
-      .btn-help, .room, .block_card
-        padding: 0 10px
-      .block_phone-top
-        p
-          font-size: 18px
+      .page-text-content__wrapper, .page-text-content__description
+        width: 100%
+        padding: 0
+        border-right: none
+      .page-text-content__description
+        margin: 30px 0
+
+  .selection-result__wrapper
+    .auto-characteristics
+      margin: 0 20px 0 0
+
+  .table-catalog
+    .table-title, .table-body
+      font-size: 12px
+
+  .table-catalog .auto-model
+    width: 26.5%
+
+  .product-analogies
+    .tabs__caption
+      li
+        width: 150px
+        margin: 0 auto 10px
+        &:last-child
+          margin: 0 auto 10px
+
 
 @media only screen and (max-width : 800px)
   .search
     input
       min-width: auto
 
-  .main_slider
-    .wrapper-slide
-      &:before
-        height: 185px
-    .slider_item
-      .slider_text
-        width: calc(100% - 200px)
-        h3
-          font-size: 22px
-          line-height: 26px
-          max-width: 200px
-        .text-sale
-          margin-top: 15px
-          height: 24px
-          p
-            font-size: 14px
-      .image
-        padding: 50px 80px 50px 0
-        img
-          max-width: 100px
-        &:before
-          width: 250px
-          height: 250px
-        &:after
-          width: 100px
-          height: 100px
-          top: 40px
-          right: 80px
-
-  .s_product-group
+  .page-text-content__description
     width: 100%
-    background: #ffffff
-    .container
-      padding: 0
-      .s-title
-        padding: 0 15px
-        .links-all
-          display: none
-    .cart-wrapper
-      flex-direction: column
-      align-items: flex-start
-      width: 100%
-      margin-top: 32px
-      .product_item
-        margin-bottom: 0
-        width: 100%
-        &:last-child
-          margin: 0
-          .product-title
-            border-bottom: 1px solid #ebebeb
-        .image
-          display: none
-        .product-title
-          font-size: 14px
-          margin: 0
-          padding: 11px 15px
-          display: block
-          border-top: 1px solid #ebebeb
-        .product_menu
-          display: none
-        a
-          display: none
+    margin: 20px 0 0 0
 
-  footer
+  .registration
     .container
-      justify-content: space-between
-      flex-wrap: wrap
+      .page-text-content__wrapper
+        width: 100%
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  .cabinet_orders, .cabinet_vin
-    .cabinet_wrapper
-      .catalog_content
-        .s__cabinet-content
-          .line
-            .diagnostic, .payment, .comment, .number_declaration, .vin_code
-              width: 100%
-
-  .cabinet_vin
-    .cabinet_wrapper
-      .catalog_content
-        .s__cabinet-content
-          .line
-            .links-btn
-              display: none
-              margin: 30px auto 0 0
-              padding: 5px 15px
-
-  .VIN_queries
-    .s__cabinet-content
-      .line
-        .comment
-          width: 100%
-
-  .you_searched
-    .line
-      align-items: center
-      &:before
-        display: none
-      .btn-inside-hidden
-        display: block
-      .code_name, .mark
-        width: auto
-
-  .s__cabinet-content
-    .line.in
-      &:before
-        transform: rotate(270deg)
-    .line
-      position: relative
-      flex-wrap: wrap
-      &:before
-        content: ''
-        position: absolute
-        left: 4px
-        top: 35px
-        background: url("../img/arrow-accent-right.png") no-repeat
-        width: 6px
-        height: 10px
-        transform: rotate(90deg)
-        transition: .3s ease
-      .diagnostic, .payment, .comment, .number_declaration, .btn-print, .vin_code
-        display: none
+  #menu .menu
+    display: block
+  footer
+    padding: 33px 0 49px
+    .container
+      align-items: flex-start
+    .footer-item
+      .menu
+        display: flex
+      &:last-child
         width: 100%
-        margin-top: 30px
-      .links-btn
-        display: none
-        margin: 30px auto 0 0
-        padding: 5px 15px
-      .btn-print
-        display: none !important
-      .number
-        width: auto
-        padding-left: 20px
-      .status, .b_date
-        width: auto
-      .number
-        order: -3
-      .status
-        order: -2
-      .b_date
-        order: -1
+        margin: 20px 0 0 0
 
+  .s-advantages__item
+    margin: 0 0 30px 0
+    width: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .text
+      text-align: center
+      margin: 10px 0 0 0
 
-  #basket_modal
-    max-height: 400px
-    overflow-y: scroll
-    height: 100%
-    margin-top: -200px
+  .title, h2
+    text-align: center
+    margin: 30px 0 20px
 
-  .block_search, .header_top, .block_card
+  .s-advantages__content
+    margin: 0
+
+  .s-about__content
+    column-count: 1
+    .image
+      margin: 0 0 25px 0
+
+  .s_category-mark .list-auto
+    li
+      a
+        span
+          display: none
+
+  .product_item.in .product_menu
+    column-count: 2
+
+  .main_slider
+    .slider_item
+      .slider_text
+        h3
+          font-size: 20px
+          line-height: normal
+        .text-sale
+          p
+            font-size: 30px
+          span
+            font-size: 18px
+
+  .menu, .header_center .box-schedule
     display: none
 
-  .menu-mobile , .catalog_menu .drop-menu1 .list-mobile
-    display: flex
+  .ordering_wrapper
+    .stages
+      .box-left, .box-right
+        width: 47%
+        margin: 0
+
+  .s-category-auto
+    .box
+      width: 30%
+      .list-auto
+        &:last-child
+          margin: 0 0 20px
+
+  .selection-result__wrapper
+    .image
+      width: 100px
+      height: 90px
+
+  .catalog_item-list
+    .availability, .quantity, .item_name
+      width: 30%
+      max-width: none
+    .item_wrapper
+      .b_hidden
+        .image
+          width: 100px
+        .product-info-box
+          width: calc(100% - 120px)
+
+  .catalog-header__sorting
+    .price-sort, .quantity-sort
+      width: 10%
+    .name-sort
+      width: 22%
+
+  .catalog-header__sorting a
+    width: 20%
+
+  .catalog-butter_item-list .availability
+    width: 108px
+
+  .catalog-butter_item-list .quantity
+    width: auto
+
+  .table-catalog .table-body, .table-catalog .table-title
+    justify-content: space-between
 
 
-  .catalog_menu
-    width: 200px
-    height: auto
-    .menu-title
-      &:before
-        top: 22px
-      span
-        display: block
-    .drop-menu1
-      .links-drop
-        &:hover
-          .drop-menu2
-            display: block
-        .drop-menu2
-          position: relative
-          left: 0
-          flex-direction: column
-          min-width: auto
-          padding: 10px 15px
-          display: none
-          .menu
-            width: 100%
-            margin-bottom: 10px
-            h3
-              font-size: 12px
-            ul
-              li
-                a
-                  margin-right: 0
 
   .auto_select
     .wrapper
       .auto_select-wrap
         flex-direction: column
         align-items: center
-        .item
+        .btn-select
           width: 100%
-          &:first-child
-            .drop-menu
-              min-width: auto
 
-  footer
-    .container
-      justify-content: space-around
-      .footer-item
-        margin-bottom: 20px
-        &:last-child
-          margin-bottom: 0
 
   .vin-request
     .cabinet_wrapper
@@ -634,154 +661,1187 @@
         .btn-group
           margin: 0 0 0 10px
 
+  .selection .s_product-group
+    justify-content: space-around
+
 @media screen and (max-width: 723px)
   .catalog_item-list
     .line_price
       margin-top: 20px
 
-@media screen and (max-width: 620px)
-  .product
-    .product_descriptions-left
-      .characteristics
-        .product_characteristics-text
-          .line
-            p
-              min-width: 160px
+  .ordering_wrapper
+    .stages
+      .box-left, .box-right
+        width: 100%
+      .box-right
+        margin: 30px 0 0 0
+        p
+          margin: 10px 0 5px
 
-  .short_description
-    .wrapper
-      .block_left
-        .image
-          display: none
-      .block_right
-        .btn-group
+  .table-wrapper
+    width: 100%
+    position: relative
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+    .table
+      overflow: scroll
+      -webkit-overflow-scrolling: touch
+      width: 700px
+
+  .table-orders
+    position: relative
+
+  .btn-scroll
+    display: flex
+
+  .ordering_wrapper
+    .stages
+      .line
+        .list-radio
           margin: 0
 
-  //.s-news-article
-  //  background: #ffffff
-  //  border: none
-  //  width: 100%
-  //  box-sizing: border-box
-  //  .container
-  //    .s-article
-  //      .cart-wrapper
-  //        .article_item
-  //          display: none
-  //          width: 284px
-  //          margin: 0 auto
-  //          .image
-  //            height: 159px
-  //          &:first-child
-  //            display: block
+  .catalog
+    .sort_wrapper
+      width: 100%
+      margin: 20px 0 0 0
 
+  .info-delivery-payment .box
+    padding: 24px 30px
+    width: 260px
+
+@media screen and (max-width: 640px)
   footer
     .container
       flex-direction: column
-      .footer-item
-        margin-bottom: 50px
-        &:last-child
-          margin-bottom: 0
-
-  .cabinet_wrapper
-    .catalog_content
-      .item
+      align-items: center
+    .footer-item
+      width: 100%
+      .block_phone
+        border: none
+      &:first-child
+        display: flex
         flex-direction: column
-        .b_left, .b_right
+        align-items: center
+        justify-content: center
+      &:nth-child(3)
+        width: 100%
+        margin: 20px 0 0 0
+      &:nth-child(2)
+        order: 1
+      &:last-child
+        order: 2
+
+  .page-content
+    padding: 24px 0
+
+  .page-search-result .search_result
+    margin: 0
+
+  .links-home
+    margin: 20px 0
+
+  .s-title, h1
+    font-size: 20px
+    line-height: normal
+
+  .contacts .container .page-text-content__description #map
+    height: 400px
+
+  .form-contacts
+    justify-content: space-around
+    .input-group
+      width: 47%
+      margin: 0
+    button
+      margin: 20px auto 0
+
+  .basket-table__line
+    justify-content: space-between
+    .auto-name
+      width: auto
+    .button-group
+      margin: 20px 0 0 0
+      width: 80%
+      flex-direction: row
+      align-items: center
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+
+  .s-about-page__catalog
+    display: none
+
+  .catalog-butter_item-list .image
+    width: 80px
+    min-width: 80px
+
+  .product
+    .product_content-left-image
+      .image_max
+        max-width: 272px
+        height: 202px
+        width: auto
+      .image_min
+        max-width: 272px
+        .item
+          width: 83px
+          height: 62px
+
+  .product-information
+    width: 100%
+
+  .offers-products
+    max-width: 400px
+    margin: 0 auto
+    .table-title
+      p
+        &:last-child
+          margin: 0 70px 0 auto
+    .table-body
+      li
+        .price
+          width: auto
+          font-size: 20px
+          font-weight: normal
+        .quantity
+          font-weight: normal
+          font-size: 18px
+          width: 80px
+        .availability
+          margin: 0 25px 0 auto
+        .button-group
           width: 100%
-        .b_left
-          padding: 23px 12px 34px
-          .subtitle
-            font-size: 18px
-        .b_right
-          align-items: center
-          justify-content: center
-          padding: 28px 12px
-          .image
-            width: 78px
-            height: 78px
-          .text
-            p
-              font-size: 18px
-            span
-              font-size: 30px
+          justify-content: space-between
+          a, .btn
+            height: 26px
+            width: 136px
+            font-weight: normal
+            font-size: 14px
+            padding: 0
+            margin: 3px 0 0 0
 
-  .cabinet
-    .line_sort
-      .btn
-        margin: 0 65% 30px 0
 
-  .vin-request
-    .cabinet_wrapper
-      .tabs__content
-        .details_description
-          .form
-            width: 100%
-            .line
-              justify-content: space-between
-              width: 100%
-              align-items: center
-              .input-group
-                margin: 0 0 15px 0
-                width: 100%
-                input
-                  width: 100%
-                &:nth-child(2)
-                  width: auto
-                &:last-child
-                  margin-bottom: 0
-              .btn-close
-                margin: 0 0 20px 0
+  #modal_thanks
+    width: 80%
+    .modal_div-wrapper
+      padding: 40px 20px
 
-  .ordering
-    .container
-      .ordering_right
-        .ordering_product
-          .item
-            flex-wrap: wrap
-            .item_title
-              width: calc(100% - 85px)
-            .b_date-delivery
-              margin: 0
 
-  .spare_parts
-    .spare_parts-categories
-      .item
-        margin: 30px auto 0
-        padding: 24px 17px 30px
-        .image
-          max-width: 50%
 
-  .catalog
-    .catalog_item-block
-      margin: 0 auto 30px
-      .links-next
-        p
+@media screen and (max-width: 620px)
+
+  footer
+    .footer-item
+      &:last-child
+        margin: 0
+        .footer-item__top
+          flex-direction: column
+          align-items: flex-start
+          .footer-item__top-right
+            margin: 8px 0 0 0
+        .footer-item__bottom
           display: none
 
-  .header_fixed
+  .title, h2
+    font-size: 18px
+
+  .article__content
+    flex-wrap: nowrap
+    overflow-x: scroll
+    -webkit-overflow-scrolling: touch
+    justify-content: flex-start
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+    margin: 0 0 30px
+
+  .article-item
+    width: 241px
+    height: 316px
+    min-width: 241px
+    margin: 0 11px 0 0
+    &:last-child
+      margin: 0
+    .image
+      height: 161px
+
+  .article-title
+    font-size: 14px
+    line-height: 19px
+    max-height: 40px
+    min-height: 40px
+    overflow: hidden
+    margin: 0
+
+  .article-description
+    line-height: 17px
+    margin: 5px 0 0 0
+    max-height: 70px
+    min-height: 70px
+    overflow: hidden
+
+  .article-item__text
+    padding: 4px 13px 10px
+    height: calc(100% - 161px)
+
+  .s_sale, .s-news-article
     .container
-      .room
-        .icon-entrance
-          margin: 0 auto
-      .btn-help
-        display: none
+      padding: 0 0 30px
+      h2, .btn-view-all
+        padding: 0 20px
+
+  .search
+    width: 400px
+
+  .table-basket
+    .predestination-order
+      width: 40%
+    .the-sum__total
+      padding: 10px 20px
+
+  #basket_modal
+    .button-group
+      flex-direction: column
+      align-items: center
+      .btn-continue-shopping
+        order: 1
+        margin: 10px auto 0
+
+  .selection-result__wrapper
+    flex-direction: column
+    align-items: center
+    .image
+      margin: 0 auto 20px
+      width: 200px
+      height: auto
+    .auto-characteristics
+      margin: 0 auto 20px
+      width: 100%
+
+  .filter-orders__line
+    input
+      width: 100%
+    label
+      width: 80%
+    .left, .right
+      width: 100%
+      margin: 0 0 20px 0
+
+  .list-orders__top-line
+    font-size: 12px
+    .number-orders
+      width: 70px
+
+  .catalog_item-list
+    .item_wrapper
+      .b_hidden
+        .image
+          width: 70px
+        .product-info-box
+          width: calc(100% - 90px)
+
+  .appointment
+    margin: 15px 0
+    p
+      display: none
+
+  .product
+    .characteristics
+      display: none
+    .product_content-right
+      margin: 0
+
+  .info-delivery-payment
+    margin: 23px 0 0 0
+    .box
+      width: 100%
+
+
+@media screen and (max-width: 580px)
+  .list-orders__top-line
+    .date-orders
+      width: 50%
+      justify-content: center
+      text-align: center
+    .quantity-orders
+      width: 50%
+      text-align: center
+      justify-content: center
+      margin: 10px 0 0 0
+    .status-orders
+      width: 50%
+      justify-content: center
+      text-align: center
+      margin: 10px 0 0 0
+
+  .list-info__details
+    width: 100%
+
+@media screen and (max-width: 540px)
+  .page-text-content__callback-form
+    .box-right
+      .button-group
+        button
+          width: 100%
+          margin: 20px auto 0
+
+
 
 @media screen and (max-width: 510px)
-  #basket_modal
-    form
-      .form_item
-        .b_quantity
-          margin: 20px 0 0 0
-      button.btn
-        margin: 20px 0 0 0
+  .page-content
+    padding: 15px 0
 
-  .product_catalog
+  .s-title
+    margin: 15px auto
+
+  .catalog-butter_item
+    .btn-details
+      margin: 10px auto 0
+      display: flex
+      align-items: center
+      justify-content: center
+      text-transform: uppercase
+      font-size: 14px
+
+  .catalog_item-block
+    height: auto
+    .item_wrapper
+      position: relative
+      padding: 0
+    .b_hidden
+      display: block
+      opacity: 1
+      visibility: visible
+      ul
+        display: none
+      .btn-details
+        margin: 0
+        color: $accent2
+
+  .s_category-mark .list-auto
+    li.in
+      a
+        &:before
+          transform: rotate(0deg)
+    li
+      width: 100%
+      > a
+          position: relative
+          padding: 0 20px
+          &:before
+            content: ''
+            position: absolute
+            right: 20px
+            top: 0
+            height: 100%
+            width: 12px
+            background: url("../img/arr-bottom.svg") no-repeat center
+              size: contain
+            transition: .3s ease
+            transform: rotate(-90deg)
+
+  .s_category-mark
+    .container
+      padding: 0
+      h2
+        text-align: left
+        padding: 0 20px
+    .btn-all
+      text-align: center
+      font-weight: 600
+      color: $footer
+      font-size: 16px
+      justify-content: center
+    .subcategory-auto
+      li
+        a
+          &:before
+            display: none
+
+  .btn-main-garage
+    display: flex
+
+  footer
+    .footer-item
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      .footer-item__top
+        width: 100%
+      nav
+        width: 100%
+      ul
+        width: 100%
+        li
+          width: 100%
+          a
+            text-align: center
+            justify-content: center
+      .footer-item__top-right
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        width: 100%
+        ul
+          width: auto
+
+  .product_item.in
+    .product_item-text
+      &:before
+        transform: rotate(180deg)
+    .product_menu
+      column-count: 1
+      padding: 12px 14px 20px
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+
+
+    .product_item-text
+      &:after
+        height: 0
+
+  .s_product-group
+    order: -2
+    h4.b-mobile
+      width: 100%
+      margin: 12px 0 10px
+      text-align: left
+      font-size: 14px
+      font-weight: bold
+      color: $title
+      display: block
+    .show-more.b-mobile
+      display: flex
+      color: $footer
+      margin: 10px auto 22px
+      font-size: 16px
+      font-weight: 600
+
+
+
+  .product_item
+    width: 100%
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0866)
+    margin: 0 0 10px
+    padding: 0
+
+    .btn-all
+      display: none
+    .product_item-text
+      width: 100%
+      max-width: none
+      flex-direction: row
+      align-items: center
+      position: relative
+      justify-content: flex-start
+      padding: 13px 18px
+      box-sizing: border-box
+      &:before
+        content: ''
+        position: absolute
+        right: 18px
+        top: 0
+        width: 13px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: .3s ease
+        background: url("../img/arr-bottom.svg") no-repeat center
+          size: contain
+    .product-title
+      margin: 0 0 0 30px
+      min-height: auto
+      padding: 0 13px 0 0
+      box-sizing: border-box
+      font-size: 14px
+    .image
+      position: relative
+      order: -1
+      left: 0
+      top: 0
+      width: 34px
+      height: 34px
+      min-width: 34px
+    .product_menu
+      display: none
+      background: #4F4F4F
+      padding: 12px 14px 20px
+      border-radius: 0 0 6px 6px
+      overflow: auto
+      -webkit-overflow-scrolling: touch
+      max-height: 245px
+      li
+        a
+          color: #fff
+
+  .product_menu
+    &::-webkit-scrollbar
+        width: 10px
+        height: 10px
+    &::-webkit-scrollbar-track
+        background-color: $accent2
+    &::-webkit-scrollbar-track-piece
+        background-color: #999
+    &::-webkit-scrollbar-thumb
+        background-color: $accent2
+    &::-webkit-scrollbar-corner
+        background-color: #999
+    &::-webkit-resizer
+        background-color: $accent2
+
+  .auto_select
+    order: -2
+    padding: 0
+    .container
+      padding: 12px 20px
+      .label-auto_search, h4:first-child
+        display: none
+
+  .auto_select-wrap
+    .btn-select
+      width: 100%
+    .item
+      .btn-select
+        width: 100%
+
+  .main_slider
+    .slider_item
+      .image
+        img
+          height: 100%
+          width: auto
+      .slider_text
+        padding: 19px 10px
+        h3
+          max-width: 110px
+          font-size: 14px
+          line-height: 15px
+        .text-sale, h3
+          padding: 0 0 0 43px
+        .text-sale
+          p
+            font-size: 18px
+          span
+            font-size: 14px
+
+  .slick-prev
+    left: 10px
+
+  .slick-next
+    right: 10px
+
+  .block_card.block_card-mobile
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1
+    padding: 0
+    height: 64px
+    .block_card-text
+      li
+        margin: 0
+
+  .block_card
+    display: none
+
+  .header_center
+    display: none
+
+
+  .block_phone li a
+    font-size: 14px
+
+  .mobile_menu
+    margin: 0
+    box-sizing: border-box
+    display: flex
+    flex: 1
+    height: 64px
+
+
+  .btn-phone-mobile
+    display: flex
+    padding: 0
+
+  .logo.logo-mobile
+    display: flex
+    width: 40px
+    height: 40px
+    margin: 0 20px
+
+  .header_top
+    .container
+      padding: 0
+    .box-entrance, .btn-phone-mobile
+      margin: 0
+      flex: 1
+      padding: 0
+      height: 64px
+      a.b-mobile
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        display: flex
+        padding: 0
+        svg
+          width: 22px
+          height: 22px
+      a
+        display: none
+
+  .block_phone
+    margin: 0 auto
+
+  .table-basket
+    .table-body
+      .image
+        width: 40px
+        height: 40px
+        min-width: 40px
+        margin: 0 10px 0 0
+      .cost-order, .table-basket, .the-sum
+        font-size: 16px
+      .b_quantity
+        .minus, .plus
+          width: 23px
+          height: 23px
+          min-width: 23px
+
+  #menu
+    top: 64px
+    height: calc(100% - 64px)
+
+  .vin-request
+    .details-box
+      .line
+        width: 100%
+        justify-content: center
+        .input-group
+          width: 100%
+          margin: 0 0 10px
+
+  .form-contacts
+    .input-group
+      width: 100%
+      margin: 0 0 10px
+
+  .page-content
+    .container
+      .box-contacts
+        flex-wrap: wrap
+        .box
+          margin: 0 0 10px
+          width: 100%
+
+  .selection
+    .s_product-group
+      order: inherit
+
+  .s-category-auto
+    .box
+      width: 100%
+      h6
+        position: relative
+        padding: 0 20px 0 0
+        box-sizing: border-box
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          right: 0
+          transform: translate(0,-50%)
+          width: 15px
+          height: 13px
+          background: url("../img/arr-bottom.svg") no-repeat center
+            size: contain
+      .list-auto
+        display: none
+
+  .catalog
+    .sort_wrapper
+      .tabs__caption
+        display: none
+
+  .product_content__wrapper
+    padding: 0
+    border: none
+
+  .product .product_content-left-image .slick-next, .product .product_content-left-image .slick-prev
+    top: 35%
+
+  .product .product_content-left-image .slick-prev
+    left: 0
+
+  .product .product_content-left-image .slick-next
+    right: 0
+
+  .s-title, h1
+    font-size: 18px
+
+  .product
     .pagination-group
       display: none
-    .s-title
-      font-size: 24px
-      line-height: normal
-      margin-bottom: 23px
+    .pagination-group.pagination-group__mobile
+      display: flex
+      margin: 30px 0 0 0
+    .breadcrumb
+      li
+        display: none
+        &:last-child
+          display: block
+          a
+            padding: 0 0 0 24px
+            position: relative
+            &:before
+              content: ''
+              position: absolute
+              left: 0
+              top: 20%
+              background: url('../img/arr-bottom.svg') no-repeat center
+                size: contain
+              width: 12px
+              height: 7px
+              transform: rotate(90deg) translate(0,-50%)
+
+  .appointment
+    font-size: 14px
+
+  .product-information
+    margin: 20px 0 0
+
+  .info-delivery-payment
+    .box
+      width: 100%
+      border: none
+      padding: 0
+      height: auto
+      margin: 0 0 10px
+      &:last-child
+        margin: 0 0 10px
+      h3.in
+        background: $accent2
+        color: #fff
+        &:before
+          background: url("../img/arrow-right.svg") no-repeat center
+            size: contain
+          transform: rotate(-90deg)
+          top: 30%
+          width: 10px
+          height: 18px
+      h3
+        font-size: 14px
+        color: $title
+        padding: 10px 22px
+        position: relative
+        background: #F2F2F2
+        border-radius: 4px
+        font-weight: 600
+        box-sizing: border-box
+        margin: 0
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          transform: translate(0,-50%)
+          right: 16px
+          width: 10px
+          height: 18px
+          background: url('../img/arr-bottom.svg') no-repeat center
+            size: contain
+          transition: .3s ease
+      .icon
+        display: none
+      .list-line
+        display: none
+
+  .about-brand
+    .subtitle
+      h2.in
+        background: $accent2
+        color: #fff
+        &:before
+          background: url("../img/arrow-right.svg") no-repeat center
+            size: contain
+          transform: rotate(-90deg)
+          top: 30%
+          width: 10px
+          height: 18px
+      h2
+        font-size: 14px
+        color: $title
+        padding: 10px 22px
+        position: relative
+        background: #F2F2F2
+        border-radius: 4px
+        font-weight: 600
+        text-align: left
+        box-sizing: border-box
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          transform: translate(0,-50%)
+          right: 16px
+          width: 10px
+          height: 18px
+          background: url('../img/arr-bottom.svg') no-repeat center
+            size: contain
+          transition: .3s ease
+    .brand-description
+      display: none
+      p.text-image
+        width: 100%
+        padding: 0
+      .image
+        margin: 10px auto
+        order: -1
+
+  .product-analogies
+    display: none
+
+  .product-analogies.product-analogies__mobile
+    margin: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    h3.in
+      background: $accent2
+      color: #fff
+      &:before
+        background: url("../img/arrow-right.svg") no-repeat center
+          size: contain
+        transform: rotate(-90deg)
+        top: 30%
+        width: 10px
+        height: 18px
+    h3
+      width: 100%
+      font-size: 14px
+      color: $title
+      padding: 10px 22px
+      position: relative
+      background: #F2F2F2
+      border-radius: 4px
+      font-weight: 600
+      text-align: left
+      box-sizing: border-box
+      margin: 0 0 10px
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translate(0,-50%)
+        right: 16px
+        width: 10px
+        height: 18px
+        background: url('../img/arr-bottom.svg') no-repeat center
+          size: contain
+        transition: .3s ease
+    .product-analogies__box
+      width: 100%
+      flex-direction: column
+      padding: 0 0 16px
+      display: none
+
+  .ordering_wrapper .table-orders .table-body
+    margin: 0 0 15px
+
+  .table-basket
+    .table-body
+      margin: 0 0 15px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        right: 14px
+        width: calc(100% - 80px)
+        bottom: 60px
+        height: 1px
+        background: #e0e0e0
+      .b-mobile
+        display: flex
+        font-weight: normal
+        font-size: 12px
+      p.b-mobile
+        font-weight: normal
+        font-size: 12px
+        text-align: center
+        justify-content: center
+        text-decoration: underline
+        display: flex
+        width: 100%
+      .name-order
+        width: auto
+      .the-sum, .delete-order
+        margin: 15px auto 0
+        order: 3
+      .item_title, .predestination-order
+        display: none
+      .cost-order
+        order: 3
+        margin: 0 auto
+        align-self: flex-start
+        width: auto
+      .b_quantity
+        flex-wrap: wrap
+        margin: 0 auto
+        .b-mobile
+          width: 100%
+      .availability
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        align-self: flex-start
+        span
+          display: block
+      .table-body__top
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          left: -14px
+          top: -14px
+          width: calc(100% + 28px)
+          height: calc(100% + 14px)
+          background: #f2f2f2
+
+
+  .table-body__top
+    border-bottom: 1px solid #e0e0e0
+    margin: 0 0 10px
+    padding: 0 0 5px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .item_brand, .name-category
+      width: auto
+      z-index: 2
+    .item_brand
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      font-weight: bold
+      span
+        display: block
+        color: #333
+    .name-category
+      padding: 0 0 0 5px
+      text-align: right
+
+  .cabinet-details__tabs
+    .basket-table
+      display: none
+    .table-basket
+      width: 100%
+      border: none
+      display: flex
+      flex-direction: column
+      .table-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        padding: 10px
+      .table-body
+        border: none
+        padding: 0
+        width: 100%
+        .table-body__top, .table-body__center, .table-body__bottom
+          width: 100%
+          padding: 10px
+          box-sizing: border-box
+          display: flex
+          align-items: center
+          justify-content: space-between
+        .cost-order, .b_quantity, .availability
+          margin: 0 auto
+          width: auto
+        .b_quantity
+          max-width: 90px
+        .the-sum
+          flex-direction: row
+          display: flex
+          align-items: center
+          width: 100%
+          justify-content: center
+          p
+            width: auto
+            margin: 0 5px 0 0
+
+  .list-orders
+    .list-orders__top-line
+      padding: 10px 0 0
+      background: #f2f2f2
+      .b-mobile
+        display: flex
+        width: 100%
+        text-align: center
+        justify-content: center
+        align-items: center
+      .icon
+        order: 1
+        margin: 0 5px 0 0
+      .date-orders
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: auto
+        margin: 0 auto
+        span
+          margin: 0
+        p
+          text-decoration: underline
+          margin: 0 0 5px
+      .number-orders, .number-of-goods, .the-sum
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: auto
+        align-self: flex-start
+        p
+          text-decoration: underline
+          margin: 0 0 5px
+      .quantity-orders
+        display: none
+      .status-orders
+        background: #fff
+        width: 100%
+        order: 2
+        padding: 5px 5px 10px
+        border-top: 1px solid #e0e0e0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        p
+          width: auto
+  .list-orders__bottom-box
+    .list-info__details
+      border-bottom: 1px solid #e0e0e0
+      margin: 0 0 5px
+      &:nth-child(3)
+        border: none
+        margin: 0
+    .box-info-delivery
+      margin: 0
+
+  .cabinet-orders
+    .table-orders
+      display: none
+    .table-basket.b-mobile
+      display: flex
+      flex-direction: column
+      width: 100%
+      .table-body
+        margin: 0 0 15px
+        &:last-child
+          margin: 0
+      .name-category
+        font-size: 12px
+      .table-body
+        padding: 10px 5px
+        .image
+          margin: 0 5px 0 0
+        &:before
+          bottom: 45px
+      .table-header
+        display: flex
+        align-items: center
+        width: 100%
+        flex-wrap: nowrap
+        border:
+          top: 1px solid #e0e0e0
+          left: 1px solid #e0e0e0
+          right: 1px solid #e0e0e0
+        .number
+          margin: 0 20px 0 10px
+        .status-order
+          width: 100%
+          display: flex
+          align-items: center
+          flex-direction: row
+          justify-content: space-between
+          padding: 0 10px 0 0
+      .table-body__center
+        margin: 0 0 10px
+      .table-body__center, .table-body__bottom
+        width: 100%
+        justify-content: space-between
+        display: flex
+        align-items: center
+        .availability, .b_quantity, .cost-order
+          width: auto
+          margin: 0 auto
+        .cost-order
+          font-size: 12px
+        .b_quantity
+          input
+            width: 25px
+      .table-body__bottom
+        .the-sum
+          width: 100%
+          align-items: center
+          display: flex
+          justify-content: space-between
+          p
+            width: auto
+      .b_quantity
+        max-width: 80px
+
+  .ordering
+    .table-wrapper, .btn-scroll
+      display: none
+    .b-mobile
+      display: flex
+      flex-direction: column
+      width: 100%
+      .table-body
+        &:before
+          bottom: 45px
+      .table-body__center, .table-body__bottom
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .availability, .b_quantity, .cost-order
+          width: auto
+          margin: 0 auto
+          font-size: 13px
+        .b_quantity
+          max-width: 80px
+          input
+            width: 30px
+            padding: 0
+      .the-sum
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        p
+          width: auto
+
+  .filter-orders
+    display: none
+
+  .catalog-butter_item
+    .image
+      height: 70px
+      img
+        height: 100%
+        width: auto
+    .item_title
+      min-height: auto
+    .line_price
+      margin: 10px 0 0 0
+    .list-descriptions>li
+      margin: 0 0 3px
 
 
   .catalog_item-list
@@ -793,15 +1853,7 @@
       &:last-child
         margin-bottom: 0
 
-  .catalog
-    .sort_wrapper
-      .line_sort
-        p
-          display: none
-        .select
-          width: 128px
-          min-width: auto
-          background-position: 100px center
+
 
   .short_description
     margin-top: 20px
@@ -820,272 +1872,106 @@
             &:first-child
               margin: 0
 
-  .ordering
-    .breadcrumb
-      margin: 20px auto 12px
-    .container
-      margin-top: 32px
-      .subtitle
-        h2
-          font-size: 18px
-        .icon
-          margin-right: 24px
-      .ordering_left
-        .stages
-          .line
-            padding: 0
-            justify-content: space-between
-            flex-direction: row
-            .links-btn
-              margin: 0
-          .subtitle
-            h2
-              font-size: 18px
-            .icon
-              margin-right: 24px
-          .form
-            width: 100%
-            padding: 0
-            .input-group
-              input
-                width: 100%
-
-  .links-next
-    p
-      display: none
-
-  .breadcrumb, .cabinet .breadcrumb, .registration .breadcrumb
-    margin: 22px auto 16px
-
-  .header
-    order: -2
-    margin-bottom: 0
-
-  .main_slider
-    order: -1
-    margin: 0 auto
-    padding: 0
-    border-radius: 0
-    .wrapper-slide
-      border-radius: 0
-      &:before
-        height: 119px
-      .slider_item
-        .slider_text
-          width: calc(100% - 140px)
-          h3
-            font-size: 16px
-            line-height: 20px
-            max-width: 150px
-          .text-sale
-            p
-              font-size: 9px
-        .image
-          padding: 32px 47px 32px 0
-          img
-            max-width: 65px
-          &:before
-            width: 160px
-            height: 160px
-            top: -15px
-          &:after
-            width: 70px
-            height: 70px
-            top: 25px
-            right: 45px
-    .slick-dots
-      bottom: 7px
-
-  .menu-mobile
-    li
-      width: auto
-  .catalog_menu
-    display: none
-
-  #mobile_menu
-    display: block
-    height: 65px
-    width: 61px
-    border-right: 2px solid #5a6267
-    .mobile_mnu
-      height: 100%
-      width: 100%
-      display: flex
-      align-items: center
-      justify-content: center
-
-  .header_bottom
-    .container
-      padding: 0
-      width: 100%
-      .header_bottom-wrapper
-        border-radius: 0
-
-  .vin
-    width: 64px
-    padding: 0
-    font-size: 17px
-    box-sizing: border-box
-    span
-      display: none
-
-  .header_center
-    padding: 17px 0 29px
-    .container
-      align-items: center
-      .block_phone
-        .block_phone-callback
-          display: none
-        .block_phone-top
-          color: #43494d
-          margin: 0
-          .phone-code
-            font-weight: 700
-            line-height: 14px
-          p
-            font-size: 18px
-
-  .s_sale
-    margin: 58px auto 0
-    .cart-wrapper
-      margin-bottom: 60px
-    .s-title
-      .links-all
-        display: none
-
-  .subtitle
-    font-size: 24px
-
-  //.s-auto
-  //  display: none
-
-  //.s-news-article
-  //  padding: 56px 15px 0
-
-  .s-about
-    display: none
-
-  .s__cabinet-form
-    flex-wrap: wrap
-
-  .cabinet_wrapper .catalog_content .subtitle
-    flex-wrap: wrap
-
-  .cabinet_garage
-    .short_description
-      .wrapper
-        flex-direction: column
-        .block_left
-          .image
-            max-width: 220px
-        .block_right
-          width: 133px
-          margin: 23px auto 0
-          padding: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  #basket_modal
-    .block_phone-callback
-      margin: 10px 0 0 0
-      padding: 0 20px 0 0
-
-  .product
-    .product_content
-      &-left
-        &-image
-          .image_min
-            display: none
-          .image_max
-            width: 100%
-      &-right
-        display: flex
-        flex-direction: column
-        align-items: center
-        .block_phone-callback
-          align-items: center
-        .links-hidden
-          display: inline-block
-          margin: 17px 0 0 0
-        .icon-arrow
-          display: inline-block
+  .s_category-mark
+    h2
+      text-align: left
+      margin: 20px 0 27px
+    .btn-all
+      color: $footer
+      font-size: 16px
+      line-height: 18px
+      text-align: center
+      justify-content: center
 
 
-  .ordering
-    .container
-      .ordering_right
-        position: relative
-        padding-bottom: 80px
-        .ordering_total
-          flex-direction: column
-          align-items: flex-start
-          .btn-disable
-            position: absolute
-            bottom: 0
+  .quick-order
+    .form-phone
+      flex-direction: column
+      align-items: center
+      label
+        width: 100%
+      input
+        width: 100%
+        margin: 0
+      button
+        margin: 10px auto 0
+        border-radius: 4px
+
+  .pagination
+    li
+      a
+        font-size: 14px
+        padding: 5px
+        height: 25px
+        min-width: 25px
+
+  .basket-table__line
+    .auto-characteristics, .auto-name
+      width: 100%
+    .auto-name
+      text-align: left
+      margin: 20px 0 0
+    .auto-photo
+      width: 100%
+      justify-content: center
+
+  .catalog
+    h1
+      display: none
+    .sort_wrapper
+      margin: 0
+      flex-direction: column
+      align-items: center
+      .line_sort
+        width: 100%
+        .item
+          width: 100%
+    .breadcrumb
+      li
+        display: none
+        &:last-child
+          display: flex
+          a
+            padding: 0 0 0 24px
+            position: relative
+            &:before
+              content: ''
+              position: absolute
+              left: 0
+              top: 20%
+              background: url('../img/arr-bottom.svg') no-repeat center
+                size: contain
+              width: 12px
+              height: 7px
+              transform: rotate(90deg) translate(0,-50%)
+
+  .filter_mnu
+    width: 100%
+    margin: 0 0 20px
+
 
 
   .clarification
     display: flex
 
-  .vin-request
-    .cabinet_wrapper
-      .tabs__content
-        .auto_select-top
-          .block_center, .block_right
-            display: none
-      .tabs__caption-vin
-        flex-direction: column
-        align-items: flex-start
-        margin-bottom: 25px
-        li
-          margin: 0 0 20px 0
-          &:last-child
-            margin-bottom: 0
-        .active
-          padding-left: 0
 
-  .cabinet_profile
-    .cabinet_wrapper
-      .subtitle
-        flex-wrap: nowrap
-        .icon
-          min-width: 50px
-      .catalog_content
-        .form
-          margin: 32px 0 40px 0
-          width: 100%
-          .input-group
-            input
-              width: 100%
-            .radio
-              .label
-                max-width: 80%
+
+
   .form
     .phone-wrap
       label
         margin: 0 5px 0 0
 
-  .s__cabinet-form
-    .links-btn
-      margin: 12px 0 0 auto
-
-  .auto_select
-    .wrapper
-      .auto_select-top
-        .block_right
-          justify-content: space-between
-          width: 100%
-          .links-btn
-            margin-left: 0
 
   #modal_authorization
-    width: 100%
-    margin-left: 0
-    left: 0
+    width: 99%
     .form
       .button-group
         a
-          width: 120px
+          width: 130px
           .image
             width: 40px
 
@@ -1095,37 +1981,78 @@
   .cabinet .line_sort .btn
     margin: 0 55% 30px 0
 
-  .application
-    .subtitle
-      font-size: 18px
-    .container
-      padding: 40px 15px 35px
-      .application_left
-        .application_list
-          li
-            padding: 0 10px
-            .auto
-              min-width: 75px
-            .date
-              margin-left: 10px
-      .application_right
-        .dots-orange
-          column-count: 2
-          margin-bottom: 36px
-          li
-            line-height: 48px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 420px)
-  .s__cabinet-form
-    .input-group
-      margin-right: 13px
-      input
-        width: 110px
+  .table-basket
+    .table-body
+      &:before
+        bottom: 50px
+      .b_quantity
+        input
+          width: 35px
+        .plus, .minus
+          width: 20px
+          height: 20px
+          min-width: 20px
+      .cost-order
+        font-size: 15px
+        margin: 0 auto
+      .the-sum
+        font-size: 15px
+        margin: 15px auto 0
+      .b_quantity
+        width: 37%
+
+  #basket_modal .modal_div-wrapper
+    padding: 20px
+
+
+  .cabinet-wrapper .sidebar
+    width: 270px
+
+  .box-personal-manager
+    font-size: 14px
+
+  footer
+    .container
+      flex-direction: column
+      align-items: flex-start
+      .block_phone
+        border: none
+    .footer-item
       &:last-child
-        margin-right: 0
-    .links-btn
-      margin: 12px 0 0 auto
+        margin: 0
+      &:nth-child(2)
+        margin: 29px 0 0 0
+
+  .s-about
+    padding: 0 0 30px 0
+    .container
+      padding: 0
+    p, h2
+      padding: 0 20px
+      box-sizing: border-box
+
+  .table-basket
+    .the-sum__total
+      flex-direction: column
+      align-items: center
+      span
+        margin: 10px auto 0
+
+  .manager-contacts
+    li
+      width: 100%
+
+  .cabinet-personal__box
+    .box-top
+      .manager-photo
+        width: 70px
+        height: 70px
+        margin: 0 10px 0 0
+
 
   .registration .form
     width: 100%
@@ -1136,64 +2063,40 @@
         .label
           max-width: 80%
 
-
-
-@media only screen and (max-width : 437px)
-  .cabinet_wrapper
-    .catalog_content
-      .subtitle
+  .list-orders__bottom-box
+    .box-info-delivery
+      .line
+        .the-sum
+          margin: 0 auto 0 20px
         .btn
-          margin: 30px 0 0 0
+          width: 100%
+          margin: 10px 0 0 0
 
-  #modal_result
-    width: 100%
-    margin-left: 0
-    left: 0
-    height: auto
+  .cabinet
+    .s-title
+      flex-wrap: nowrap
+
+  #cabinet_menu-mobile
+    > span
+        display: none
+
+  .cabinet-details__tabs .tabs__caption li
+    padding: 15px 5px
+
+  .analog-product__item .image
+    width: 68px
+    height: 54px
 
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
-  .header_fixed
-    .container
-      .block_card
-        &-top
-          margin: 0
-          padding: 0
-          position: relative
-          .goods
-            position: absolute
-            top: -7px
-            right: -4px
-            width: 18px
-            height: 18px
-            border: 2px solid #ff9d04
-              radius: 50%
-            box-sizing: border-box
-            background: $accent1
-            display: flex
-            align-items: center
-            justify-content: center
-            span
-              line-height: normal
-          .card_text, .amount
-            display: none
-
   .cabinet .line_sort .btn
     margin: 0 40% 30px 0
 
-  .cabinet_wrapper
-    .catalog_content
-      .subtitle
-        .icon
-          margin-right: 14px
 
   #basket_modal
     form
-      .b_date-delivery
-        margin: 0 auto
-        width: 40%
       .b_amount
         margin-left: auto
       .form_top
@@ -1204,24 +2107,28 @@
     .block_phone-callback
       padding: 0
 
+  .btn-phone-mobile
+    padding: 8px 10px
+    margin: 0 8px 0 auto
+    height: 55px
+
+  .block_card.block_card-mobile
+    padding: 9px 5px
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
+  #menu
+    top: 64px
+
+@media only screen and (max-width : 355px)
+  .f-soc, .f-money
+    li
+      a
+        width: 35px
+        height: 35px
+        min-width: 35px
+
+  .links-accent
+    font-size: 12px
 
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
 

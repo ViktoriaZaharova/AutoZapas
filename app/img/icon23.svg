@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+
+    <path class="cls-1" d="M26.54,6.46A14.55,14.55,0,1,1,7.73,6.23"/>
+    <circle class="cls-1" cx="17" cy="17.45" r="8.28"/>
+    <circle class="cls-1" cx="17" cy="17.45" r="2.69"/>
+    <path class="cls-1"
+          d="M22.71,8.78a10.39,10.39,0,0,0-11.42,0H8.35a.62.62,0,0,1-.62-.62V4.86L10.79,2H23.47l3.07,2.86v3.3a.62.62,0,0,1-.62.62Z"/>
+    <circle class="cls-1" cx="17" cy="12.13" r="0.94"/>
+    <circle class="cls-1" cx="11.94" cy="15.8" r="0.94"/>
+    <circle class="cls-1" cx="13.87" cy="21.76" r="0.94"/>
+    <circle class="cls-1" cx="20.13" cy="21.75" r="0.94"/>
+    <circle class="cls-1" cx="22.06" cy="15.8" r="0.94"/>
+</svg>
